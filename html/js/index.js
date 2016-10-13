@@ -25,6 +25,7 @@ $(function(){
         },time)
     }
     $('.list li').click(function(){
+
         clearInterval(timer);
         banner(3000);
         acIndex=$(this).index();
@@ -33,7 +34,6 @@ $(function(){
         $('.list li').removeClass('active');
         $('.item').eq(acIndex).fadeIn(500);
         $(this).addClass('active')
-        console.info(acIndex);
     })
 
 //公司动态
@@ -45,7 +45,7 @@ $(function(){
         for(var i=0;i<dynLen; i++){
             $('.dynamic_con .topimg img').eq(i).css('z-index',-i);
         }
-        var dytime = setInterval(function(){
+         setInterval(function(){
 
             $('.dynamic_con .topimg img').eq(imgIndex).fadeOut(1000);
             $('.dynamic_con .topimg img').removeClass('curr');
