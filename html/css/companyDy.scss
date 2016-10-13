@@ -1,0 +1,98 @@
+.companyDy{
+  background:#f3f3f3;
+
+  .comDyMain{
+    width:1100px;
+    margin:0 auto;
+    .list{
+
+      li{
+        border-bottom:1px solid #c5c9c8;
+        padding:30px 0;
+        overflow:hidden;
+        img{float:left}
+        .list_a{
+          float:left;
+          margin-left:44px;
+          width:680px;
+          h2{
+            color:#444;
+            font-size:18px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+          }
+          p{
+            color:#777;
+            font-size:12px;
+            line-height:20px;
+            margin-top:10px;
+          }
+        }
+        .readcount{
+          float:right;
+          ._date{
+            width:47px;
+            height:38px;
+            border:1px solid #cbcfce;
+            text-align:center;
+            color:#777;
+            padding-top:5px;
+            float:right;
+            p{
+              font-size:16px;
+              font-weight:700;
+            }
+          }
+          .looktime{
+            color:#777;
+            margin-top:60px;
+          }
+        }
+      }
+    }
+    .page{
+      width:400px;
+      height:30px;
+      margin:0 auto;
+      padding:50px 0;
+      a{
+        display:inline-block;
+        height:30px;
+        line-height:30px;
+        color:#4898ea;
+
+      }
+
+      .last,.next{
+        float:left;
+        font-size:14px;
+        margin:0 30px;
+      }
+
+      ul{
+
+        li{
+          float:left;
+          margin:0 5px;
+          &.active{
+            width:30px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            background:#4898ea;
+            border-radius:3px;
+            a{
+              color:#fff;
+            }
+          }
+          a{
+            width:30px;
+            text-align:center;
+            font-size:16px;
+          }
+        }
+      }
+    }
+  }
+}

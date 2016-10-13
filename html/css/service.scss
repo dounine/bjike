@@ -1,0 +1,62 @@
+
+.serviceCon{
+  background:#f3f3f3;
+  overflow:hidden;
+  .serviceMain{
+    width:1100px;
+    margin:0 auto;
+    .software{
+      overflow:hidden;
+      h3{
+        font-size:16px;
+        color:#333;
+        margin:40px 0 30px;
+        clear:both;
+      }
+      ul{
+        li{
+          width:330px;
+          float:left;
+          margin:0 15px 80px;
+          h4{
+            font-size:24px;
+            margin-top:24px;
+          }
+          .imgbtn{
+            overflow:hidden;
+            display:inline-block;
+            img{
+              width:330px;
+              height:208px;
+              transition:1s;
+              -webkit-transition:1s;
+              -moz-transition:1s;
+              &:hover{
+                transform:scale(1.1);
+                -webkit-transform:scale(1.1);
+                -moz-transform:scale(1.1);
+                transition:1s;
+                -webkit-transition:1s;
+                -moz-transition:1s;
+              }
+            }
+          }
+          p.text{
+            margin-top:40px;
+            font-size:14px;
+            color:#777;
+            line-height:22px;
+            height:100px;
+          }
+          .movebtn{
+            font-size:14px;
+            font-weight:700;
+            border:2px solid #4898ea;
+            color:#4898ea;
+            padding:10px 20px;
+          }
+        }
+      }
+    }
+  }
+}
