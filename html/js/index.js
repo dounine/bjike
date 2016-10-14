@@ -41,15 +41,9 @@ $(function(){
     function dynamic(){
         var imgIndex = $('.dynamic_con .topimg img').filter('.curr').index();
         var nextInd = imgIndex+1
-        var dynLen = $('.dynamic_con .topimg img').length
-        for(var i=0;i<dynLen; i++){
-            $('.dynamic_con .topimg img').eq(i).css('z-index',-i);
-        }
+        var dynLen = $('.dynamic_con .topimg img').length;
          setInterval(function(){
-
             $('.dynamic_con .topimg img').eq(imgIndex).fadeOut(1000);
-            $('.dynamic_con .topimg img').removeClass('curr');
-            $('.dynamic_con .topimg img').eq(nextInd).addClass('curr');
             $('.dynamic_con .topimg img').eq(nextInd).fadeIn(1000);
             imgIndex = nextInd;
             nextInd = imgIndex + 1 < dynLen ? imgIndex + 1 : 0;

@@ -41,20 +41,6 @@
 
       }
     }
-    .details{
-      position:absolute;
-      top:430px;
-      left:500px;
-      a{
-        display:inline-block;
-        width:116px;
-        height:45px;
-        text-align:center;
-        line-height:45px;
-        border:2px solid #fff;
-        color:#fff;
-      }
-    }
     .list{
       position:absolute;
       z-index:99;
@@ -84,7 +70,8 @@
           display:inline-block;
           width:100%;
           height:70px;
-          display: table-cell; vertical-align:middle;
+          display: table-cell;
+          vertical-align:middle;
         }
 
 
