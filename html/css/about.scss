@@ -1,14 +1,16 @@
 .aboutcon{
   background:#F3F3F3;
-  padding-bottom:30px;
+  padding-bottom:50px;
+  overflow:hidden;
   .profile{
     margin-top:50px;
   }
   .il_tr{
-    height:510px;
+    max-height:510px;
     .imgLeft{
       float:left;
-      height:508px;
+      max-height:508px;
+      width:55%;
       overflow:hidden;
       img{
         transition:0.5s;
@@ -86,6 +88,7 @@
       }
     }
     .imgRight{
+      width:55%;
       float:right;
       overflow:hidden;
       img{
