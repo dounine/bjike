@@ -51,7 +51,12 @@ $(function(){
     }
 
 
-
+//招聘
+    $('.recruitMain .recommend li a').click(function(){
+        var aTit = $(this).attr('title')
+        $('.recruitMain .recruit_l .relework').removeClass('NO');
+        $('.'+aTit).addClass('NO')
+    })
 
 
 })
