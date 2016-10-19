@@ -15,8 +15,7 @@ header{
       height:80px;
       line-height:80px;
       .cope{
-        float:left;
-        font-size:18px;
+        vertical-align:middle;
       }
       .head_r{
         float:right;
@@ -50,6 +49,7 @@ header{
           float:left;
           background:url("../img/public/tel.png") no-repeat 0 22px ;
           padding-left:10px;
+          color:#fff;
         }
       }
     }
@@ -59,6 +59,7 @@ header{
     width:1100px;
     height:300px;
     margin: auto;
+    background:url("../img/public/citybgm.png") no-repeat  0 40px;
     .logo{
       float:left;
       img{
@@ -112,6 +113,8 @@ header{
       color:#333;
       clear:both;
       padding-top:20px;
+
+
     }
   }
 
