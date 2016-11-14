@@ -1,0 +1,34 @@
+<?php
+$typeArr[1] = '网页基础';
+$typeArr[2] = 'HTML';
+$typeArr[3] = 'DIV&amp;CSS';
+$typeArr[4] = 'Javascript/Ajax';
+$typeArr[5] = 'Dreamweaver';
+$typeArr[6] = '站长图集';
+$typeArr[7] = '软件下载';
+$typeArr[8] = '商品销售';
+$typeArr[9] = '分类信息';
+$typeArr[10] = '织梦CMS';
+$typeArr[11] = '帮助文档';
+$typeArr[12] = '在线留言';
+$typeArr[13] = '黄页';
+$typeArr[14] = '圈子';
+$typeArr[15] = '问答';
+$typeArr[16] = '小说';
+$typeArr[17] = '新闻中心';
+$typeArr[18] = '行业新闻';
+$typeArr[19] = '国际新闻';
+$typeArr[20] = '公司动态';
+$typeArr[21] = '关于我们';
+$typeArr[22] = '服务';
+$typeArr[23] = '公司简介';
+$typeArr[24] = '团队支撑';
+$typeArr[25] = '保障体系';
+$typeArr[26] = '资质与荣誉';
+$typeArr[27] = '我们';
+$typeArr[28] = '我们的福利';
+$typeArr[29] = '软件类';
+$typeArr[30] = '通讯类';
+$typeArr[31] = '系统集成类';
+$typeArr[32] = '营销策划类';
+?>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/index.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+</head>
+<body>
+    {dede:include filename="header.htm"/}
+    <div class="content">
+        <div class="banner">
+            <div class="banner_con">
+                <div class="item" style="display:block">
+                    <a href="tpls/aboutUs_team.html "> <img src="{dede:global.cfg_templets_skin/}/img/index/wlyh.png" ></a>
+                </div>
+                <div class="item" >
+                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/wlwyy.png" ></a>
+                </div>
+                <div class="item">
+                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/rjyth.png" ></a>
+                </div>
+                <div class="item" >
+                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/ggyxch.png" ></a>
+                </div>
+            </div>
+            <ul class="list">
+                <li class="active">
+                    <a href="javascript:void(0)">网络优化与系统集成一体化解决方案</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">物联网应用解决方案</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">软件一体化解决方案</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">广告营销策划一体化解决方案</a>
+                </li>
+            </ul>
+        </div>
+        <div class="company">
+            <div class="brief">
+                <div class="breif_title">
+                    <h3>公司简介</h3>
+					{dede:arclist  flag='' typeid='21' row='1' col='' titlelen='' infolen='' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
+					
+                    <a href="[field:arcurl/]">详情 &gt;</a>
+					
+					{/dede:arclist}
+                </div>
+				{dede:arclist  flag='' typeid='21' row='1' col='' titlelen='' infolen='500' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
+                <div class="brief_con">
+                    <a href="[field:arcurl/]">
+                        <div>[field:image/]</div>
+                        <p>[field:description/]</p>
+                    </a>
+                </div>
+				{/dede:arclist}
+            </div>
+            <div class="dynamic">	
+
+			{dede:autochannel partsort='3' typeid=17}
+
+
+                <div class="dynamic_title">
+                    <h3>[field:typename/]</h3>
+                    <a href="[field:typelink/]">更多 &gt;</a>
+
+                </div>
+				
+			{/dede:autochannel}
+	
+			{dede:arclist  flag='h' typeid='20' row='1' col='' titlelen='' infolen='' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
+
+
+                <div class="dynamic_con">
+                    <div class="dycon_top">
+                        <div class="toptext">
+                            <div class="textitle">
+							<a href="[field:arcurl/]" style="font-size:14px;font-weight:700;height:32px;width:305px;overflow:hidden;color:#555;">
+								[field:title/]
+							</a>
+							</div>
+                            <p class="text">
+								<a href="[field:arcurl/]" style="color:#555;">
+									[field:description/]
+								</a>
+                            </p>
+                            <span>发布时间：[field:pubdate function=MyDate('Y-m-d',@me)/]</span>
+                        </div>
+                        <div class="topimg">
+							<a href="[field:arcurl/]">
+								[field:image/]
+							</a>
+                        </div>
+                    </div>
+			{/dede:arclist}
+			{dede:arclist  flag='h' typeid='20' row='1' col='' titlelen='' infolen='' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
+			
+                    <div class="dycon_bottom">
+                        <ul class="bottext">
+                            <li>
+								<p>
+									<a href="[field:arcurl/]" style="color:#555;">
+										[field:title/]
+									</a>
+								</p> 
+								<span>[field:pubdate function=MyDate('Y-m-d',@me)/]</span>
+							</li>
+                        </ul>
+                    </div>
+					
+			{/dede:arclist}
+                </div>
+
+
+            </div>
+        </div>
+        <div class="partner">
+            <i class="leftline"></i>
+            <h2>主要客户</h2>
+            <i class="rightline"></i>
+            <div class="partner_con">
+                <div class="operator">
+                    <h5>运营商:</h5>
+                    <ul>
+                        <li class="yd">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="dx">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="lt">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vender">
+                    <h5>厂家:</h5>
+                    <ul>
+                        <li class="hw">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="zx">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="dtyd">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="nokia">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                        <li class="erisson">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="govt">
+                    <h5>各政府单位:</h5>
+                    <ul>
+                        <li class="gov">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

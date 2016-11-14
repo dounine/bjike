@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=114";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+			<li>
+			<a href='/dedecms/ike_web/news/'>公司动态</a>
+            </li>
+            <li>
+                <a href='/dedecms/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/dedecms/ike_web/contactus/">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>行业新闻</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>泰迪犬在邻居门上撒尿被砸死 法院：狗主人负主</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2016-11-07 13:52
+				<small>来源:</small>
+				测试 
+				<small>作者:</small>
+				网络 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=114&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			<p>
+	<img alt="" src="/dedecms/uploads/allimg/161107/1-16110G3541KB.jpg" style="width: 720px; height: 532px;" /><br />
+	花3000元买来的纯种泰迪犬养了不到1年，因多次在邻居家门上撒尿，被恼羞成怒的邻居一砖头砸死。狗的主人将邻居徐平(化名)告上法庭，近日，经法院调解，邻居赔偿狗的主人1000元。</p>
+<p>
+	徐平家住阿克苏地区温宿县文化路一个小区的3楼。2015年1月，他发现对门邻居陈玉霞(化名)以3000元的价格购买了一只棕色的纯种泰迪犬后，他回家时总能闻到自家门口有一股尿骚味，偶尔还有粪便，虽然他怀疑是泰迪犬做的，但碍于邻里关系，就自行清理了。</p>
+<p>
+	3月的一天，徐平下班回家，爬到2楼拐角处时，发现邻居陈玉霞正准备下楼，而泰迪犬正抬着后腿，支在他家门框上撒尿。</p>
+<p>
+	见到徐平，陈玉霞连连道歉：&ldquo;不好意思，给您弄脏了，下次我一定注意。&rdquo;</p>
+<p>
+	见对方态度较好，徐平也没多计较，只说：&ldquo;没事，下次注意就行，这狗还是得用链子拴好，撒尿是其次，伤了人就不好了。&rdquo;随后，徐平拿拖把把门口的尿渍自行清理了。</p>
+<p>
+	不久后，徐平下班回家发现妻子在和对门邻居陈玉霞吵架。原来，妻子发现邻居家的泰迪犬又在自家门上撒尿，和狗的主人理论，对方态度还很不好。</p>
+<p>
+	徐平虽然也气愤，但想着远亲不如近邻，便拉住妻子让她别再计较。事后陈玉霞也表示，日后会给狗拴上狗链，看护好。</p>
+<p>
+	今年8月29日，陈玉霞去外地出差，由其母亲看管泰迪犬。随后，泰迪犬又在徐平家门口&ldquo;小解&rdquo;时，被徐平逮个正着。气不打一处来的徐平捡起一块砖头砸向泰迪犬，泰迪犬被当场砸死。</p>
+<p>
+	陈玉霞回来后，多次找徐平索赔且几次报警，徐平均拒绝赔偿。陈玉霞遂将徐平诉至温宿县法院，请求判决徐平赔偿自己各项损失共计5000元。</p>
+
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',114)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',114)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(114);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：没有了 </li>
+     <li>下一篇：<a href='/dedecms/b//2016/1107/116.html'>全国人大通过香港特区基本法第104条解释</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

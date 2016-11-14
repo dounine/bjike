@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=4";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+            <li>
+                <a href="###">加入我们</a>
+            </li>
+            <li>
+                <a href="../tpls/contactUs.html">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>HTML</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>初学者很好的参考：HTML标签详尽讲解</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2010-04-07 09:29
+				<small>来源:</small>
+				 
+				<small>作者:</small>
+				 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=4&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			<p><strong>结构</strong></p><p>＜html＞<br />＜head＞<br />＜title＞标题＜title＞<br />＜/head＞<br />＜body＞..........文件内容..........<br />＜/body＞<br />＜/html＞<br />1.文件标题<br />＜title＞..........＜/title＞<br />2.文件更新--＜meta＞<br />　【1】10秒后自动更新一次<br />　　＜meta http-equiv="refresh" content=10＞<br />　【2】10秒後自动连结到另一文件<br />　　＜meta http-equiv="refresh" content="10；URL=欲连结文件之URL"＞<br />3.查询用表单--＜isindex><br />　　　若欲设定查询栏位前的提示文字：<br />　　＜isindex prompt="提示文字"＞<br />4.预设的基准路径--＜base><br />&nbsp;&nbsp; ＜base href="放置文件的主机之URL"＞</p><p><strong>版面</strong></p><p>1.标题文字 ＜h#＞..........＜/h#＞ #=1~6；h1为最大字，h6为最小字<br />2.字体变化 ＜font＞..........＜/font＞ <br />【1】字体大小 ＜font size=#＞..........＜/font＞ #=1~7；数字愈大字也愈大 <br />【2】指定字型 ＜font face="字型名称"＞..........＜/font＞ <br />【3】文字颜色 ＜font color=#rrggbb＞..........＜/font＞ rr：表红色（red）色码 gg：表绿色（green）色码 bb：表蓝色（blue）色码<br />3.显示小字体 ＜small＞..........＜/small＞ <br />4.显示大字体 ＜big＞..........＜/big＞<br />5.粗体字 ＜b＞..........＜/b＞<br />6.斜体字 ＜i＞..........＜/i＞ <br />7.打字机字体 ＜tt＞..........＜/tt＞<br />8.底线 ＜u＞..........＜/u＞<br />9.删除线 ＜strike＞..........＜/strike＞<br />10.下标字 ＜sub＞..........＜/sub＞<br />11.上标字 ＜sup>..........＜/sup＞<br />12.文字闪烁效果 ＜blink＞..........＜/blink＞<br />13.换行 ＜br＞<br />14.分段 ＜p＞ <br />15. 文字的对齐方向 ＜p align="#"＞ #号可为 left：表向左对齐（预设值） center：表向中对齐 right：表向右对齐 P.S.＜p align="#"＞之後的文字都会以所设的对齐方式显示， 直到出现另一个＜p align="#"＞改变其对齐方向，或遇到＜hr＞?＜h#＞标签时会自动设回预设的向左对齐。<br />16.分隔线 ＜hr＞ <br />【1】分隔线的粗细 ＜hr size=点数＞ <br />【2】分隔线的宽度 ＜hr size=点数或百分比＞ <br />【3】分隔线对齐方向 ＜hr align="#"＞ #号可为 left：表向左对齐（预设值） center：表向中对齐 right：表向右对齐 <br />【4】分隔线的颜色 ＜hr color=#rrggbb＞ <br />【5】实心分隔线 ＜hr noshade＞<br />17.向中对齐 ＜center＞..........＜/center＞<br />18.依原始样式显示 ＜pre＞..........＜/pre＞<br />19.＜body＞指令的属性 <br />【1】背景颜色 -- bgcolor ＜body bgcolor=#rrggbb＞ <br />【2】背景图案 -- background ＜body background="图形文件名"＞ <br />【3】设定背景图案不会卷动 -- bgproperties ＜body bgproperties=fixed＞ <br />【4】文件内容文字的颜色 -- text ＜body text=#rrggbb＞ <br />【5】超连结文字颜色 -- link ＜body link=#rrggbb＞ <br />【6】正被选取的超连结文字颜色 -- vlink ＜body vlink=#rrggbb＞ <br />【7】已连结过的超连结文字颜色 -- alink ＜body alink=#rrggbb＞<br />20.注解 ＜!--..........--＞21.特殊字元表示法 <br />符 号 　　语 法&nbsp; <br />＜&nbsp; 　　　＆ｌｔ&nbsp; <br />＞&nbsp; 　　　＆ｇｔ&nbsp; <br />& 　　 　＆ａｍｐ&nbsp; <br />"&nbsp; 　　　＆ｑｕｏｔ&nbsp; <br />空白&nbsp; 　　＆ｎｂｓｐ</p><p><strong>图片</strong></p><p>1.插入图片 ＜img src="图形文件名"＞<br />2.设定图框 -- border ＜img src="图形文件名" border=点数＞<br />3.设定图形大小 -- width?height ＜img src="图形文件名" width=宽度点数 height=高度点数＞<br />4.设定图形上下左右留空 -- vspace?hspace ＜img src="图形文件名" vspace=上下留空点数 hspace=左右留空点数＞<br />5.图形附注 ＜img src="图形文件名" alt="说明文字"＞<br />6.预载图片<br />＜img src="高解析度图形文件名" lowsrc="低解析度图形文件名"＞ P.S.两个图的图形大小最好一致<br />7.影像地图（Image Map） ＜img src="图形文件名" usemap="#图的名称"＞ ＜map name="图的名称"＞<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ＜area shape=形状 coords=区域座标列表 href="连结点之URL"＞<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ＜area shape=形状 coords=区域座标列表 href="连结点之URL"＞<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ＜area shape=形状 coords=区域座标列表 href="连结点之URL"＞<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ＜area shape=形状 coords=区域座标列表 href="连结点之URL"＞&nbsp;&nbsp;&nbsp; ＜/map＞&nbsp;&nbsp;&nbsp; <br />【1】定义形状 -- shape<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shape=rect：矩形&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shape=circle：圆形&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shape=poly：多边形&nbsp;&nbsp;&nbsp; <br />【2】定义区域 -- coords<br />a.矩形：必须使用四个数字，前两个数字为左上角座标，后两个数字为右下角座标<br />例：＜area shape=rect coords=100,50,200,75 href="URL"＞<br />b.圆形：必须使用三个数字，前两个数字为圆心的座标，最后一个数字为半径长度<br />例：＜area shape=circle coords=85,155,30 href="URL"＞<br />c.任意图形（多边形）：将图形之每一转折点座标依序填入<br />例：＜area shape=poly coords=232,70,285,70,300,90,250,90,200,78 href="URL"＞</p><p><strong>表格</strong></p><p>1.定义表格 ＜table＞..........＜/table＞ <br />【1】设定边框的厚度 -- border<br />＜table border=点数＞ <br />【2】设定格线的宽度 -- cellspacing<br />＜table cellspacing=点数＞ <br />【3】设定资料与格线的距离 -- cellpadding<br />＜table cellpadding=点数＞ <br />【4】调整表格宽度 -- width<br />＜table width=点数或百分比＞ <br />【5】调整表格高度 -- height<br />＜table height=点数或百分比＞ <br />【6】设定表格背景色彩 -- bgcolor<br />＜table bgcolor=#rrggbb＞ <br />【7】设定表格边框色彩 -- bordercolor<br />＜table bordercolor=#rrggbb＞<br />2.显示格线 ＜table border＞<br />3.表格标题<br />＜caption＞..........＜/caption＞ <br />表格标题位置 -- align<br />＜caption align="#"＞ #号可为 top：表标题置于表格上方（预设值）<br />bottom：表标题置于表格下方<br />4.定义列 ＜tr＞<br />5.定义栏位 《1》＜td＞：靠左对齐<br />《2》＜th＞：靠中对齐?粗体 <br />【1】水平位置 -- align ＜th align="#"＞<br />#号可为 left：向左对齐<br />center：向中对齐 right：向右对齐<br />【2】垂直位置 -- align ＜th align="#"＞ #号可为<br />top：向上对齐 middle：向中对齐<br />bottom：向下对齐 <br />【3】栏位宽度 -- width<br />＜th width=点数或百分比＞ <br />【4】栏位垂直合并 -- rowspan<br />＜th rowspan=欲合并栏位数＞ <br />【5】栏位横向合并 -- colspan<br />＜th colspan=欲合并栏位数＞</p><p><strong>清单</strong></p><p>一、目录式清单 <br />＜dir＞ ＜li＞项目1 ＜li＞项目2 ＜li＞项目3 ＜/dir＞ P.S.目录式清单每一个项目不能超过20个字元（即10个中文字）<br />二、选项式清单 ＜menu＞ ＜li＞项目1 ＜li＞项目2 ＜li＞项目3 ＜/menu＞<br />三、有序号的清单 ＜ol＞ ＜li＞项目1 ＜li＞项目2 ＜li＞项目3 ＜/ol＞ <br />【1】序号形式 -- type ＜ol type=#＞或＜li type=#＞ #号可为 A：表以大写英文字母A?B?C?D...做为项目编号 a：表以小写英文字母a?b?c?d...做为项目编号 I：表以大写罗马数字做为项目编号 i：表以小写罗马数字做为项目编号 1：表以阿拉伯数字做为项目编号（预设值） <br />【2】起始数字 -- start ＜ol start=欲开始计数的序数＞ <br />【3】指定编号 -- value ＜li value=欲指定的序数＞<br />四、无序号的清单 ＜ul＞ ＜li＞项目1 ＜li＞项目2 ＜li＞项目3 ＜/ul＞ <br />【1】项目符号形式 -- type ＜ul type=#＞或＜li type=#＞ #号可为 disc：实心圆点（预设值） circle：空心圆点 square：实心方块 <br />【2】原始清单 -- plain ＜ul plain＞ <br />【3】清单排列方式 -- warp 《1》清单垂直排列 ＜ul warp = vert＞ 《2》清单水平排列 ＜ul warp = horiz＞<br />五、定义式清单 ＜dl＞ ＜dt＞项目1 ＜dd＞项目1说明 ＜dt＞项目2 ＜dd＞项目2说明 ＜dt＞项目3 ＜dd＞项目3说明 ＜/dl＞ <br />紧密排列 -- compact ＜dl compact＞ P.S.如此可使＜dt＞的内容与＜dd＞的内容在同一行，仅 以数格空白相隔而不换行，但若＜dt＞的文字超过一 定的长度后，compact的作用就消失了！</p><p><strong>表单</strong></p><p>一、基本架构 ＜form action="处理资料用的CGI程式之URL"或"mailto:电子信箱的URL" method="get或post"＞ .......... .......... .......... ＜/form＞ <br />二、输入文件型表单 ＜form action="URL" method="post"＞ ＜input＞ ＜input＞ .......... .......... ＜/form＞ <br />【1】栏位类型 -- type ＜input type=#＞ #号可为 text：文字输入 password：密码 checkbox：多选钮 radio：单选钮 submit：接受按钮 reset：重设按钮 image：图形钮 hidden：隐藏栏位 <br />【2】栏位名称 -- name ＜input name="资料栏名"＞ P.S.若type为submit?reset则name不必设定 <br />【3】文件上的预设值 -- value ＜input value="预设之字串"＞ <br />【4】设定栏位的宽度 -- size ＜input size=字元数＞ <br />【5】限制最大输入字串的长度 -- maxlength ＜input maxlength=字元数＞ <br />【6】预设checkbox或radio的初值 -- checked ＜input type=checkbox checked＞ ＜input type=radio checked＞ <br />【7】指定图形的URL -- src ＜input type=image src="图档名"＞ <br />【8】图文对齐 -- align ＜input type=image align="#"＞ #号可为 top：文字对齐图片之顶端 middle：文字对齐图片之中间 buttom：文字对齐图片之底部<br />三、选择式表单 ＜form action="URL" method="post"＞ ＜select＞ ＜option＞ ＜option＞ .......... .......... ＜/select＞ ＜/form＞ <br />A、＜select＞的属性 <br />【1】栏位名称 -- name ＜select name="资料栏位名"＞ <br />【2】设定显示的选项数 -- size ＜select size=个数＞ <br />【3】多重选项 -- multiple ＜select multiple＞ <br />B、＜option＞的属性 <br />【1】定义选项的传回值 -- value ＜option value="传回值"＞ <br />【2】预先选取的选项 -- selected ＜option selected＞<br />四、多列输入文字区表单 ＜form action="URL" method="post"＞ ＜textarea＞ .......... .......... ＜/textarea＞ ＜/form＞ <br />【1】文字区的变数名称 -- name ＜textarea name=变数名称＞ <br />【2】设定文字输入区宽度 -- cols ＜textarea cols=字元数＞ <br />【3】设定文字输入区高度 -- rows ＜textarea rows=列数＞ <br />【4】输入区设定预设字串 ＜textarea＞ 预设文字 ＜/textarea＞ <br />【5】自动换行与否 -- wrap ＜textarea wrap=#＞ #号可为 off：表输入的文字超过栏宽时，不会自动换行（预设值） virtual：表输入的文字在超过栏宽时会自动换行</p><p><strong>链接</strong></p><p>一、连结至其他文件 ＜a href="URL"＞说明文字或图片＜/a＞</p><p>二、连结至文件内之某一处（外部连结） </p><p>《1》起点<br />＜a href="档名#名称"＞..........＜/a＞ <br />《2》终点 ＜a name="名称"＞</p><p>三、frame的超连结 </p><p>【1】开启新的浏览器来显示连结文件 -- _blank ＜a href="URL" target=_blank＞<br />【2】显示连结文件於目前的frame -- _self ＜a href="URL" target=_self＞<br />【3】以上一层的分割视窗显示连结文件 -- _parent ＜a href="URL" target=_parent＞<br />【4】以全视窗显示连结文件 -- _top ＜a href="URL" target=_top＞ <br />【5】以特定视窗显示连结文件 --＜a href="URL" target="特定视窗名称"＞</p><p><strong>FRAME</strong></p><p>一、分割视窗指令 ＜frameset＞..........＜/frameset＞ <br />【1】垂直（上下）分割 -- rows<br />＜frameset rows=#＞ #号可为点数：如欲分割为100,200,300三个视窗，则<br />＜frameset rows=100,200,300＞；亦可以*号代表，如＜frameset rows=*,500,*＞<br />百分比：如＜frameset rows=30%,70%＞，各 项总和最好为100%<br />【2】水平（左右）分割 -- cols ＜frameset cols=点数或百分比＞<br />二?指定视窗内容 -- ＜frame＞<br />＜frameset cols=30%,70%＞&nbsp;&nbsp;&nbsp; ＜frame＞&nbsp;&nbsp;&nbsp; ＜frame＞ ＜/frameset＞<br />【1】指定视窗的文件名称 -- src ＜frame src=HTML档名＞ <br />【2】定义视窗的名称 -- name<br />＜frame name=视窗名称＞ <br />【3】设定文件与上下边框的距离 -- marginheight<br />＜frame marginheight=点数＞ <br />【4】设定文件与左右边框的距离 -- marginwidth<br />＜frame marginwidth=点数＞ <br />【5】设定分割视窗卷轴 -- scrolling<br />＜frame scrolling=#＞ #号可为 yes：固定出现卷轴<br />no：不出现卷轴 auto：自动判断文件大小需不需要卷轴（预设值）<br />【6】锁住分割视窗的大小 -- noresize ＜frame noresize＞</p>
+            <p align="center"> </p>
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',4)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',4)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(4);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/a/webbase/html/2010/0407/3.html'>网页中应用表格爱好者</a> </li>
+     <li>下一篇：<a href='/dedecms/a/webbase/html/2010/0407/5.html'>实例学习网页制作中常用的网页表单的应用</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

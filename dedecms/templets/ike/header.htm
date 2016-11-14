@@ -1,0 +1,74 @@
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="{dede:global.cfg_templets_skin/}/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="{dede:global.cfg_templets_skin/}/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="{dede:global.cfg_templets_skin/}/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="{dede:global.cfg_cmsurl/}"><img src="{dede:global.cfg_templets_skin/}/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="{dede:global.cfg_cmsurl/}/">首页</a>
+            </li>
+            <li>
+			{dede:type typeid=21}
+
+			<a href='[field:typelink/]'>[field:typename/]</a>
+
+			{/dede:type}
+
+            </li>
+            <li class="serBtn">
+			{dede:channelartlist typeid='22,22'}
+                <a href="{dede:field name='typeurl'/}" class="serviceBtn">{dede:field name='typename'/} <i></i></a>
+                <ul class="subnav">
+				{dede:channel type='son' noself='yes'}
+                    <li>
+                        <a href="[field:typelink/]#stft" goId="">[field:typename/]</a>
+                    </li>
+				{/dede:channel}
+
+                </ul>
+			{/dede:channelartlist}
+            </li>
+			<li>
+			{dede:autochannel partsort='3' typeid=17}
+                <a href='[field:typelink/]'>[field:typename/]</a>
+			{/dede:autochannel}
+            </li>
+            <li>
+                {dede:type typeid=33}
+
+				<a href='[field:typelink/]'>[field:typename/]</a>
+
+				{/dede:type}
+            </li>
+            <li>
+			{dede:type typeid=34}
+                <a href="[field:typelink/]">联系我们</a>
+			{/dede:type}
+            </li>
+        </ul>
+		<h1>
+		{dede:geturl runphp='yes'}
+			@me = GetCurUrl();
+			if(@me == '/dedecms/' || @me=='/dedecms/index.php'){
+				@me='首页';
+			}else{
+				@me='';
+			}
+		{/dede:geturl}
+		</h1>
+		<h1>{dede:type}[field:typename/]{/dede:type}</h1>
+    </nav>
+</header>

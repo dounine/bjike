@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=116";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+			<li>
+			<a href='/dedecms/ike_web/news/'>公司动态</a>
+            </li>
+            <li>
+                <a href='/dedecms/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/dedecms/ike_web/contactus/">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>行业新闻</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>全国人大通过香港特区基本法第104条解释</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2016-11-07 16:11
+				<small>来源:</small>
+				未知 
+				<small>作者:</small>
+				admin 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=116&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			<div style="text-align: center;">
+	<img alt="" src="/dedecms/uploads/allimg/161107/1-16110G61246458.jpg" style="width: 480px; height: 367px;" /></div>
+<div>
+	<p>
+		资料图：香港特区基本法</p>
+	<p>
+		新华社快讯：十二届全国人大常委会第二十四次会议7日上午经表决，全票通过了《全国人大常委会关于香港特别行政区基本法第一百零四条的解释》。</p>
+	<p>
+		背景资料</p>
+	<p>
+		香港特区基本法第104条</p>
+	<p>
+		中华人民共和国香港特别行政区基本法第一百零四条：香港特别行政区行政长官、主要官员、行政会议成员、立法会议员、各级法院法官和其他司法人员在就职时必须依法宣誓拥护中华人民共和国香港特别行政区基本法，效忠中华人民共和国香港特别行政区。</p>
+	<p>
+		更多新闻</p>
+	<p>
+		国务院港澳事务办公室就人大释法通过发表谈话</p>
+	<p>
+		国务院港澳事务办公室发言人7日释法通过发表谈话。该发言人说，今天上午，全国人大常委会针对香港特别行政区立法会选举及个别候任议员在宣誓时宣扬&ldquo;港独&rdquo;主张，侮辱国家、民族引发的问题，对基本法有关条 文作出解释，明确了依法宣誓的有关含义和要求。全国人大常委会的这一解释，表明了中央政府反对&ldquo;港独&rdquo;的坚定决心和意志，维护了基本法的权威和香港法治， 顺应了包括香港同胞在内的全体中国人民的共同愿望，完全必要，正当其时。</p>
+	<p>
+		香港中联办负责人就人大释法通过发表谈话</p>
+	<p>
+		中央人民政府驻香港特别行政区联络办公室负责人表示，此次释法有利于解决香港立法会部分候任议员宣誓违法引起的争议，有利于维护国家安全，打击和遏制&ldquo;港独&rdquo;势力，有利于确保&ldquo;一国两制&rdquo;在香港的实践不走样、不变形。</p>
+	<p>
+		此前报道</p>
+	<p>
+		全国人大将第五次就香港基本法释法</p>
+	<p>
+		鉴于香港立法会在近期出现宣誓问题，有议员在宣誓时展示&ldquo;港独&rdquo;标语并发布辱华言论，全国人大常委会将就香港特别行政区基本法第104条，有关特区政府公职人员宣誓的内容进行解释。香港许多政界人士纷纷表示，全国人大常委会在此时做出释法，是为遏制&ldquo;港独&rdquo;发出明确而强力的讯号。</p>
+	<p>
+		连日来，香港许多政界人士纷纷表示，人大释法就是为了遏制&ldquo;港独&rdquo;。民主建港协进联盟主席李慧琼认为，人大释法就是要发出反&ldquo;港独&rdquo;的清楚信息，&ldquo;由于&lsquo;港独&rsquo;的事情是大是大非的问题，挑战&lsquo;一国两制&rsquo;，甚至影响国家统一，所以要通过释法来处理，我相信人大常委要释放一个清楚的信息：在&lsquo;港独&rsquo;问 题上中央政府绝对没有退让，也绝对不会容许在&lsquo;一国两制&rsquo;下让&lsquo;港独&rsquo;有任何滋长的空间。&rdquo;</p>
+	<p>
+		基本法委员会副主任梁爱诗表示说，回归以来人大常委会曾经四次行使法律解释权，而且包括了主动释法、政府提出，以及由终审法院提请释法等各种模式， 这次人大释法属于主动释法。而立法会前主席曾钰成则认为，这次人大主动释法，反映&ldquo;港独&rdquo;问题严重，中央不得不断然出手，&ldquo;如果我们发生的事，真的让中央 政府相信会严重影响到国家主权问题，中央政府就会采取相当严厉的措施。过去几次的释法都引起一些反向，中央政府是完全知道。就我了解，中央政府也是非到不得已，是不会采取这个做法的。&rdquo;&nbsp;</p>
+	<p>
+		有关立法会议员宣誓的问题，目前在香港正在进行司法程序，香港高等法院最快下周一才会作出判决。行政会议成员叶刘淑仪认为，人大释法选在这个时间段 是有技术上的考虑，有利于澄清本地法律模糊不清的部分，&ldquo;就算法官尽快裁决，还都会有一段诉讼时期，在香港也可能上诉到终审庭，也许最快也要一年半载，在 这段时期内，怎样的宣誓才有效，怎样才符合《基本法》第一条、第104或者其他条款的要求，才能当特区的议员，这方面香港的法律就很不清晰，所以人大常委 在法律上早日将有关的法律原意澄清，是有帮助的。&rdquo;</p>
+	<p>
+		而特区政府财政司长曾俊华则认为，人大释法是香港整体法制的重要部分，对香港各行政、立法、司法等各部门都有约束力，&ldquo;第一在《基本 法》框架之下，人大释法的安排也都是香港整体法制的一个重要部分，人大释法不单止对法院有约束力，对政府、对立法会也都有约束力。这个安排一直都存在，也都会继续存在。第二是这次的事件性质非常严重，也涉及到了国家主权问题，中央极为重视，也都必须严肃处理。人大也是在履行它维护国家主权的宪制责任。&rdquo;</p>
+</div>
+<br />
+
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',116)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',116)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(116);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/b//2016/1107/114.html'>泰迪犬在邻居门上撒尿被砸死 法院：狗主人负主</a> </li>
+     <li>下一篇：没有了 </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

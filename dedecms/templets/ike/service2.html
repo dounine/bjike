@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/service2.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="ser2Con">
+    <div class="ser2Main">
+        <div class="software">
+		{dede:autochannel partsort='4' typeid=22}
+            <div class="img-l">
+                <a href="[field:typelink/]"><div class="type"> <span>[field:typename/]</span></div></a>
+            </div>
+		{/dede:autochannel}
+            <div class="img-r">
+			{dede:autochannel partsort='4' typeid=22}
+                <div class="img-r-t">
+                    <a href="[field:typelink/]"><div class="type"> <span>[field:typename/]</span></div></a>
+                </div>
+			{/dede:autochannel}
+                <div class="img-r-b">
+				{dede:arclist  flag='' typeid='29' row='' col='' titlelen='' infolen='' imgwidth='277' imgheight='200' listtype='' orderby='sortrank'  keyword='' limit='0,2'}
+                    <div class="imga">[field:image/]</div>
+				{/dede:arclist}
+                </div>
+				
+            </div>
+        </div>
+        <div class="commun" style="overflow:hidden;width:1100px;height:400px;">
+		{dede:arclist  flag='' typeid='30' row='' col='' titlelen='200' infolen='' imgwidth='545' imgheight='400' listtype='' orderby='sortrank'  keyword='' limit='0,2'}
+            <div class="img_l" style="background:url([field:litpic/]) no-repeat scroll 0 0 / 100% 100%;float: left;transition: all 0.5s ease 0s;">
+                <div class="type"> <span>[field:typelink/]</span></div></a>
+                <p>
+                   [field:title/]
+                </p>
+                <div class="more">
+                    <a href="[field:arcurl/]">查看更多</a>
+                </div>
+            </div>
+			<div style="float:left;width:10px;height:400px;"></div>
+		{/dede:arclist}
+        </div>
+		<div class="system" style="overflow:hidden;width:1100px;height:400px;">
+		{dede:arclist  flag='' typeid='31' row='' col='' titlelen='200' infolen='' imgwidth='545' imgheight='400' listtype='' orderby='sortrank'  keyword='' limit='0,2'}
+            <div class="img_l" style="background:url([field:litpic/]) no-repeat scroll 0 0 / 100% 100%;float: left;transition: all 0.5s ease 0s;">
+                <div class="type"> <span>[field:typelink/]</span></div></a>
+                <p>
+                   [field:title/]
+                </p>
+                <div class="more">
+                    <a href="[field:arcurl/]">查看更多</a>
+                </div>
+            </div>
+			<div style="float:left;width:10px;height:400px;"></div>
+		{/dede:arclist}
+        </div>
+		<div class="marketing" style="overflow:hidden;width:1100px;height:400px;">
+		{dede:arclist  flag='' typeid='32' row='' col='' titlelen='200' infolen='' imgwidth='545' imgheight='400' listtype='' orderby='sortrank'  keyword='' limit='0,2'}
+            <div class="img_l" style="background:url([field:litpic/]) no-repeat scroll 0 0 / 100% 100%;float: left;transition: all 0.5s ease 0s;">
+                <div class="type"> <span>[field:typelink/]</span></div></a>
+                <p>
+                   [field:title/]
+                </p>
+                <div class="more">
+                    <a href="[field:arcurl/]">查看更多</a>
+                </div>
+            </div>
+			<div style="float:left;width:10px;height:400px;"></div>
+		{/dede:arclist}
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    //导航服务
+    $('.serviceBtn').click(function(){
+        if(!$(this).hasClass('on')){
+            $(this).addClass('on');
+            $(this).next().show();
+        }else {
+            $(this).removeClass('on');
+            $(this).next().hide()
+        }
+    })
+</script>

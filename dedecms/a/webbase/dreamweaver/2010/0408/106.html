@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=106";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+            <li>
+                <a href="../tpls/joinUs.html">加入我们</a>
+            </li>
+            <li>
+                <a href="../tpls/contactUs.html">联系我们</a>
+            </li>
+        </ul>
+        <h1>Dreamweaver</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>{dede:招聘启事 标题='织梦大家庭新年招募第一波'}</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2010-04-08 14:26
+				<small>来源:</small>
+				织梦官方 
+				<small>作者:</small>
+				织梦官方 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=106&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			<p><font size="3">2010年，新一年，新征程……<br />
+织梦大家庭招募能够共同创业的新伙伴。<br />
+首要特点：织梦需要的是创业伙伴，而非普通员工。织梦是一个大家共同的创业平台！繁华浮躁的时代，我们需要的是『不浮躁』的人。<br />
+我们特制作了这份具有织梦特色的招聘模板页面给熟悉DedeCMS的GGJJDDMM，你如果条件符合并有意加入，请立即联系我们：<br />
+P.S. 如果目前你还是个新手，但你非常喜爱DedeCMS并且有足够的自信和学习力，我们同样的给予机会让你加入到织梦大家庭一起参与创业！<br />
+我们为加入织梦团队的伙伴，提供住宿，让大家在上海吃住无忧。<br />
+<br />
+&nbsp;---------------------------------------------------- <br />
+|&nbsp;&nbsp;&nbsp; E-mail:hr#dedecms.com(#<=>@)&nbsp;&nbsp;&nbsp; | <br />
+&nbsp;---------------------------------------------------- <br />
+&nbsp; <br />
+{dede:招聘启事 标题='织梦大家庭新年招募第一波' 工作地点='上海' 版本='1.0.1' 时间='2010+'} <br />
+&nbsp; 声明 织梦人 <br />
+&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥性别 = '不限'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥年龄 = '不限'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥性格 = '开朗'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥学历 = '英雄不问出处';<br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥团队意识 = '强'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥学习能力 = '非常强'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥人品 = '好'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥烟酒 = '没瘾';<br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥薪资 = '人有多大胆,地有多大产'; <br />
+&nbsp; } <br />
+&nbsp; <br />
+&nbsp; /*****我们需要这样的策划人员*****/ <br />
+&nbsp; 文案策划 继承 织梦人 <br />
+&nbsp; { <br />
+&nbsp;&nbsp;&nbsp; ￥招聘人数 = '2+'; <br />
+&nbsp;&nbsp;&nbsp; ￥描述 = ' <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.基本的要求可以查看"声明 织梦人{}",如果您还符合以上的要求则可以继续阅读下面部分的内容; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.有基本的市场营销观念,能够了解用户并且能够主动挖掘用户潜在商业价值; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.有较强的文字组织能力,能够通过文字有条理的表达、沟通； <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.对网站建设方面比较了解，能够知道网站建设中一些基本的流程，并且能够准确地形成文档同用户或技术团队沟通； <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.熟悉各种文案编辑工具的使用，例如：Axure、Dreamweaver、Visio等，能够制作线框图，流程图者优先考虑； <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.有制定规范的能力，善于发现问题，分析问题，能够解决问题者最佳； <br />
+&nbsp;&nbsp;&nbsp; '; <br />
+&nbsp; } <br />
+&nbsp; <br />
+&nbsp; /*****这样的是织梦喜欢的网站制作人员*****/ <br />
+&nbsp; 网站制作 继承 织梦人 <br />
+&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <人数>3+</人数> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <熟悉DedeCMS>是</熟悉DedeCMS> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <织梦标签>会</织梦标签> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <技术> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <XML>必须</xml> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <HTML>必须</HTML> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <CSS>必须</CSS> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Javascript>必须</Javascript> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <JSON>最佳</JSON> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Ajax>最佳</Ajax> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </技术> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <熟悉软件><Photoshop/><Fireworks/><Dreamweaver/><Illustrator/></熟悉软件> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <跨平台浏览器兼容性>有经验</跨平台浏览器兼容性> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Web标准化>有经验</Web标准化> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <沟通能力>很好</沟通能力> <br />
+&nbsp; } <br />
+&nbsp; <br />
+&nbsp; /*****我们需要怎样一个程序员*****/ <br />
+&nbsp; 程序员 继承 织梦人 <br />
+&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥人数 = 5+; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥编程经验 > 3年; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥技术 in ('PHP', 'MySQL', 'Linux', 'C/C++', '其它'); <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥优先 = (￥熟悉 == 'DedeCMS')? '是' : 'Out'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥自主开发产品 = '可以'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥程序员->编码() <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥代码习惯 = '良好'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥结构 = '清晰'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥命名 = '规范'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥逻辑 = '强'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥代码冗余率 = '低'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥程序员->学习() <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥同类产品 = '熟悉'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥UI/UE = '经常研究'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥用户习惯 = '了解'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥新技术 = '非常关注'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp; ￥程序员->开发() <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥MySQL索引优化 = '具有'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥查询优化和存储优化 = '有经验'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥PHP缓存技术 = '有经验'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ￥静态化设计 = '有经验'; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp; } <br />
+&nbsp; <br />
+{/dede:招聘启事 CopyRight='2007-2010 DesDev INC.'} </font><br />
+&nbsp;</p>
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',106)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',106)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(106);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/72.html'>在Dreamweaver中为插入的Flash添加透明</a> </li>
+     <li>下一篇：没有了 </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>新闻中心-深圳市凯利盈科技有限公司</title>
+<meta name="keywords" content="" >
+<meta name="description" content="" >
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/Css/base.css"/>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/Css/NewsCore.css"/>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/JS/jquery-1.8.0.min.js"></script>
+
+
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+
+<script>
+function multi(pagenum,tagid)
+{
+var taget_obj = document.getElementById(tagid);
+var taget_obj_page = document.getElementById("page_"+tagid);
+myajax = new DedeAjax(taget_obj,false,false,'','','');
+myajax.SendGet2("/plus/arcmulti.php?mtype=0&pnum="+pagenum+'&tagid='+tagid);
+myajax = new DedeAjax(taget_obj_page,false,false,'','','');
+myajax.SendGet2("/plus/arcmulti.php?mtype=1&pnum="+pagenum+'&tagid='+tagid);
+DedeXHTTP = null;
+}
+</script>
+</head>
+<body>
+<div class="header">
+	<div class="header_t">
+		<div class="header_t_content">
+			<span>欢迎来到深圳市凯利盈科技有限公司！</span>
+			<font><a>收藏我们</a><a class="nobd">在线留言</a></font>
+		</div>
+	</div>
+	<div class="header_logo">
+		<div class="logo_L">
+			<img src="{dede:global.cfg_templets_skin/}/Images/base/logo.gif"/>
+		</div>
+		<div class="logo_R">
+			<img src="{dede:global.cfg_templets_skin/}/Images/base/hotline.gif"/>
+		</div>
+	</div>
+	<div class="header_banner">
+		<div class="header_nav">
+			<ul>
+					<li><a href="{dede:global.cfg_cmsurl/}/">首页</a></li>
+					{dede:channel type='top' row='2' currentstyle="<li><a href='~typelink~' class='thisclass'>~typename~</a> </li>"} 
+
+
+					<li><a href="[field:typelink/]">[field:typename/]</a></li>
+					
+					{/dede:channel}
+			</ul>
+            
+		</div>
+		<img src="{dede:global.cfg_templets_skin/}/images/base/banner.jpg"/>
+	</div>
+</div>
+<div class="centainer">
+		<div class="news">
+            <div id="newscore" class="newscore">
+			{dede:channel type='son' row='3' typeid="17" currentstyle="<li><a href='~typelink~' class='thisclass'>~typename~</a> </li>"} 
+
+
+                <a no="" >[field:typename/]</a>
+                
+				
+			{/dede:channel} 
+			<script>				
+				$('.news a').eq(0).attr('no','1');
+				$('.news a').eq(0).attr('id','news_c');
+				$('.news a').eq(1).attr('no','2');
+				$('.news a').eq(2).attr('no','3');
+				$('#newscore a')
+			</script>
+
+            </div>
+            <div id="news_list" class="news_list">
+                <div id="news_center" class="news_center">
+					<ul>
+					{dede:arclist  flag='h' typeid='18' row='5' col='' titlelen='2000' infolen='' imgwidth='256' imgheight='172' listtype='' orderby='' keyword='' limit='0,1',tagid="index" pagesize=="3"}
+				<li><a href="[field:arcurl/]" >[field:title/]</a></li>
+				<p>[field:info/]...</p>
+
+						<li>
+							<a href="NewsInfo.html" class="news_img">
+								[field:image/]
+							</a>
+							<span>
+								<a href="[field:arcurl/]">
+									<h1>[field:title/]</h1>
+								</a>
+								<a href="[field:arcurl/]">
+									<p>
+										[field:shorttitle/]
+									</p>	
+								</a>
+								<i>[field:pubdate function="MyDate('Y-m-d H:i:s',@me)"/]</i>
+							</span>
+							<u class="clear"></u>
+						</li>
+						
+					{/dede:arclist}
+
+						
+						<li class="clear"></li>
+					</ul>
+                </div>
+                <div>
+					<ul>
+					{dede:arclist  flag='h' typeid='19' row='5' col='' titlelen='2000' infolen='' imgwidth='256' imgheight='172' listtype='' orderby='' keyword='' limit='0,1'}
+
+
+						<li>
+							<a href="NewsInfo.html" class="news_img">
+								[field:image/]
+							</a>
+							<span>
+								<a href="[field:arcurl/]">
+									<h1>[field:title/]</h1>
+								</a>
+								<a href="[field:arcurl/]">
+									<p>
+										[field:shorttitle/]
+									</p>	
+								</a>
+								<i>[field:pubdate function="MyDate('Y-m-d H:i:s',@me)"/]</i>
+							</span>
+							<u class="clear"></u>
+						</li>
+						
+					{/dede:arclist}
+
+						
+						<li class="clear"></li>
+					</ul>
+                </div>
+                <div>
+					<ul>
+					{dede:arclist  flag='h' typeid='20' row='5' col='' titlelen='2000' infolen='' imgwidth='256' imgheight='172' listtype='' orderby='' keyword='' limit='0,1'}
+
+
+						<li>
+							<a href="NewsInfo.html" class="news_img">
+								[field:image/]
+							</a>
+							<span>
+								<a href="[field:arcurl/]">
+									<h1>[field:title/]</h1>
+								</a>
+								<a href="[field:arcurl/]">
+									<p>
+										[field:shorttitle/]
+									</p>	
+								</a>
+								<i>[field:pubdate function="MyDate('Y-m-d H:i:s',@me)"/]</i>
+							</span>
+							<u class="clear"></u>
+						</li>
+						
+					{/dede:arclist}
+
+						
+						<li class="clear"></li>
+					</ul>
+                </div>
+            </div>
+        </div>
+		 
+
+
+		<div class="a_list">
+dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="2"/}
+			<!--
+			{dede:pagelist istitem=”index,pre,next,end,option,info,” listsize=”1″/}
+			<a class="a_frist">上一页</a>
+			<a class="a_number">1</a>
+			<a class="a_number">2</a>
+			<a class="a_number">3</a>
+			<a class="a_number">4</a>
+			<a class="a_number">5</a>
+			<a class="a_number">6</a>
+						<a class="a_last">末页</a>
+			<a class="a_down">下一页</a>
+			<a>[field:description/]...</a>
+			-->
+			<ul>
+			{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="3"/}
+			</ul>
+
+
+		</div>
+    </div>
+</div>
+<div class="footer">
+	<p>
+		<a href="Index.html" class="footer_bg">首页</a>
+		<a href="NewsCore.html" class="footer_bg">新闻中心</a>
+		<a href="productCore.html" class="footer_a_br">产品中心</a>
+		<a href="ContactUs.html" >联系我们</a>
+	</p>
+	<p>
+		<span>联系电话：021-3988-5868</span>
+		<span>联系地址：上海市浦东新区世纪大道1号</span>
+		<span>邮箱：pcoject068@labwm.com</span>
+		<span>传真：021-39885868</span>
+	</p>
+	<p>版权所有：&nbsp;&nbsp;多迪网络科技有限公司</p>
+</div>
+<script language="javascript">
+	window.onload=function(){
+		var newscore=document.getElementById('newscore').getElementsByTagName('a');
+		var news_list=document.getElementById('news_list').getElementsByTagName('div');
+		function clear(){
+			for(var i=0;i<newscore.length;i++){
+				newscore.item(i).removeAttribute('id');
+				news_list.item(i).removeAttribute('id');
+			}	
+		}
+		for(var i=0;i<newscore.length;i++){
+			newscore.item(i).onclick=function(){
+				clear();
+				this.setAttribute('id','news_c')
+				var no=Number(this.getAttribute('no'));
+				news_list.item(no-1).setAttribute('id','news_center');
+			}
+		}
+	}
+</script>
+</body>
+</html>
