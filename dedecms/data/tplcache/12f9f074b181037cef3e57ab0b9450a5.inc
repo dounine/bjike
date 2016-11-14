@@ -1,0 +1,1 @@
+<a href="[field:typelink/]">详情 &gt;</a>

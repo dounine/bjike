@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>产品中心-深圳市凯利盈科技有限公司</title>
+<meta name="keywords" content="" >
+<meta name="description" content="" >
+<link rel="stylesheet" type="text/css" href="Css/base.css"/>
+<link rel="stylesheet" type="text/css" href="Css/ProductInfo.css"/>
+</head>
+<body>
+<div class="header">
+	<div class="header_t">
+		<div class="header_t_content">
+			<span>欢迎来到深圳市凯利盈科技有限公司！</span>
+			<font><a>收藏我们</a><a class="nobd">在线留言</a></font>
+		</div>
+	</div>
+	<div class="header_logo">
+		<div class="logo_L">
+			<img src="Images/base/logo.gif"/>
+		</div>
+		<div class="logo_R">
+			<img src="Images/base/hotline.gif"/>
+		</div>
+	</div>
+	<div class="header_banner">
+		<div class="header_nav">
+			<ul>
+				<li><a href="Index.html">首页</a></li>
+				<li><a href="AboutUs.html">关于我们</a></li>
+				<li><a href="NewsCore.html">新闻中心</a></li>
+				<li><a href="ProductCore.html">产品中心</a></li>
+				<li><a href="ContactUs.html">联系我们</a></li>
+			</ul>
+		</div>
+		<img src="images/base/banner.jpg"/>
+	</div>
+</div>
+<div class="centainer">
+	<div class="product">
+		<b id="pro_list" class="pro_list">
+			<a id="pro_list_01" no="1">二级管</a>
+			<a no="2">三级管</a>
+			<a no="3">场效能管</a>
+			<a no="4">控管</a>
+			<a no="5">晶体三极管</a>
+			<a no="6">其他三极管</a>
+			<a no="7">中高频放大三极管</a>
+		</b>
+		<div id="pro_info" class="pro_info">
+				<img src="Images/inner/product_info_01.jpg"/>
+				<p>产品分类： 贴片LED0603系列</p>
+				<p>产品规格：60*60*60</p>
+				<p>产品体积：60*60*60</p>
+				<p>产品波长：0.1mm</p>
+				<p>产品亮度：6</p>
+				<p>焊接温度：5000 0C</p>
+				<p>焊接时间：10s</p>
+				<p>商品名称：0603红普绿双色贴片LED</p>
+				<p>商品关键词：0603红绿光0603红绿灯贴片红黄绿双色灯贴片LED0603红绿双色发光二极管</p>
+				<p>产品适用范围及用途： 产品广泛应用于各类家电.电子表，电子台历，电子礼品，数码.通信.汽车电子.照明灯饰.电子玩具.交通指示.城市亮化工程等相关生产企业</p>
+				<p>产品特点</p>
+				<p>1、本公司采用台湾全自动固晶机，焊线机，保证产品的一致性，全系产品采用台湾芯片，耐高温环氧树脂胶水，纯金线制成，保证了产品的稳定性</p>
+				<p>2、公司产品全系列通过了ROHSReachEN62471(EN60825)认证!公司一般纳税人企业，可开17%增值发票。</p>
+				<p>客户利益</p>
+				<p>1、产品一致性好，亮度高，质量稳定解决客户对产品质量的忧虑。</p>
+				<p>2、每天500-800K的产量，保证交期快捷。</p>
+				<p>3、同等质量，价格最优惠!强大的销售团队，给客户至高无上的服务!</p>
+				<p>欢迎社会各界前来参观、指导，拓展光电竭诚期待与您的合作!</p>
+				<div class="clear"></div>
+		</div>
+		<div class="a_list">
+				<a href="#">上一件：贴片LED0603系列</a>
+				<a href="#">下一件：贴片LED0603系列</a>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<p>
+		<a href="Index.html" class="footer_bg">首页</a>
+		<a href="NewsCore.html" class="footer_bg">新闻中心</a>
+		<a href="productCore.html" class="footer_a_br">产品中心</a>
+		<a href="ContactUs.html" >联系我们</a>
+	</p>
+	<p>
+		<span>联系电话：021-3988-5868</span>
+		<span>联系地址：上海市浦东新区世纪大道1号</span>
+		<span>邮箱：pcoject068@labwm.com</span>
+		<span>传真：021-39885868</span>
+	</p>
+	<p>版权所有：&nbsp;&nbsp;多迪网络科技有限公司</p>
+</div>
+<script language="javascript">
+	window.onload=function(){
+		var list=document.getElementById('pro_list').getElementsByTagName('a');
+		function clear(){
+			for(var i=0;i<list.length;i++){
+				list.item(i).removeAttribute('id');
+			}
+		}
+		for(var i=0;i<list.length;i++){
+			list.item(i).onmouseover=function(){
+				clear();
+				this.setAttribute('id','pro_list_01');
+			}
+		}
+}
+</script>
+</body>
+</html>

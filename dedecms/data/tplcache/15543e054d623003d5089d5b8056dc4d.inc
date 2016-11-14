@@ -1,0 +1,1 @@
+<div class="imga">[field:image/]</div>

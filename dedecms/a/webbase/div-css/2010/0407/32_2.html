@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=32";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+            <li>
+                <a href="###">加入我们</a>
+            </li>
+            <li>
+                <a href="../tpls/contactUs.html">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>DIV&CSS</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>20个让你学习并精通CSS的网站(2)</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2010-04-07 09:32
+				<small>来源:</small>
+				 
+				<small>作者:</small>
+				 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=32&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			</p>
+<h3>11.</h3>
+<p><img height="180" width="500" alt="" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395104160-11W24.png" title="w3c标准-教程" class="alignnone size-medium wp-image-1767" /><br />
+W3CSchools有一个CSS部分，内容涵盖了初级到高级的CSS主题。</p>
+<h3>12.</h3>
+<p><img height="180" width="500" alt="CSS禅意花园" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395140240-125c9.jpg" title="css_zen_garden" class="alignnone size-medium wp-image-1768" /><br />
+css Zen Garden给我们展示了CSS是怎样工作的，使用相同的HTML文件，设计师提交的外部样式来美化这个文件。用Web Developer Tool就可以检查CSS是如何进行布局工作的。这个网站在7个最好的网上CSS资源里也有介绍</p>
+<h3>13.</h3>
+<p><img height="180" width="500" alt="CSS-实例" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F603951N930-135T4.png" title="CSS-实例" class="alignnone size-medium wp-image-1769" /><br />
+MaxDesign拥有Russ Weakley的一套CSS精彩教程，在Listmatic里，教你使用CSS格式化列表，在Floatutorial里，介绍floating元素的知识。</p>
+<h3>14.</h3>
+<p><img height="180" width="500" alt="CSS-网站推荐" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395220J0-14U47.png" title="CSS-网站推荐" class="alignnone size-medium wp-image-1770" /><br />
+CSSEasy.com网站的口号是”学习CSS的时髦方法”，拥有丰富的经验及创意分享，让我们更好地了解CSS。这个网站的迟早也会派上用场。</p>
+<h3>15.&nbsp;</h3>
+<p><img height="180" width="500" alt="CSS-教程" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F603952EB0-154307.png" title="CSS-教程" class="alignnone size-medium wp-image-1771" /><br />
+CSS-Discuss是一个CSS爱好者社区，而 CSS-Discuss Wiki是关于CSS的应用收集。</p>
+<h3>16.</h3>
+<p><img height="180" width="500" alt="网页设计-CSS" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395332I0-164B4.png" title="网页设计-CSS" class="alignnone size-medium wp-image-1772" /><br />
+Web Design from Scratch有一章节是关于CSS的，涵盖了CSS的基本概念。 其中的Introduction to CSS对初学者很有帮助。</p>
+<h3>17.</h3>
+<p><img height="180" width="500" alt="css_技巧" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395410150-1J327.jpg" title="css_技巧" class="alignnone size-medium wp-image-1773" /><br />
+CSS-Tricks是一个专注CSS的博客</p>
+<h3>18.</h3>
+<p><img height="180" width="500" alt="css" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395460230-1T253.png" title="css" class="alignnone size-medium wp-image-1774" /><br />
+The CSS tag on Delicious是关于优秀CSS设计的链接收集，亮点就是让我们知道哪些好东西在被人看。</p>
+<h3>19.&nbsp;</h3>
+<p><img height="180" width="500" alt="css-教程" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60395500T0-1c215.png" title="css-教程" class="alignnone size-medium wp-image-1775" /><br />
+SitePoint有一个CSS部分，专门讨论入门水平的CSS主题</p>
+<h3>20.&nbsp;</h3>
+<p><img height="180" width="500" alt="css_dog" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F6039554520-203041.png" title="css_dog" class="alignnone size-medium wp-image-1776" /><br />
+CSSDog有一部分为初学者与高级开发者设计的，其中的开发经验及参考，个人认为是最有价值的部分。</p>
+<p>英文原文：</p>
+            <p align="center"> </p>
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',32)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',32)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(32);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/a/webbase/div-css/2010/0407/31.html'>使用CSS为图片添加更多趣味的5种方法</a> </li>
+     <li>下一篇：<a href='/dedecms/a/webbase/div-css/2010/0407/33.html'>你应当了解的5个CSS3新技术</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=68";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+            <li>
+                <a href="###">加入我们</a>
+            </li>
+            <li>
+                <a href="../tpls/contactUs.html">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>Dreamweaver</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>使用Dreamweaver来详细了解CSS的多样性</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2010-04-07 09:39
+				<small>来源:</small>
+				 
+				<small>作者:</small>
+				 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=68&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			说明：<span style="COLOR: red">√</span>属性继承　×不继承　<br />　　　[　]为适应元素类型　无[　]标出为所有元素<br /><br /><span style="COLOR: red">字体</span><br /><span style="COLOR: red">√</span><strong>Font-family</strong><br /><span style="COLOR: red">√</span><strong>Font-size</strong> 9 10 12 14 16 18 24 36 xx-small x-small small medium large x-large xx-large smaller larger<br /><span style="COLOR: red">√</span><strong>Color</strong><br /><span style="COLOR: red">√</span><strong>Font-style</strong> normal italic oblique<br /><span style="COLOR: red">√</span><strong>Line-height</strong> nomal<br /><span style="COLOR: red">√</span><strong>Font-weight</strong> normal bold bolder lighter 100 200 300 400 500 600 700 800 900<br /><span style="COLOR: red">√</span><strong>Text-transform</strong> capitalize uppercase lowercase none<br /><span style="COLOR: red">√</span><strong>Font-variant</strong> normal small-caps<br />×<strong>Text-decoration</strong> none underline overline line-through blink<br /><span style="COLOR: red">√</span><strong>Font</strong><br /><br /><span style="COLOR: red">背景</span><br />×<strong>Background-color</strong><br />×<strong>Background</strong><br />×<strong>Background-image</strong><br />×<strong>Background-attachment</strong> fixed scroll<br />×<strong>Background-repeat</strong> no-repeat repeat repeat-x repeat-y<br />×<strong>Background-position</strong><span style="COLOR: brown">[块、替换]</span><br /><br /><span style="COLOR: red">区块</span><br /><span style="COLOR: red">√</span><strong>Word-spacing</strong> normal<span style="COLOR: brown">[块]</span><br /><span style="COLOR: red">√</span><strong>Letter-spacing</strong> normal<br />×<strong>Vertical-align</strong> baseline sub super top text-top middle bottom text-bottom<span style="COLOR: brown">[内]</span><br /><span style="COLOR: red">√</span><strong>Text-align</strong> left right center justify<span style="COLOR: brown">[块]</span><br />×<strong>Text-indent</strong><span style="COLOR: brown">[块]</span><br />×<strong>White-space</strong> normal pre nowrap<span style="COLOR: brown">[块]</span><br />×<strong>Display</strong> inline block list-item run-in compact marker table inline-table table-row-group table-header-ground table-footer-ground table-row table-column-ground table-column table-cell table-caption none<br /><br /><span style="COLOR: red">边框</span><br />×<strong>Border</strong><br />×<strong>Border-top-color</strong><br />×<strong>Border-top-style</strong> none solid dashed dotted double groove ridge inset outset<br />×<strong>Border-top-width</strong> thin medium thick<br />×<strong>Border-top-Right</strong><br />×<strong>Border-top-Bottom</strong><br />×<strong>Border-top-Left</strong><br />×<strong>Border-top</strong><br />×<strong>Border-right</strong><br />×<strong>Border-bottom</strong><br />×<strong>Border-left</strong><br />×<strong>Border-color</strong><br />×<strong>Border-style</strong><br />×<strong>Border-width</strong><br /><br /><span style="COLOR: red">方框</span><br />×<strong>Width</strong> auto px pt in cm mm pc em ex %<span style="COLOR: brown">[块、替]</span><br />×<strong>Height</strong> auto<span style="COLOR: brown">[块、替]</span><br />×<strong>Float</strong> left right none<br />×<strong>Clear</strong> left right both none<br />×<strong>Margin</strong><br />×<strong>Margin-top</strong><br />×<strong>Margin-right</strong><br />×<strong>Margin-bottom</strong><br />×<strong>Margin-left</strong><br />×<strong>Padding</strong><br />×<strong>Padding-top</strong><br />×<strong>Padding-right</strong><br />×<strong>Padding-bottom</strong><br />×<strong>Padding-left</strong><br /><br /><span style="COLOR: red">列表</span><br />×<strong>List-style-type</strong> disc circle square decimal lower-roman upper-roman lower-alpha upper-alpha onne<span style="COLOR: brown">[显示值为list-item的元素]</span><br />×<strong>List-style-Image</strong><span style="COLOR: brown">[显示值为list-item的元素]</span><br />×<strong>List-style-position</strong> inside outside<span style="COLOR: brown">[显示值为list-item的元素]</span><br /><br /><span style="COLOR: red">定位</span><br />×<strong>Position</strong> absolute relative static<br />×<strong>Visiblility</strong> visible hidden inherit<br />×<strong>Height</strong> auto<br />×<strong>Left</strong> auto<br />×<strong>Top</strong> auto<br />×<strong>Right</strong> auto<br />×<strong>Bottom</strong> auto<br />×<strong>z-index</strong> auto<span style="COLOR: brown">[定位元素]</span><br />×<strong>overflow</strong> visible hidden scroll auto<span style="COLOR: brown">[块、替]</span><br />×<strong>clip</strong> auto<br />
+            <p align="center"> </p>
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',68)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',68)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(68);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/67.html'>网页禁止右键菜单及禁止全选代码</a> </li>
+     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/69.html'>用Dreamweaver合理为为网页进行优化</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

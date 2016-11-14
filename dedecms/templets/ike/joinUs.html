@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加入我们</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/join.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+</head>
+<style>
+	
+	.pagination-wrapper{
+		margin: 30px 0 20px 30% ;
+	}
+	.pagination{
+		height: 34px;
+		text-align: center;
+	}
+	.pagination li {
+		display: inline-block;
+		height: 34px;
+		margin-right: 5px;
+		border: 1px solid #dddddd;
+		line-height: 32px;
+		padding: 0 24px;
+		font-size: 16px;
+	}
+	.pagination li a{
+		display: block;
+		height: 32px;
+		line-height: 32px;
+		font-size: 16px;
+		color: #555555;
+		text-decoration: none;
+	}
+	.pagination li a:hover{
+		background:#f5f5f5;
+		color:#0099ff;
+	}
+	.pagination li.thisclass {
+		background: #09f;
+		color: #fff;
+	}
+	.pagination li.thisclass a,.pagination li.thisclass a:hover{
+		background: transparent;
+		border-color: #09f;
+		color: #fff;
+		cursor: default;
+	}
+	</style>
+<body>
+{dede:include filename="header.htm"/}
+<div class="joinCon">
+    <div class="joinsear">
+        <div class="sear_input">
+            <span>工作地点</span>
+            <select>
+			{dede:infolink}
+                <option value="gz">[field:linkalltype/]</option>
+			{/dede:infolink}
+            </select>
+        </div>
+		<div class="sear_input">
+			{dede:infoguide}
+
+			<form name='infoguide' method='get' action='/dedecms/plus/list.php'>
+
+
+			<input type='hidden' name='tid' value='[field:typeid /]' />
+
+			<input type='hidden' name='channelid' value='-8' />
+
+			<span class='infosearchtxt'>关键字：</span><span><input type='text' name='keyword' value='' class="ipt-txt input_join" /></span>
+
+			<button><input type='submit' value='' class="btn-2" style='cursor:pointer' /></button>
+			</form>
+
+			{/dede:infoguide}
+			
+		</div>
+		
+    <div class="t_head">
+        <ul>
+            <li>职位名称</li>
+            <li>工作地点</li>
+            <li>薪资</li>
+        </ul>
+    </div>
+    <table id="join">
+        <tbody>
+		{dede:list pagesize='20'}
+            <tr>
+                <td>
+                    <a href="[field:arcurl/]" title="jav">
+                        [field:title/]
+                    </a>
+                </td>
+                <td>广州</td>
+                <td>面议</td>
+            </tr>
+		{/dede:list}
+        </tbody>
+    </table>
+	<div class="pagination-wrapper">
+			<div class="pagination">
+			{dede:pagelist listsize='5' listitem='info,index,end,pre,next,pageno'/}
+			</div>
+	</div> 
+</div>
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
