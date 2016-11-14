@@ -1,0 +1,121 @@
+*{
+  margin:0;padding:0;font-size:12px;font-family:'SimHei';
+  a{text-decoration:none}
+  ul li{list-style:none}
+}
+
+
+header{
+  color:#f3f3f3;
+  .headtop{
+    background:#111;
+    .headtop_con{
+      width:1100px;
+      margin:0 auto;
+      height:80px;
+      line-height:80px;
+      .cope{
+        vertical-align:middle;
+      }
+      .head_r{
+        float:right;
+        .wx{
+          float:left;
+          margin-right:30px;
+          position:relative;
+          &:hover .twowm{
+            display:block;
+          }
+          a{
+            color:#fff;
+            img{
+              vertical-align:middle;
+              margin-right:8px;
+            }
+          }
+          .twowm{
+            display:none;
+            position:absolute;
+            top:83px;
+            height:100px;
+            img{
+
+              width:100px;
+              height:100px;
+            }
+        }
+        }
+        .tel{
+          float:left;
+          background:url("../img/public/tel.png") no-repeat 0 22px ;
+          padding-left:10px;
+          color:#fff;
+        }
+      }
+    }
+  }
+  nav{
+    clear:both;
+    width:1100px;
+    height:300px;
+    margin: auto;
+    background:url("../img/public/citybgm.png") no-repeat  0 40px;
+    .logo{
+      float:left;
+      img{
+        margin-top:9px;
+        width:254px;
+      }
+    }
+    .mainnav{
+      float:right;
+      margin-top:130px;
+      &>li{
+        float:left;
+        height:30px;
+        width:80px;
+        margin:0 15px;
+        text-align:center;
+        a{
+          color:#333;
+          font-size:16px;
+          height:30px;
+          line-height:30px;
+          i{
+            display:inline-block;
+            width:8px;
+            height:4px;
+            background:url("../img/public/arrows_down.png")no-repeat ;
+            background-size:100% 100%;
+            margin-bottom:5px;
+          }
+        }
+        .subnav{
+         display:none;
+          border:1px solid #e6e6e6;
+          width:150px;
+          height:130px;
+          margin-top:20px;
+          margin-left:12px;
+          background:#fff;
+        li{
+          text-align:left;
+          text-indent:20px;
+          a{
+            font-size:12px;
+          }
+        }
+        }
+      }
+    }
+    h1{
+      font-size:30px;
+      color:#333;
+      clear:both;
+      padding-top:20px;
+
+
+    }
+  }
+
+}
