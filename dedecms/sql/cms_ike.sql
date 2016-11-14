@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-14 14:25:44
+Date: 2016-11-14 18:16:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -329,7 +329,7 @@ CREATE TABLE `ike_admin` (
 -- ----------------------------
 -- Records of ike_admin
 -- ----------------------------
-INSERT INTO `ike_admin` VALUES ('1', '10', 'admin', 'bd0e10d51a6ed9313da5', 'admin', '', '', '', '1479104225', '127.0.0.1');
+INSERT INTO `ike_admin` VALUES ('1', '10', 'admin', '7992e268962384eb17fa', 'bjike', '', '', '', '1479108875', '127.0.0.1');
 INSERT INTO `ike_admin` VALUES ('9', '1', 'ike', '7992e268962384eb17fa', 'ike', '', '', '33,17,20,21,23,24,25,26,27,28,22,30,31,32,29,34', '1479104458', '127.0.0.1');
 
 -- ----------------------------
@@ -347,8 +347,8 @@ CREATE TABLE `ike_admintype` (
 -- ----------------------------
 -- Records of ike_admintype
 -- ----------------------------
-INSERT INTO `ike_admintype` VALUES ('1', '信息发布员', '1', 't_AccList a_AccNew a_AccList a_MyList a_MyEdit a_MyDel sys_MdPwd sys_Feedback sys_MyUpload plus_留言簿模块 ');
-INSERT INTO `ike_admintype` VALUES ('5', '频道管理员', '1', 't_AccList t_AccNew t_AccEdit t_AccDel a_AccNew a_AccList a_AccEdit a_AccDel a_AccCheck a_MyList a_MyEdit a_MyDel a_MyCheck co_AddNote co_EditNote co_PlayNote co_ListNote co_ViewNote spec_New spec_List spec_Edit sys_MdPwd sys_Log sys_ArcTj sys_Source sys_Writer sys_Keyword sys_MakeHtml sys_Feedback sys_Upload sys_MyUpload member_List member_Edit plus_站内新闻发布 plus_友情链接模块 plus_留言簿模块 plus_投票模块 plus_广告管理 ');
+INSERT INTO `ike_admintype` VALUES ('1', '信息发布员', '1', 't_AccList a_AccNew a_AccList a_MyList a_MyEdit a_MyDel sys_MdPwd sys_Feedback sys_MyUpload');
+INSERT INTO `ike_admintype` VALUES ('5', '频道管理员', '1', 't_AccList t_AccNew t_AccEdit t_AccDel a_AccNew a_AccList a_AccEdit a_AccDel a_AccCheck a_MyList a_MyEdit a_MyDel a_MyCheck co_AddNote co_EditNote co_PlayNote co_ListNote co_ViewNote spec_New spec_List spec_Edit sys_MdPwd sys_Log sys_ArcTj sys_Source sys_Writer sys_Keyword sys_MakeHtml sys_Feedback sys_Upload sys_MyUpload member_List member_Edit plus_友情链接模块 plus_投票模块 plus_广告管理 plus_留言簿模块 plus_站内新闻发布');
 INSERT INTO `ike_admintype` VALUES ('10', '超级管理员', '1', 'admin_AllowAll ');
 
 -- ----------------------------
@@ -429,7 +429,7 @@ CREATE TABLE `ike_archives` (
   `arcrank` smallint(6) NOT NULL DEFAULT '0',
   `click` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `money` smallint(6) NOT NULL DEFAULT '0',
-  `title` char(90) NOT NULL DEFAULT '',
+  `title` char(60) NOT NULL DEFAULT '',
   `shorttitle` char(36) NOT NULL DEFAULT '',
   `color` char(7) NOT NULL DEFAULT '',
   `writer` char(20) NOT NULL DEFAULT '',
@@ -2403,7 +2403,7 @@ CREATE TABLE `ike_member` (
 -- ----------------------------
 -- Records of ike_member
 -- ----------------------------
-INSERT INTO `ike_member` VALUES ('1', '个人', 'admin', 'd7de0bd0e10d51a6ed9313da5972bbf6', 'admin', '男', '100', '0', '0', '0', '', '10000', '10', '0', '', '0', '', '1478310195', '', '1479104225', '127.0.0.1', '-1');
+INSERT INTO `ike_member` VALUES ('1', '个人', 'admin', '0659c7992e268962384eb17fafe88364', 'bjike', '男', '100', '0', '0', '0', '', '10000', '10', '0', '', '0', '', '1478310195', '', '1479108875', '127.0.0.1', '-1');
 INSERT INTO `ike_member` VALUES ('2', '个人', 'tianya', 'fcea920f7412b5da7be0cf42b8c93759', '天涯', '', '10', '0', '0', '0', 'tianya@dedecms.com', '115', '0', '2', '', '0', '', '1270622445', '127.0.0.1', '1270622445', '127.0.0.1', '-1');
 INSERT INTO `ike_member` VALUES ('3', '个人', 'wind', 'e10adc3949ba59abbe56e057f20f883e', '木林森', '', '10', '0', '0', '0', 'wind@dedecms.com', '100', '0', '2', '', '0', '', '1270623901', '127.0.0.1', '1270623901', '127.0.0.1', '-1');
 INSERT INTO `ike_member` VALUES ('4', '个人', 'like', 'e10adc3949ba59abbe56e057f20f883e', 'like', '', '10', '0', '0', '0', 'like@dedecms.com', '113', '0', '2', '', '0', '', '1270624079', '127.0.0.1', '1270624079', '127.0.0.1', '-1');
