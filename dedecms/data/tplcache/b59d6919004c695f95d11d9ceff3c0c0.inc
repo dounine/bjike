@@ -1,0 +1,1 @@
+<div class="imga">[filed:image/]</div>

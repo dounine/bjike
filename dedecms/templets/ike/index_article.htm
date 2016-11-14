@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/companyDy.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="companyDy">
+    <div class="comDyMain">
+        <ul class="list">
+            <li>
+                <img src="../img/about/picture1.png" >
+                <div class="list_a">
+                    <a href="javascript:void(0)" >
+                        <h2>中秋福利</h2>
+                    </a>
+                    <a href="javascript:void(0)" >
+                        <p>又是一年月满时，多年来，艾佳始终秉承“点滴做起，追求完善”的公司理念，为员工创造和谐、富有激情的工作环境。艾佳获得的每一分成绩都离不开员工们的共同努力。
+
+                        </p>
+                    </a>
+                </div>
+                <div class="readcount">
+                    <div class="_date">
+                        2016-01 <p>15</p>
+                    </div>
+                    <div class="looktime">查看：<span>5201</span>次</div>
+                </div>
+            </li>
+
+
+        </ul>
+        <div class="page">
+            <a class="last" href="javascript:void(0) "><span>&lt;</span> 上一页</a>
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)">1</a>
+                </li>
+                <!--<li>-->
+                    <!--<a href="javascript:void(0)">2</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="javascript:void(0)">3</a>-->
+                <!--</li>-->
+            </ul>
+            <a class="next" href="javascript:void(0) ">下一页 <span>&gt;</span></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="../img/public/yinhe.png"></li>
+            <li><img src="../img/public/inrogo.png" alt=""></li>
+            <li><img src="../img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="../img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.page ul li a').click(function(){
+            $('.page ul li').removeClass('active');
+            $(this).parent().addClass('active')
+        });
+        $('.page .last').click(function(){
+            var lastIndex = $('.page .active').index();
+            if(lastIndex==0){
+                lastIndex=0;
+            }else {
+                lastIndex--
+            }
+            $('.page ul li').eq(lastIndex).addClass('active').siblings('li').removeClass('active');
+        });
+        $('.page .next').click(function(){
+            var nextIndex = $('.page .active').index();
+            $('.page ul li').eq(nextIndex+1).addClass('active').siblings('li').removeClass('active');
+        });
+    })
+</script>

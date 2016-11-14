@@ -1,0 +1,1 @@
+<a href="[field:arcurl/]">详情 &gt;</a>

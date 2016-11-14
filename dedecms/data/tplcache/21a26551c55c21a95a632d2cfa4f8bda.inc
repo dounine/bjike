@@ -1,0 +1,1 @@
+<option value="gz">[field:linkallplace/]</option>

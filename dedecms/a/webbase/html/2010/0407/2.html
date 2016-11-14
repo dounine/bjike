@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
+    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
+    <script src="/dedecms/templets/ike/js/index.js"></script>
+	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=2";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+</head>
+<style>
+	.comDyMain h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+	.comDyMain p{
+		color: #898787;
+		font-size: 14px;
+		line-height: 2;
+		text-indent: 2em;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经点击过，请勿重新点击 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<body>
+<header>
+    <div class="headtop">
+        <div class="headtop_con">
+            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <div class="head_r">
+                <div class="wx">
+                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                </div>
+                <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <ul class="mainnav">
+            <li>
+                <a href="/dedecms/">首页</a>
+            </li>
+            <li>
+			<a href='/dedecms/ike_web/about/'>关于我们</a>
+
+            </li>
+            <li class="serBtn">
+			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+                <ul class="subnav">
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                    </li>
+				
+                    <li>
+                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                    </li>
+				
+
+                </ul>
+            </li>
+            <li>
+                <a href="###">加入我们</a>
+            </li>
+            <li>
+                <a href="../tpls/contactUs.html">联系我们</a>
+            </li>
+        </ul>
+		<h1>
+		
+		</h1>
+		<h1>HTML</h1>
+    </nav>
+</header>
+<div class="companyDy viewbox">
+    <div class="comDyMain">
+
+			<h2>初学者：XHTML常用标签的基本应用指南</h2>
+			<div class="info"> 
+				<small>时间:</small>
+				2010-04-07 09:29
+				<small>来源:</small>
+				 
+				<small>作者:</small>
+				 
+				<small>点击:</small>
+				<script src="/dedecms/plus/count.php?view=yes&aid=2&mid=1" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			　一段时间以来，发现有很多人XHTML都不会用，不光是普通的初学者，有的程序员都不是很清楚该怎么写这个XHTML，我这里呢算是把一些常见的应用问题做一个总结，也算能使得大家能在沟通，合作上能形成默契。<br /><br />　　XHTML里有很多的标签，但是经常用到的也就是那么几个，也只要掌握这几个也就可以了。下面我们一一列举：div,p,span,ul,li,dl,dt,dd,a,img,h,strong,em<br /><br />　　div&nbsp;在我的脑子里我一直把他想作是一个瓶子或是箱子，我的感觉它挺硬的。这个div没有什么特性的意义，可以使用在很多地方，也就是说他可以装不同的东西。他的正确的写法是<div></div>必需要有封口。大家都用来做布局之用，也有用来作为存放文章形成段落，实际上，这个做法并不是很好，因为作为文章的分段自然有一个特定的标签来用。那就是下面要讲的<p></p>标签，不过用DIV来再整体的包住所有的段落。这是非常实用的。<br /><br />　　p&nbsp;这是一个有特定语义的标签，表示段落，是用来区分段落的。在大部分的浏览器中对P基本上都有一个上下的边距。但是没有行首缩进，因为行首缩进只是表示段落的方式但是不是一定或是必需的。所以在用P标签的时候如果需要可以针对P设定一下行首缩进，我是推荐在文章以外的地方不要使用P，因为P是有一定语义的，如果用在别的地方恐不合适。正确的写法是<p></p><br /><br />　　span&nbsp;这也是一个非常常用的标签，这个标签可以说与div很像，没有什么特定的意义，只是他是一个级联元素，不是块级元素。我一直把它看作是一个袋子，他不像箱子那样可以有自己的宽高，他的宽高只能随着内容的多少而定，所以很像是袋子。这个标签与div正好互补。<br /><br />　　ul,li&nbsp;这是一个列表，在列表中，除了UL还OL，不过我觉得OL有点像是鸡肋。因为UL通过CSS定义一样可以有OL的数字排序效果。所以一般我不推荐使用OL，有UL就可以了。UL是块级的，他的子级li也是块级标签。正确的写法是<ul><li>< /li></ul>&nbsp;LI标签是被UL标签包裹的，在UL标签里可以有无数个LI标签，LI标签不能独立使用。并且LI标签一定要封口，这不光是美观问题，对于后期的维护也很有好处。很多程序员都不喜欢把这个LI封口。UL列表的用处主要是列举出一维的，同一类型的数据。具体的比如使用在菜单上，文章中列数的一些条例等等。在列表中有一种特别的形式与UL是不一样的。那就是下面的DL<br /><br />　　dl,dt,dd&nbsp;这是一个很特别的三个标签的组合。这里的DT是指标题，DD是指内容。DL是包课他们的容器。正确的写法是<dl><dt>< /dt><dd></dd></dl>在DL里可以有很多组的DT，DD，当出现很多组的时候尽量是一个DT 配一个DD，如果DD中内容很多，可以在DD里加P标签配合使用。DL列表是一个非常好的列表形式，可以多加利用。<br /><br />　　a&nbsp;这表示链接，是一个特定属性的，也是网页中最为神奇的标签。因为它才让无数的网页都连在了一起。正确的写法是：<a&nbsp;href=""&nbsp;title=""> </a>其中的href是表示目标地址，TITLE是鼠标悬停提示文字，这是可有可无的。但是有必是利大于无。<br /><br />　　img&nbsp; 这是图片标签，也是个特定属性的标签。正常写法是：<img&nbsp;src=""&nbsp;alt=""&nbsp;title=""/>&nbsp;这里的src是目标地址， ALT与TITLE是替换文字，ALT是&nbsp;IE特定的，TITLE是其它浏览器的通用的。不过记得后面的反斜线那是一定要有的。<br /><br />　　H&nbsp; 这是一个系列的标签，从H1到H6，一共六个，有人说太少了，有人说正好用，有人说用不了这么多。反正我是觉得差不多。正确写法是：<h> </h>主要是用来存放标题，也有一些朋友用来作它用拿来作其它用处，个人觉得这个标签还是让他安生一点，就让他做标题的作用。这六个标签之间最好不要出现什么相互包含的事。<br /><br />　　strong&nbsp;这个意思是着重，这是有语义的，作用也很简单。至于样工，是加粗着重，还是用色彩表明着重，那都是自行选择。正确的写法是<strong></strong><br /><br />　　em&nbsp;这个与strong很像，是表示强调。一般浏览器的默认值是斜体。使用方式与strong一样。写法是：<em></em><br /><br />　　这里没有说表单，因为表单基本上没有什么变化，也没什么可特别说的。
+            <p align="center"> </p>
+			(责任编辑：admin)
+
+    </div>
+	  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',2)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',2)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(2);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/dedecms/a/webbase/html/2010/0407/1.html'>学习HTML 4.0事件属性</a> </li>
+     <li>下一篇：<a href='/dedecms/a/webbase/html/2010/0407/3.html'>网页中应用表格爱好者</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <!-- /actbox -->
+  </div>
+</div>
+
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

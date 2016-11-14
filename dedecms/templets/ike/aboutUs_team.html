@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京艾佳天诚信息技术有限公司</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/usteam.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="usteamCon">
+    <div class="teambanner">
+        <div class="banCon">
+            <img src="{dede:global.cfg_templets_skin/}/img/about/profile.png" >
+            <h2>团队支撑-解决问题、策略方针</h2>
+        </div>
+        <div class="teamDate">
+            <h3>10</h3>
+            <div class="years">
+                <div class="tmonth">10月</div>
+                <div class="tyear">2016年</div>
+            </div>
+            <a href="javascript:void(0)" class="upload">上传</a>
+        </div>
+        <div class="blank"></div>
+    </div>
+    <div class="t_left">
+        <div class="text">
+			{dede:field.body/}
+            <div class="other">
+                <h5>我们其他福利</h5>
+                <div class="otherCon">
+                    <img src="{dede:global.cfg_templets_skin/}/img/about/profile.png" >
+                    <p>2016年端午节公司福利</p>
+                </div>
+            </div>
+        </div>
+        <div class="t_right">
+            <div class="label">
+                <h4>标签</h4>
+                <a href="javascript:void(0)"><span>公司简介</span></a>
+                <a href="javascript:void(0)"><span>福利</span></a>
+                <a href="javascript:void(0)"><span>节日</span></a>
+                <a href="javascript:void(0)"><span>客户</span></a>
+                <a href="javascript:void(0)"><span>合作伙伴</span></a>
+                <a href="javascript:void(0)"><span>我们</span></a>
+            </div>
+            <div class="recommend">
+                <h4>推荐 <i></i></h4>
+                <ul>
+					{dede:channelartlist row='' typeid='21'}
+
+					{dede:arclist titlelen='60' row='8'}
+
+
+                    <li >
+                        <a href="[field:arcurl/]" ><p> [field:title/]</p> 2016-10-10</a>
+                    </li>
+					{/dede:arclist}
+
+
+				{/dede:channelartlist} 
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<footer>
+    <div class="mainfoot">
+
+        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
+
+        <ul>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
+            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
+        </ul>
+        <div class="copyright">
+            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
+            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

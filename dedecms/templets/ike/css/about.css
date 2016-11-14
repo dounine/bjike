@@ -1,0 +1,89 @@
+.aboutcon {
+  background: #F3F3F3;
+  padding-bottom: 50px;
+  overflow: hidden; }
+  .aboutcon .profile {
+    margin-top: 50px; }
+  .aboutcon .il_tr {
+    max-height: 510px; }
+    .aboutcon .il_tr .imgLeft {
+      float: left;
+      max-height: 508px;
+      width: 55%;
+      overflow: hidden; }
+      .aboutcon .il_tr .imgLeft img {
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s; }
+      .aboutcon .il_tr .imgLeft:hover img {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s; }
+    .aboutcon .il_tr .textRight {
+      position: relative;
+      float: left;
+      width: 415px;
+      height: 508px;
+      margin-left: 28px; }
+      .aboutcon .il_tr .textRight h2 {
+        font-size: 30px;
+        margin-top: 20px; }
+      .aboutcon .il_tr .textRight .text div {
+        font-size: 14px;
+        margin-top: 20px;
+        line-height: 20px;
+        height: 100px;
+        overflow: hidden; }
+      .aboutcon .il_tr .textRight a {
+        font-size: 14px;
+        font-weight: 700;
+        border: 2px solid #4898ea;
+        color: #4898ea;
+        padding: 10px 20px;
+        position: absolute;
+        bottom: 90px; }
+  .aboutcon .tl_ir {
+    height: 510px; }
+    .aboutcon .tl_ir .textLeft {
+      position: relative;
+      float: right;
+      width: 415px;
+      height: 508px;
+      margin-right: 28px; }
+      .aboutcon .tl_ir .textLeft h2 {
+        font-size: 30px;
+        margin-top: 20px; }
+      .aboutcon .tl_ir .textLeft .text div {
+        font-size: 14px;
+        margin-top: 20px;
+        line-height: 20px;
+        height: 100px;
+        overflow: hidden; }
+      .aboutcon .tl_ir .textLeft a {
+        font-size: 14px;
+        font-weight: 700;
+        border: 2px solid #4898ea;
+        color: #4898ea;
+        padding: 10px 20px;
+        position: absolute;
+        bottom: 90px; }
+    .aboutcon .tl_ir .imgRight {
+      width: 55%;
+      float: right;
+      overflow: hidden; }
+      .aboutcon .tl_ir .imgRight img {
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s; }
+      .aboutcon .tl_ir .imgRight:hover img {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s; }
+
+/*# sourceMappingURL=about.css.map */
