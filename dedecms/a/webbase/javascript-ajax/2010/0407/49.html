@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=49";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=49";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Javascript/Ajax</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=49&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=49&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>最近，老板在我们公司使用了一种网络内容过滤设备。至今为止，他们对该设备进行了良好的设置。在使用我的办公用计算机浏览网页时，经过该设备进行了网页内容过滤的Web世界就大为不同了。</p><p>Mashups仅是合并的开始，像链接或将其它网站的内容嵌入到你的网站中。这样的事情被人们认为是一种粗鲁的行为，不是一个业务模型。现在，幸亏有了新的WCF设备来代替，我不再需要访问以前日常工作中可能需要浏览的一些技术和业务相关网站。</p><p>问题并不在网站本身，也不在网站上的内容，甚至也不是因为我访问的网站与我的工作没有直接的关系。问题是这些网站常常将YouTube网站的视频信息嵌入到它们的内容中。</p><p>我知道WCF设备确实记录和监控用户访问过的网站，即使这个网站未被列入黑名单。我也知道它会对这些记录输出报告，以发现那些网站比较有价值或者那些网站对工作没有多少帮助。</p><p>这很好，我担心的问题是，如果他们决定对嵌入了YouTube视频信息的网站开启一些警告如“嘿，该用户经常试图访问受限制或标记的内容！”等，那么其它的mashups就会使用困难。</p><p>我不使用Mashup还有另外的原因。我以前已经从两个不同的角度介绍过这个方面的内容。在“”中讨论了为什么我认为mashups是一个不好的想法的原因。在“”一文中，我们为大家介绍了对“便利”数据的误用可能会将安全应用转变成职业杀手的问题。</p><p>在将某些内容放到YouTube、Flikr或其它类似网站上时，大多数开发人员或Web设计人员最不希望的事是他们可能给用户带来麻烦。</p><p>正好相反，他们说“看，很好，我可以将这个有用的视频信息放到YouTube上，它不会堵塞网络带宽，我的网站运行速度很快，YouTube播放器很好用，它能很好的与我的网站结合。”这些都是真话。</p><p>但是另一个事实是，当用户登录你的网站浏览与工作相关的Web页面时，用户所在的公司可能会将此访问记录为访问一个未授权的或不合适的网站，这不是用户所希望的。</p><p>结果，眼光敏锐的用户可能会开始拒绝访问这些与工作相关的站点。当他们对感兴趣的信息来源逐渐减少访问时，那么可以肯定地是他们日常访问也会相应减少。</p><p>我始终认为对来自域外面的内容应该清楚的标记为外部链接，这将十分有用。这样如果用户想在一个新窗口中打开一个网站时，他们可以做出决定能否打开，从而可以保留他们对你的网站兴趣。</p><p>如果网站中存在用户不感兴趣的内容或该内容来自用户不希望访问站点，这将有助于确保他们可以得到一个全面的选项。总之，清晰的标记外部内容（或者通过链接内容或者通过链接图标）对你的网站和用户是一种双赢的方法。</p><p>我的观点是不要对网站内容进行拼接。总的来说，这不是一个很好的策略。设计一个自己的类似系统，或者为了播放来自服务器的内容嵌入一个Flash播放器，或插入一个标准多媒体插件，这都不是很困难。</p><p>如果你的带宽不足以提供这些内容，那么你可能需要考虑实际可以添加多大数据量的视频、音频剪辑或任何其它内容。一旦将你的内容放在其它地方结果将会很糟糕，它可能会被添加了一些广告或其它东西。这将会给用户带来大量麻烦。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>最近，老板在我们公司使用了一种网络内容过滤设备。至今为止，他们对该设备进行了良好的设置。在使用我的办公用计算机浏览网页时，经过该设备进行了网页内容过滤的Web世界就大为不同了。</p><p>Mashups仅是合并的开始，像链接或将其它网站的内容嵌入到你的网站中。这样的事情被人们认为是一种粗鲁的行为，不是一个业务模型。现在，幸亏有了新的WCF设备来代替，我不再需要访问以前日常工作中可能需要浏览的一些技术和业务相关网站。</p><p>问题并不在网站本身，也不在网站上的内容，甚至也不是因为我访问的网站与我的工作没有直接的关系。问题是这些网站常常将YouTube网站的视频信息嵌入到它们的内容中。</p><p>我知道WCF设备确实记录和监控用户访问过的网站，即使这个网站未被列入黑名单。我也知道它会对这些记录输出报告，以发现那些网站比较有价值或者那些网站对工作没有多少帮助。</p><p>这很好，我担心的问题是，如果他们决定对嵌入了YouTube视频信息的网站开启一些警告如“嘿，该用户经常试图访问受限制或标记的内容！”等，那么其它的mashups就会使用困难。</p><p>我不使用Mashup还有另外的原因。我以前已经从两个不同的角度介绍过这个方面的内容。在“”中讨论了为什么我认为mashups是一个不好的想法的原因。在“”一文中，我们为大家介绍了对“便利”数据的误用可能会将安全应用转变成职业杀手的问题。</p><p>在将某些内容放到YouTube、Flikr或其它类似网站上时，大多数开发人员或Web设计人员最不希望的事是他们可能给用户带来麻烦。</p><p>正好相反，他们说“看，很好，我可以将这个有用的视频信息放到YouTube上，它不会堵塞网络带宽，我的网站运行速度很快，YouTube播放器很好用，它能很好的与我的网站结合。”这些都是真话。</p><p>但是另一个事实是，当用户登录你的网站浏览与工作相关的Web页面时，用户所在的公司可能会将此访问记录为访问一个未授权的或不合适的网站，这不是用户所希望的。</p><p>结果，眼光敏锐的用户可能会开始拒绝访问这些与工作相关的站点。当他们对感兴趣的信息来源逐渐减少访问时，那么可以肯定地是他们日常访问也会相应减少。</p><p>我始终认为对来自域外面的内容应该清楚的标记为外部链接，这将十分有用。这样如果用户想在一个新窗口中打开一个网站时，他们可以做出决定能否打开，从而可以保留他们对你的网站兴趣。</p><p>如果网站中存在用户不感兴趣的内容或该内容来自用户不希望访问站点，这将有助于确保他们可以得到一个全面的选项。总之，清晰的标记外部内容（或者通过链接内容或者通过链接图标）对你的网站和用户是一种双赢的方法。</p><p>我的观点是不要对网站内容进行拼接。总的来说，这不是一个很好的策略。设计一个自己的类似系统，或者为了播放来自服务器的内容嵌入一个Flash播放器，或插入一个标准多媒体插件，这都不是很困难。</p><p>如果你的带宽不足以提供这些内容，那么你可能需要考虑实际可以添加多大数据量的视频、音频剪辑或任何其它内容。一旦将你的内容放在其它地方结果将会很糟糕，它可能会被添加了一些广告或其它东西。这将会给用户带来大量麻烦。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/48.html'>如何用jQuery简化JavaScript开发</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/50.html'>如何用JavaScript实现旋转木马</a> </li>
+     <li>上一篇：<a href='/a/webbase/javascript-ajax/2010/0407/48.html'>如何用jQuery简化JavaScript开发</a> </li>
+     <li>下一篇：<a href='/a/webbase/javascript-ajax/2010/0407/50.html'>如何用JavaScript实现旋转木马</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

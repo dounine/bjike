@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=35";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=35";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Javascript/Ajax</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=35&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=35&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>软件开发中一个比较棘手的内容是使用时间和日期值；似乎每种语言或者每种平台都有自己的格式。在Web开发过程中，你可以使用服务器端的代码来操控日期，你也可以使用JavaScript的日期（Date）对象来实现同样的目的。在今天的专栏里，我们将仔细看看这个对象。</p><p><strong>使用日期</strong></p><p>在JavaScript里使用时间和日期值非常简单。这要从创建日期对象的一个实例开始：</p>var d = new Date(); <p>这会使用当前的日期和时间在变量d里返回一个日期对象的实例。这个日期对象包括多个用于访问和操控其值的方法和属性。下面的列表列出了用于访问日期值的方法：</p><ul><li><strong>getDate()</strong>：返回月份里的日期。 </li><li><strong>getDay()</strong><strong>：</strong>返回星期几。每周从星期六开始（0－6）。 </li><li><strong>getFullYear()</strong>：返回四位数的年份。 </li><li><strong>getMonth()</strong>：返回月份。 </li><li><strong>getYear()</strong>：返回两位数的年份。 </li><li><strong>getUTCDate()</strong>：根据协调世界时（UTC）返回月份里的日期。 </li><li><strong>getUTCMonth()</strong>：根据协调世界时（0－11）返回月份。 </li><li><strong>getUTCFullYear()</strong>：根据协调世界时返回四位数的年份。 </li></ul><p><strong>注：</strong>维基百科全书（Wikipedia）将协调世界时定义为一种高精度的原子时间标准，它大约相当于世界时（UT）。</p><p>关于JavaScript和日期需要注意的一点是，它使用从1970年1月1日午夜起的毫秒数来保存日期。这叫做历元（epoch），任何在这个日期之前的日期和时间都是不被允许的。</p><p>正如<strong>Listing A</strong>里说明的，使用前面一个列表里的方法是很简单明了的。你需要注意的是日期和星期中的天的值是从零开始的，所以需要向它们添加一个值以显示它们真正的值。你可以很容易就使用一个数组来显示星期几。<strong>列表B</strong>里是JavaScript代码。</p><p>你没有被限制只使用当前的日期。日期对象可以用传递给它的值初始化，就像下面这样：</p><p>var d = new Date("date value");</p><p>利用这种方式，我们可以修改前面的例子来使用特定的日期。<strong>列表C</strong>代表了一种发现给定值的周日期的简单方法。代码会生成下面的结果：</p><p>Today is: Wednesday 4/15/1979<br />UTC is: Wednesday 4/15/1979 </p><p>事实上，创建日期对象实例的方式有四种：</p><p>var d = new Date();<br />var d = new Date('July 4, 1976');<br />var d = new Date(7, 4, 1976);<br />var d = new Date(7, 4, 1976, 12,00,00); </p><p>我们已经讲了前两个（要注意的是可能会用到单引号或者圆括号）。最后两个按照下面的格式使用了单独的整数参数（时间是可选的）：</p><p>var d = new Date(month, day, year, hour, minutes, seconds); </p><p>填充日期对象的另外一种方式是利用setDate方法。它提供了一种重置日期对象的值或者初始化它的方式，但是这要求有一个真正的JavaScript日期对象：</p><p>Var d1 = new Date();<br />var d2 = new Date("7/4/1976");<br />d1.setDate(d2.getDate()); </p><p>填充日期对象的各种属性的固定方法还有很多，但是在讨论它们之前我们先来看看时间吧。</p><p>除了日期组件，日期对象也保存了时间信息。下面的方法能够访问到日期对象的时间信息：</p><ul><li><strong>getHours()</strong>：返回时间的小时部分。 </li><li><strong>getMinutes()</strong>：返回时间的分钟部分。 </li><li><strong>getSeconds()</strong>：返回时间的秒部分。 </li><li><strong>getMilliseconds()</strong>：返回时间的毫秒部分。 </li><li><strong>getTime()</strong>：返回自从1970年1月1日午夜以来的毫秒数。 </li><li><strong>getTimezoneOffset()</strong>：返回本地时间与格里尼治标准时间（GMT）之间的分钟差。 </li><li><strong>getUTCHours()</strong>：根据协调世界时返回时间的小时部分。 </li><li><strong>getUTCMinutes()</strong>：根据协调世界时返回时间的分钟部分。 </li><li><strong>getUTCSeconds()</strong>：根据协调世界时返回时间的秒部分。 </li><li><strong>getUTCMilliseconds()</strong>：根据协调世界时返回时间的毫秒部分。 </li></ul><p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>软件开发中一个比较棘手的内容是使用时间和日期值；似乎每种语言或者每种平台都有自己的格式。在Web开发过程中，你可以使用服务器端的代码来操控日期，你也可以使用JavaScript的日期（Date）对象来实现同样的目的。在今天的专栏里，我们将仔细看看这个对象。</p><p><strong>使用日期</strong></p><p>在JavaScript里使用时间和日期值非常简单。这要从创建日期对象的一个实例开始：</p>var d = new Date(); <p>这会使用当前的日期和时间在变量d里返回一个日期对象的实例。这个日期对象包括多个用于访问和操控其值的方法和属性。下面的列表列出了用于访问日期值的方法：</p><ul><li><strong>getDate()</strong>：返回月份里的日期。 </li><li><strong>getDay()</strong><strong>：</strong>返回星期几。每周从星期六开始（0－6）。 </li><li><strong>getFullYear()</strong>：返回四位数的年份。 </li><li><strong>getMonth()</strong>：返回月份。 </li><li><strong>getYear()</strong>：返回两位数的年份。 </li><li><strong>getUTCDate()</strong>：根据协调世界时（UTC）返回月份里的日期。 </li><li><strong>getUTCMonth()</strong>：根据协调世界时（0－11）返回月份。 </li><li><strong>getUTCFullYear()</strong>：根据协调世界时返回四位数的年份。 </li></ul><p><strong>注：</strong>维基百科全书（Wikipedia）将协调世界时定义为一种高精度的原子时间标准，它大约相当于世界时（UT）。</p><p>关于JavaScript和日期需要注意的一点是，它使用从1970年1月1日午夜起的毫秒数来保存日期。这叫做历元（epoch），任何在这个日期之前的日期和时间都是不被允许的。</p><p>正如<strong>Listing A</strong>里说明的，使用前面一个列表里的方法是很简单明了的。你需要注意的是日期和星期中的天的值是从零开始的，所以需要向它们添加一个值以显示它们真正的值。你可以很容易就使用一个数组来显示星期几。<strong>列表B</strong>里是JavaScript代码。</p><p>你没有被限制只使用当前的日期。日期对象可以用传递给它的值初始化，就像下面这样：</p><p>var d = new Date("date value");</p><p>利用这种方式，我们可以修改前面的例子来使用特定的日期。<strong>列表C</strong>代表了一种发现给定值的周日期的简单方法。代码会生成下面的结果：</p><p>Today is: Wednesday 4/15/1979<br />UTC is: Wednesday 4/15/1979 </p><p>事实上，创建日期对象实例的方式有四种：</p><p>var d = new Date();<br />var d = new Date('July 4, 1976');<br />var d = new Date(7, 4, 1976);<br />var d = new Date(7, 4, 1976, 12,00,00); </p><p>我们已经讲了前两个（要注意的是可能会用到单引号或者圆括号）。最后两个按照下面的格式使用了单独的整数参数（时间是可选的）：</p><p>var d = new Date(month, day, year, hour, minutes, seconds); </p><p>填充日期对象的另外一种方式是利用setDate方法。它提供了一种重置日期对象的值或者初始化它的方式，但是这要求有一个真正的JavaScript日期对象：</p><p>Var d1 = new Date();<br />var d2 = new Date("7/4/1976");<br />d1.setDate(d2.getDate()); </p><p>填充日期对象的各种属性的固定方法还有很多，但是在讨论它们之前我们先来看看时间吧。</p><p>除了日期组件，日期对象也保存了时间信息。下面的方法能够访问到日期对象的时间信息：</p><ul><li><strong>getHours()</strong>：返回时间的小时部分。 </li><li><strong>getMinutes()</strong>：返回时间的分钟部分。 </li><li><strong>getSeconds()</strong>：返回时间的秒部分。 </li><li><strong>getMilliseconds()</strong>：返回时间的毫秒部分。 </li><li><strong>getTime()</strong>：返回自从1970年1月1日午夜以来的毫秒数。 </li><li><strong>getTimezoneOffset()</strong>：返回本地时间与格里尼治标准时间（GMT）之间的分钟差。 </li><li><strong>getUTCHours()</strong>：根据协调世界时返回时间的小时部分。 </li><li><strong>getUTCMinutes()</strong>：根据协调世界时返回时间的分钟部分。 </li><li><strong>getUTCSeconds()</strong>：根据协调世界时返回时间的秒部分。 </li><li><strong>getUTCMilliseconds()</strong>：根据协调世界时返回时间的毫秒部分。 </li></ul><p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/34.html'>JavaScript风格要素</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/36.html'>减轻JavaScript测试和调试负担</a> </li>
+     <li>上一篇：<a href='/a/webbase/javascript-ajax/2010/0407/34.html'>JavaScript风格要素</a> </li>
+     <li>下一篇：<a href='/a/webbase/javascript-ajax/2010/0407/36.html'>减轻JavaScript测试和调试负担</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

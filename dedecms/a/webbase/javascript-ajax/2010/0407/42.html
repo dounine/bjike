@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=42";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=42";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Javascript/Ajax</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=42&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=42&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>已经读了《JavaScript DOM 编程艺术》的前几章基础部分，现在凭着记忆，将JavaScript的基础知识总结一下。</p><p><strong>一、声明变量</strong></p><p>JavaScript中，对变量的要求非常宽松，属于弱类型语言。尽管可以不申请变量而直接使用，但是为了程序的可读性和安全性，还是尽量把要使用的变量声明一下。格式如下：</p><p><em>var 变量一,变量二,…,变量N;</em></p><p>也可以直接在申请变量的同时进行赋值：</p><p><em>var 变量 = 变量值;</em></p><p>如果是数组变量，可以这样声明：</p><p><em>var 数组名 = Array(数组元素个数);</em></p><p><strong>二、条件语句</strong></p><p>JavaScript条件语句的格式如下：</p><p><em>if (返回值为布尔型的条件语句) {<br />如果条件成立执行的语句;<br />} else {<br />如果条件不成立执行的语句;<br />}</em></p><p>如果只要执行单个语句，也可以省略成如下形式：</p><p><em>if (条件判断) 条件成立后执行的语句;</em></p><p><strong>三、循环语句</strong></p><p>循环语句有三种，第一种是先判断后执行的while语句：</p><p><em>while (循环条件) {<br />循环的语句;<br />}</em></p><p>第二种，先执行后判断的while语句：</p><p><em>do {<br />循环的语句;<br />} while(循环条件);</em></p><p>第三种，for语句：</p><p><em>for (初始赋值;循环条件;条件变化) {<br />循环的语句;<br />}</em></p><p><strong>四、函数</strong></p><p>JavaScript中的函数用起来也很简单，与C语言和Java中的函数没多大差别。函数的定义：</p><p><em>function 函数名(形式参数一;形式参数二) {<br />函数里的语句;<br />return 函数返回值;<br />}</em></p><p><strong>五、对象</strong></p><p>JavaScript中，对象可以通过属性和方法两种方式访问：</p><p><em>对象.属性<br />对象.方法()</em></p><p>重点：</p><blockquote><p>属性是隶属于某个特定对象的变量；<br />方法是只有某个特定对象才能调用的函数。</p></blockquote><p>可以根据一个对象创建一个新的实例，这个实例可以使用对象所拥有的属性和方法：</p><p><em>var 实例名 = new 对象名;</em></p><p><strong>六、注释</strong></p><p>在程序设计中，注释始终是非常重要的。</p><p>JavaScript中，使用“//注释内容”来做单行注释；使用“/*注释内容*/”来进行多行注释。类似于HTML的那种注释方式，不推荐使用。</p><p>OK，将JavaScript的基本语法就回忆到这儿，关于DOM的知识我下次结合实例再谈。</p><p>来源：</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>已经读了《JavaScript DOM 编程艺术》的前几章基础部分，现在凭着记忆，将JavaScript的基础知识总结一下。</p><p><strong>一、声明变量</strong></p><p>JavaScript中，对变量的要求非常宽松，属于弱类型语言。尽管可以不申请变量而直接使用，但是为了程序的可读性和安全性，还是尽量把要使用的变量声明一下。格式如下：</p><p><em>var 变量一,变量二,…,变量N;</em></p><p>也可以直接在申请变量的同时进行赋值：</p><p><em>var 变量 = 变量值;</em></p><p>如果是数组变量，可以这样声明：</p><p><em>var 数组名 = Array(数组元素个数);</em></p><p><strong>二、条件语句</strong></p><p>JavaScript条件语句的格式如下：</p><p><em>if (返回值为布尔型的条件语句) {<br />如果条件成立执行的语句;<br />} else {<br />如果条件不成立执行的语句;<br />}</em></p><p>如果只要执行单个语句，也可以省略成如下形式：</p><p><em>if (条件判断) 条件成立后执行的语句;</em></p><p><strong>三、循环语句</strong></p><p>循环语句有三种，第一种是先判断后执行的while语句：</p><p><em>while (循环条件) {<br />循环的语句;<br />}</em></p><p>第二种，先执行后判断的while语句：</p><p><em>do {<br />循环的语句;<br />} while(循环条件);</em></p><p>第三种，for语句：</p><p><em>for (初始赋值;循环条件;条件变化) {<br />循环的语句;<br />}</em></p><p><strong>四、函数</strong></p><p>JavaScript中的函数用起来也很简单，与C语言和Java中的函数没多大差别。函数的定义：</p><p><em>function 函数名(形式参数一;形式参数二) {<br />函数里的语句;<br />return 函数返回值;<br />}</em></p><p><strong>五、对象</strong></p><p>JavaScript中，对象可以通过属性和方法两种方式访问：</p><p><em>对象.属性<br />对象.方法()</em></p><p>重点：</p><blockquote><p>属性是隶属于某个特定对象的变量；<br />方法是只有某个特定对象才能调用的函数。</p></blockquote><p>可以根据一个对象创建一个新的实例，这个实例可以使用对象所拥有的属性和方法：</p><p><em>var 实例名 = new 对象名;</em></p><p><strong>六、注释</strong></p><p>在程序设计中，注释始终是非常重要的。</p><p>JavaScript中，使用“//注释内容”来做单行注释；使用“/*注释内容*/”来进行多行注释。类似于HTML的那种注释方式，不推荐使用。</p><p>OK，将JavaScript的基本语法就回忆到这儿，关于DOM的知识我下次结合实例再谈。</p><p>来源：</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/41.html'>JavaScript：世界上误解最深的语言</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/43.html'>JavaScript的9个陷阱及评点</a> </li>
+     <li>上一篇：<a href='/a/webbase/javascript-ajax/2010/0407/41.html'>JavaScript：世界上误解最深的语言</a> </li>
+     <li>下一篇：<a href='/a/webbase/javascript-ajax/2010/0407/43.html'>JavaScript的9个陷阱及评点</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

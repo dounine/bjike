@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>北京艾佳天诚信息技术有限公司</title>
+    <title>{dede:global.cfg_webname/}</title>
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/companyDy.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="{dede:global.cfg_basehost/}/favicon1.ico" media="screen" />
 	<style>
 	
 	.pagination-wrapper{
@@ -56,7 +57,7 @@
     <div class="comDyMain">
         <ul class="list">
 		
-		{dede:list col='' titlelen='' infolen='' imgwidth='' imgheight='' orderby='' pagesize='1'}
+		{dede:list col='' titlelen='' infolen='' imgwidth='' imgheight='' orderby='' pagesize='5'}
 
 
 
@@ -67,8 +68,8 @@
                         <h2>[field:title/]</h2>
                     </a>
                     <a href="[field:arcurl/]" >
-                        <p>又是一年月满时，多年来，艾佳始终秉承“点滴做起，追求完善”的公司理念，为员工创造和谐、富有激情的工作环境。艾佳获得的每一分成绩都离不开员工们的共同努力。
-
+                        <p>
+						[field:description/]
                         </p>
                     </a>
                 </div>
@@ -91,25 +92,7 @@
     </div>
 </div>
 
-<footer>
-    <div class="mainfoot">
-
-        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
-
-        <ul>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
-        </ul>
-        <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
-            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{dede:include filename="footer.htm"/}
 <script>
     $(function(){
         $('.page ul li a').click(function(){

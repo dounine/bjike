@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=54";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=54";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Dreamweaver</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=54&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=54&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p style="TEXT-INDENT: 2em">，麻烦在更新，特别是大规模更新，工作量非常大。真不知那些创意不断而又勤奋的“站长”，隔三岔五将网站来个“大换血”，是怎么忙过来的。</p><p style="TEXT-INDENT: 2em">告诉你这个秘密吧，他们很多是在“批发”网页，并且你的机器中也有这样的“批发站”呢!这个好东东就是——模板。常见的工具：FrontPage、DreamWeaver中都有这项功能。如用DreamWeaver 3.0 制作网站时，使用模板就能减少大量的重复劳动。</p><p style="TEXT-INDENT: 2em"><strong>一、建立模板</strong></p><p style="TEXT-INDENT: 2em">1、创建模板页面</p><p style="TEXT-INDENT: 2em">最简单的办法是将一个网页另存为模板文件，通过执行命令：File→Save as Template，DreamWeaver会在网站根目录中建立一个模板文件夹——Templates来保存该模板。</p><p style="TEXT-INDENT: 2em">当然，也可以新建一个模板：Window→Templates，会出现的Templates面板，单击右下角的New Template按钮，输入文件名，就建立了一个空模板;再单击Open Template按钮打开该模板，保存后自动存放于网站模板文件夹Templates中。</p><p style="TEXT-INDENT: 2em">新建、打开的模板页面和普通的网页没什么两样，同样可以加入表格、层、图片、动画、脚本，设置页面属性等。</p><p style="TEXT-INDENT: 2em">举例：这里以制作一个模板为例来说明。在该页面中，我们希望左侧的网站标识图和底部的导航图出现在每个页面中。其中标识图由两幅图片叠加而成，导航图上的文字“最近更新”、“在线阅读”、“打包下载”等划分成几个热区分别链接到不同的文件，它们在每个页面中都不变。右上部的主页面区和左下角弹出式选单按钮下面的页面说明则各不相同。为了保持页面整洁，我们用表格来布置这些元素。</p><p style="TEXT-INDENT: 2em">准确地说它只是一个没有可编辑区域的“准模板”，下面再设定可编辑区域。</p><p style="TEXT-INDENT: 2em">2、设定可编辑区域</p><p style="TEXT-INDENT: 2em">设定模板可编辑区域，一般来说有两种方法。</p><p style="TEXT-INDENT: 2em">新建可编辑区域：选择命令：Modify→Template→New Editable Region。在某一空白区域中单击后执行该命令即可将该区域变为可编辑区域。</p><p style="TEXT-INDENT: 2em">标记某一区域为可编辑区域：选择命令：Modify→Template→Mark Selectin as Editable Region。如果某区域已经有一些文字，并且希望在以后新建的超文本文件中部分保留其内容，先选中该区域再执行标记命令即可。</p><p style="TEXT-INDENT: 2em">取消可编辑状态：选择命令：Modify→Template→Unmark Editable Region。执行该命令后会弹出一个对话框，其中有当前已有的可编辑区域列表，选中要取消的区域名称，确认即可。</p><p style="TEXT-INDENT: 2em">举例：在大片空白区中随便单击一下，执行Modify→Template→New Editable Region命令，在弹出对话框中输入名称：Main;选中左下角本页说明下面的文字，执行Modify→Template→Mark Selectin as Editable Region命令，输入名称：exp。可以看到可编辑区显示为浅蓝色，保存即完成模板制作。</p><p style="TEXT-INDENT: 2em"><strong>二、使用模板</strong></p><p style="TEXT-INDENT: 2em">1、根据模板新建页面</p><p style="TEXT-INDENT: 2em">命令：File→New From Template。弹出对话框，从模板列表中选取模板，出现的新页面中除可编辑区外均有淡黄色背景，是不能进行修改的部分。空白的Main编辑区可直接进行插入表格、文字、图片等操作，Exp编辑区保留有原来的文字，修改或重新编辑均可。</p><p style="TEXT-INDENT: 2em">2、对一个已经有内容的页面应用模板</p><p style="TEXT-INDENT: 2em">命令：Modify→Template→Apply Template to Page。选择模板后还会弹出一个对话框，让您选择现有的孤立内容保存到哪个可编辑区域(Choose Editable Region for Orphaned Content)。要是不想保留则可以选择“(none)”。</p><p style="TEXT-INDENT: 2em">举例：我们先新建一个普通页面，输入：“CIW电脑工作室”，执行Modify→Template→Apply Template to Page命令，选择模板test，现有内容保存区域选择Main，确认后可看到页面自动变成了模板页的形式，而“CIW电脑工作室”这一行字就出现在主编辑窗口中。</p><p style="TEXT-INDENT: 2em">3、更新模板以全面更新站点</p><p style="TEXT-INDENT: 2em">基于某一模板建立了一些页面后，对模板进行修改后保存时，就会自动弹出一个对话框，列出所有使用了该模板的页面，询问是否要更新。</p><p style="TEXT-INDENT: 2em">另外一种方法是执行Modify→Template→Update Pages命令。从Update Pages对话框中选择一个站点或站点的某一种模板(同一站点中可以使用多个模板)，单击右侧的Start按钮，软件会自动搜索与模板相关联的网页并进行更新。非常方便!</p><p style="TEXT-INDENT: 2em">举例：Test模板左侧图形中的“读书破万站”图片是用一个图层叠加在另一幅图片之上的，现在不想要它，同时还想将所有页面中的该图片均删除。就可以打开模板test.dwt，删除该图层，保存模板，单击右侧的“Update”按钮即可。</p><p style="TEXT-INDENT: 2em">注意：新建和使用模板前需定义站点。方法是，执行命令：Site→Define Sites;指定站点名称和本地根目录(Local Root)。模板使用的是相对路径，如果没有指定网站在本地的位置，软件就不能准确找到并保存模板文件;并且应用模板新建和更新页面时，页面中的超链接也不能随页面文件保存位置的不同而相应变化。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p style="TEXT-INDENT: 2em">，麻烦在更新，特别是大规模更新，工作量非常大。真不知那些创意不断而又勤奋的“站长”，隔三岔五将网站来个“大换血”，是怎么忙过来的。</p><p style="TEXT-INDENT: 2em">告诉你这个秘密吧，他们很多是在“批发”网页，并且你的机器中也有这样的“批发站”呢!这个好东东就是——模板。常见的工具：FrontPage、DreamWeaver中都有这项功能。如用DreamWeaver 3.0 制作网站时，使用模板就能减少大量的重复劳动。</p><p style="TEXT-INDENT: 2em"><strong>一、建立模板</strong></p><p style="TEXT-INDENT: 2em">1、创建模板页面</p><p style="TEXT-INDENT: 2em">最简单的办法是将一个网页另存为模板文件，通过执行命令：File→Save as Template，DreamWeaver会在网站根目录中建立一个模板文件夹——Templates来保存该模板。</p><p style="TEXT-INDENT: 2em">当然，也可以新建一个模板：Window→Templates，会出现的Templates面板，单击右下角的New Template按钮，输入文件名，就建立了一个空模板;再单击Open Template按钮打开该模板，保存后自动存放于网站模板文件夹Templates中。</p><p style="TEXT-INDENT: 2em">新建、打开的模板页面和普通的网页没什么两样，同样可以加入表格、层、图片、动画、脚本，设置页面属性等。</p><p style="TEXT-INDENT: 2em">举例：这里以制作一个模板为例来说明。在该页面中，我们希望左侧的网站标识图和底部的导航图出现在每个页面中。其中标识图由两幅图片叠加而成，导航图上的文字“最近更新”、“在线阅读”、“打包下载”等划分成几个热区分别链接到不同的文件，它们在每个页面中都不变。右上部的主页面区和左下角弹出式选单按钮下面的页面说明则各不相同。为了保持页面整洁，我们用表格来布置这些元素。</p><p style="TEXT-INDENT: 2em">准确地说它只是一个没有可编辑区域的“准模板”，下面再设定可编辑区域。</p><p style="TEXT-INDENT: 2em">2、设定可编辑区域</p><p style="TEXT-INDENT: 2em">设定模板可编辑区域，一般来说有两种方法。</p><p style="TEXT-INDENT: 2em">新建可编辑区域：选择命令：Modify→Template→New Editable Region。在某一空白区域中单击后执行该命令即可将该区域变为可编辑区域。</p><p style="TEXT-INDENT: 2em">标记某一区域为可编辑区域：选择命令：Modify→Template→Mark Selectin as Editable Region。如果某区域已经有一些文字，并且希望在以后新建的超文本文件中部分保留其内容，先选中该区域再执行标记命令即可。</p><p style="TEXT-INDENT: 2em">取消可编辑状态：选择命令：Modify→Template→Unmark Editable Region。执行该命令后会弹出一个对话框，其中有当前已有的可编辑区域列表，选中要取消的区域名称，确认即可。</p><p style="TEXT-INDENT: 2em">举例：在大片空白区中随便单击一下，执行Modify→Template→New Editable Region命令，在弹出对话框中输入名称：Main;选中左下角本页说明下面的文字，执行Modify→Template→Mark Selectin as Editable Region命令，输入名称：exp。可以看到可编辑区显示为浅蓝色，保存即完成模板制作。</p><p style="TEXT-INDENT: 2em"><strong>二、使用模板</strong></p><p style="TEXT-INDENT: 2em">1、根据模板新建页面</p><p style="TEXT-INDENT: 2em">命令：File→New From Template。弹出对话框，从模板列表中选取模板，出现的新页面中除可编辑区外均有淡黄色背景，是不能进行修改的部分。空白的Main编辑区可直接进行插入表格、文字、图片等操作，Exp编辑区保留有原来的文字，修改或重新编辑均可。</p><p style="TEXT-INDENT: 2em">2、对一个已经有内容的页面应用模板</p><p style="TEXT-INDENT: 2em">命令：Modify→Template→Apply Template to Page。选择模板后还会弹出一个对话框，让您选择现有的孤立内容保存到哪个可编辑区域(Choose Editable Region for Orphaned Content)。要是不想保留则可以选择“(none)”。</p><p style="TEXT-INDENT: 2em">举例：我们先新建一个普通页面，输入：“CIW电脑工作室”，执行Modify→Template→Apply Template to Page命令，选择模板test，现有内容保存区域选择Main，确认后可看到页面自动变成了模板页的形式，而“CIW电脑工作室”这一行字就出现在主编辑窗口中。</p><p style="TEXT-INDENT: 2em">3、更新模板以全面更新站点</p><p style="TEXT-INDENT: 2em">基于某一模板建立了一些页面后，对模板进行修改后保存时，就会自动弹出一个对话框，列出所有使用了该模板的页面，询问是否要更新。</p><p style="TEXT-INDENT: 2em">另外一种方法是执行Modify→Template→Update Pages命令。从Update Pages对话框中选择一个站点或站点的某一种模板(同一站点中可以使用多个模板)，单击右侧的Start按钮，软件会自动搜索与模板相关联的网页并进行更新。非常方便!</p><p style="TEXT-INDENT: 2em">举例：Test模板左侧图形中的“读书破万站”图片是用一个图层叠加在另一幅图片之上的，现在不想要它，同时还想将所有页面中的该图片均删除。就可以打开模板test.dwt，删除该图层，保存模板，单击右侧的“Update”按钮即可。</p><p style="TEXT-INDENT: 2em">注意：新建和使用模板前需定义站点。方法是，执行命令：Site→Define Sites;指定站点名称和本地根目录(Local Root)。模板使用的是相对路径，如果没有指定网站在本地的位置，软件就不能准确找到并保存模板文件;并且应用模板新建和更新页面时，页面中的超链接也不能随页面文件保存位置的不同而相应变化。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -214,27 +226,26 @@ function getDigg(aid)
    <div class="context">
     <ul>
      <li>上一篇：没有了 </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/55.html'>用 Dreamweaver 8 搞定web标准</a> </li>
+     <li>下一篇：<a href='/a/webbase/dreamweaver/2010/0407/55.html'>用 Dreamweaver 8 搞定web标准</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

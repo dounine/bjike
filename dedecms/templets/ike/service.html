@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" >
-    <title>北京艾佳天诚信息技术有限公司</title>
+    <title>{dede:global.cfg_webname/}</title>
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/service.css">
+	<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/page.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="{dede:global.cfg_basehost/}/favicon1.ico" media="screen" />
 </head>
 <body>
 {dede:include filename="header.htm"/}
 <div class="serviceCon">
-    <div class="serviceMain">
+    <div class="serviceMain viewbox">
        
-	   {dede:field name="body"/}
-
+		<div class="title">
+			<h2>{dede:field.title/}</h2>		
+		</div>
+			<div class="info"> 
+				<small>时间:</small>
+				{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}
+				<small>来源:</small>
+				{dede:field.source/} 
+				<small>作者:</small>
+				{dede:field.writer/} 
+				<small>点击:</small>
+				<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>
+					次
+			</div>
+			<div style="margin-top:10px">
+				{dede:field.body/}
+			</div>
+			<div style="margin-top:20px">
+				(责任编辑：{dede:adminname/})
+			</div>
+			
     </div>
 </div>
-<footer>
-    <div class="mainfoot">
-
-        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
-
-        <ul>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
-        </ul>
-        <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
-            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{dede:include filename="footer.htm"/}

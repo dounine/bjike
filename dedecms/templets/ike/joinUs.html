@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>加入我们</title>
+    <title>{dede:global.cfg_webname/}</title>
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/join.css">
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="{dede:global.cfg_basehost/}/favicon1.ico" media="screen" />
 </head>
 <style>
 	
@@ -65,14 +66,14 @@
 		<div class="sear_input">
 			{dede:infoguide}
 
-			<form name='infoguide' method='get' action='/dedecms/plus/list.php'>
+			<form name='infoguide' method='get' action='/plus/list.php'>
 
 
 			<input type='hidden' name='tid' value='[field:typeid /]' />
 
 			<input type='hidden' name='channelid' value='-8' />
 
-			<span class='infosearchtxt'>关键字：</span><span><input type='text' name='keyword' value='' class="ipt-txt input_join" /></span>
+			<span class='infosearchtxt'>关键字：</span><span><input type='text' name='keyword' value=''placeholder="职位" class="ipt-txt input_join" /></span>
 
 			<button><input type='submit' value='' class="btn-2" style='cursor:pointer' /></button>
 			</form>
@@ -97,7 +98,7 @@
                         [field:title/]
                     </a>
                 </td>
-                <td>广州</td>
+                <td>[field:nativeplace/]</td>
                 <td>面议</td>
             </tr>
 		{/dede:list}
@@ -109,22 +110,4 @@
 			</div>
 	</div> 
 </div>
-<footer>
-    <div class="mainfoot">
-
-        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
-
-        <ul>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
-        </ul>
-        <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
-            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{dede:include filename="footer.htm"/}

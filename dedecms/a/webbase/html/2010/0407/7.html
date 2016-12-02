@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=7";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=7";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>HTML</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=7&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=7&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<strong>前言：</strong> <p>　　现在都讲究标准建站，而标准建站使用的技术主要是XHTML+CSS，而现在我们普遍使用的是HTML代码，那么我该如何转换呢？以及HTML和XHTML有什么不同呢？在这个教程里，你将学到HTML和XHTML之间的不同，以及如何将HTML转换为XHTML。毕竟XHTML是发展的方向，所以我觉得该教程有必要在本站上发布。我感觉要是你想使用标准还是最好先学HTML，因为比较简单，然后再来看该教程。 </p><p>　　<strong>XHTML介绍：</strong> </p><p>　　XHTML是 EXtensible HyperText Markup Language(可扩展超文本标记语言) 的英文缩写，而HTML则是 HyperText Markup Language(超文本标记语言) ，这是名字的不同。其实我们说得标准应该是XML，那为什么要学习XHTML呢？因为现在的HTML代码烦琐，危机四伏，但是XML使用环境还不成熟，所以推出了一个过度的产品就是XHTML，它起着呈上起下的作用。也有人认为XHTML是HTML的一个升级版本，其实也是正确的，我的理解是XHTML把HTML做得更加规范的一个标记语言，使HTML变得功能强大，减少了代码的烦琐尤其是表格。 </p><p>　　XHTML是在2000年1月26日被国际标准组织机构W3C(World Wide web Consortium)定为一个标准的，认为是HTML的一个最新版本，并且将逐渐替换HTML。现在所有的浏览器都支持XHTML，XHTML兼容 HTML 4.0。也有人认为XHTML就是HTML4.01。如果你在学习过程中自己编写了一个符合标准的站，你可以通过W3C的验证，验证通过后你将会得到一个标志，通常是XHTML1.0认证和CSS验证。我也不清楚目前国内有多少个网站同时通过了这两个验证。大家可以去这个站点去验证你的站，如果符合那两个规则则会分别给我们两段代码加到你的网页上向别人展示说明你采用了标准建站啊，牛啊！</p><p>　　为什么我们使用XHTML </p><p>　　XHTML是HTML升级为XML的过度产品，被定为一个标准，XHTML完全兼容HTML4.01，并且具有XML的语法。下面我们来看一个含有错误代码的HTML，如下： </p><p>　　<html> <br />　　<head> <br />　　<title>This is bad HTML</title> <br />　　<body> <br />　　<h1>Bad HTML <br />　　</body> </p><p>　　虽然含有错误代码，但是当我们在浏览器中浏览时还能正常显示。XML是一个标记语言，但是它要求在网页中出现的任何元素都应该被标记出来，XML是用来描述网页中的数据的，而HTML用来显示网页中的元素的。目前我们上网使用的各种浏览器技术，包括手提电脑、手机上网浏览等等，都要求浏览的一些内容都要被正确标记，如果有错误的标记可能会使显示特别混乱、甚至不能正常显示。 </p><p>　　因此联合 HTML 和XML , 还有其他的一些技术，我们得到了一种现在有用的而且在将来也有用的语言 - XHTML。 </p><p>　　当在将来都规范的时候我们就要用的 XHTML 正确格式的标记了,使所有的浏览器都能正确的执行，所以我们现在有必要开始学习XHTML了。 </p><p>　　<strong>XHTML和HTML之间的区别：</strong> </p><p>　　XHTML是一项新技术，在浏览器和一些其他的软件都支持它之前，我们应该有必要熟悉一下这项技术。为了我们更好的学习XHTML之前我们应该熟悉一下HTML4.0，我们可以去下载一个参考手册来熟悉一下。以便于我们学起XHTML来更简单，换句话说我们现在使用HTML编写代码时应该尽力少写错误代码，如：都要使用小写的字符来编写HTML，每个标记之后都要加上标记的结束如：<p>网页教学网欢迎您的光临</p> 结束一定要有，我们要保持这种规则。 </p><p>　　<strong>它们之间最大的区别在于：</strong> </p><p>　　1.XHTML 元素一定要被正确的嵌套使用。 </p><p>　　在HTML里一些元素可以不正确嵌套也能正常显示，如： </p><p>　　<b><i>This text is bold and italic</b></i> </p><p>　　而在XHTML必须要正确嵌套之后才能正常使用，如： </p><p>　　<b><i>This text is bold and italic</i></b> </p><p>　　注意：这个错误通常发生在当嵌套多层之后的标签里面。如： </p><p>　　<ul> <br />　　　<li>Coffee</li> <br />　　　<li>Tea <br />　　　<ul> <br />　　　　<li>Black tea</li> <br />　　　　<li>Green tea</li> <br />　　　</ul> <br />　　　<li>Milk</li> <br />　　</ul> </p><p>　　正确的应该是： </p><p>　　<ul> <br />　　　<li>Coffee</li> <br />　　　<li>Tea <br />　　　<ul> <br />　　　　<li>Black tea</li> <br />　　　　<li>Green tea</li> <br />　　　</ul> <br />　　　</li> <br />　　　<li>Milk</li> <br />　　</ul> </p><p>　　观察上述的两段代码我们可以看到正确的里面我们在 </ul>之后插入 </li> 标签。 </p><p>　
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<strong>前言：</strong> <p>　　现在都讲究标准建站，而标准建站使用的技术主要是XHTML+CSS，而现在我们普遍使用的是HTML代码，那么我该如何转换呢？以及HTML和XHTML有什么不同呢？在这个教程里，你将学到HTML和XHTML之间的不同，以及如何将HTML转换为XHTML。毕竟XHTML是发展的方向，所以我觉得该教程有必要在本站上发布。我感觉要是你想使用标准还是最好先学HTML，因为比较简单，然后再来看该教程。 </p><p>　　<strong>XHTML介绍：</strong> </p><p>　　XHTML是 EXtensible HyperText Markup Language(可扩展超文本标记语言) 的英文缩写，而HTML则是 HyperText Markup Language(超文本标记语言) ，这是名字的不同。其实我们说得标准应该是XML，那为什么要学习XHTML呢？因为现在的HTML代码烦琐，危机四伏，但是XML使用环境还不成熟，所以推出了一个过度的产品就是XHTML，它起着呈上起下的作用。也有人认为XHTML是HTML的一个升级版本，其实也是正确的，我的理解是XHTML把HTML做得更加规范的一个标记语言，使HTML变得功能强大，减少了代码的烦琐尤其是表格。 </p><p>　　XHTML是在2000年1月26日被国际标准组织机构W3C(World Wide web Consortium)定为一个标准的，认为是HTML的一个最新版本，并且将逐渐替换HTML。现在所有的浏览器都支持XHTML，XHTML兼容 HTML 4.0。也有人认为XHTML就是HTML4.01。如果你在学习过程中自己编写了一个符合标准的站，你可以通过W3C的验证，验证通过后你将会得到一个标志，通常是XHTML1.0认证和CSS验证。我也不清楚目前国内有多少个网站同时通过了这两个验证。大家可以去这个站点去验证你的站，如果符合那两个规则则会分别给我们两段代码加到你的网页上向别人展示说明你采用了标准建站啊，牛啊！</p><p>　　为什么我们使用XHTML </p><p>　　XHTML是HTML升级为XML的过度产品，被定为一个标准，XHTML完全兼容HTML4.01，并且具有XML的语法。下面我们来看一个含有错误代码的HTML，如下： </p><p>　　<html> <br />　　<head> <br />　　<title>This is bad HTML</title> <br />　　<body> <br />　　<h1>Bad HTML <br />　　</body> </p><p>　　虽然含有错误代码，但是当我们在浏览器中浏览时还能正常显示。XML是一个标记语言，但是它要求在网页中出现的任何元素都应该被标记出来，XML是用来描述网页中的数据的，而HTML用来显示网页中的元素的。目前我们上网使用的各种浏览器技术，包括手提电脑、手机上网浏览等等，都要求浏览的一些内容都要被正确标记，如果有错误的标记可能会使显示特别混乱、甚至不能正常显示。 </p><p>　　因此联合 HTML 和XML , 还有其他的一些技术，我们得到了一种现在有用的而且在将来也有用的语言 - XHTML。 </p><p>　　当在将来都规范的时候我们就要用的 XHTML 正确格式的标记了,使所有的浏览器都能正确的执行，所以我们现在有必要开始学习XHTML了。 </p><p>　　<strong>XHTML和HTML之间的区别：</strong> </p><p>　　XHTML是一项新技术，在浏览器和一些其他的软件都支持它之前，我们应该有必要熟悉一下这项技术。为了我们更好的学习XHTML之前我们应该熟悉一下HTML4.0，我们可以去下载一个参考手册来熟悉一下。以便于我们学起XHTML来更简单，换句话说我们现在使用HTML编写代码时应该尽力少写错误代码，如：都要使用小写的字符来编写HTML，每个标记之后都要加上标记的结束如：<p>网页教学网欢迎您的光临</p> 结束一定要有，我们要保持这种规则。 </p><p>　　<strong>它们之间最大的区别在于：</strong> </p><p>　　1.XHTML 元素一定要被正确的嵌套使用。 </p><p>　　在HTML里一些元素可以不正确嵌套也能正常显示，如： </p><p>　　<b><i>This text is bold and italic</b></i> </p><p>　　而在XHTML必须要正确嵌套之后才能正常使用，如： </p><p>　　<b><i>This text is bold and italic</i></b> </p><p>　　注意：这个错误通常发生在当嵌套多层之后的标签里面。如： </p><p>　　<ul> <br />　　　<li>Coffee</li> <br />　　　<li>Tea <br />　　　<ul> <br />　　　　<li>Black tea</li> <br />　　　　<li>Green tea</li> <br />　　　</ul> <br />　　　<li>Milk</li> <br />　　</ul> </p><p>　　正确的应该是： </p><p>　　<ul> <br />　　　<li>Coffee</li> <br />　　　<li>Tea <br />　　　<ul> <br />　　　　<li>Black tea</li> <br />　　　　<li>Green tea</li> <br />　　　</ul> <br />　　　</li> <br />　　　<li>Milk</li> <br />　　</ul> </p><p>　　观察上述的两段代码我们可以看到正确的里面我们在 </ul>之后插入 </li> 标签。 </p><p>　
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/html/2010/0407/6.html'>网页制作初学者：认识XHTML DHTML SHTML的区别</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/html/2010/0407/8.html'>介绍span和div标签的使用</a> </li>
+     <li>上一篇：<a href='/a/webbase/html/2010/0407/6.html'>网页制作初学者：认识XHTML DHTML SHTML的区别</a> </li>
+     <li>下一篇：<a href='/a/webbase/html/2010/0407/8.html'>介绍span和div标签的使用</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>
