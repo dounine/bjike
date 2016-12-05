@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=58";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=58";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Dreamweaver</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=58&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=58&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			　我们在用Drwamweaver书写英文文本时，段落一般不缩进（不支持半角空格）；但我们大多的时候都是用中文书写格式，必须在每段开头空两个汉字的位置。但浏览器对于文本中的空格，不管多少只认一个空格。如何在Drwamweaver中实现文本的段落缩进，也就成了中的一大难题。针对这一问题，本文为大家提供以下几种解决办法。 <br /><strong>一、用自Dreaweave身所带的功能<br /></strong>1、在<font color="#000000">Dreamweaver</font>中执行下面操作4次就可以插入两个汉字大小的空格。 <p align="center"><img alt="Dreamweaver8轻松实现文本的段落缩进" src="http://file.chinahtml.com/webdesign/1/2007-04-29/5296d3b500c9b2b20e9cb5c5ed37833f.jpg" /><span class="web"></span></p><p>2、用同背景色相同颜色的字符来完成插入空格，这种方法操作比较繁琐、不易修改，而且在浏览内容被选取时，隐藏的字符就曝光了。<br /><strong>二、用HTML语言<br /></strong>用HTML语言方实现中文段落缩进。对于不懂HTML的初学者来说就有些困难了。<br />1、预格式(PRE)<br />用预格式编写的源文件，在显示时照源文件中的排版字样显示，空行和空格都能很清楚地区别开来。如源文件为： 　　<br />〈pre〉<br />　　－－预格式显示……<br />　　〈/pre〉<br />网页就会按照你预先设置好的显示方式显示，即在“预格式显示”的前面就会空两个汉字的位置。<br />2、插入特殊的空格字符“ ”<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “ ”代表非显示空格字符。插入若干个“ ”字符，中间用分号(；)或者空格隔开，也可以实现中文段落缩进。不过在Netscape 3.01中只能写小写字母，而在IE中大小写都可以。（此方法易产生乱码，不建议采用）<br /><strong>三、用输入法的全角<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>如果你用的是智能ABC的拼音输入的话，那请按SHIFT+空格，这时输入法的属性栏上的半月形就变成了圆形了，然后再敲空格键，空格就出来了。另外智能陈桥五笔的全角方式也可以直接输入空格。这种方法相对比较简单，缺点是英文字符集下，全角空格会变成乱码。<br /><strong>四、另类方法<br /></strong>1、插入点图或图形：<br />点图是指图片中只有一个或几个像素点，用肉眼看不出来。当我们在段落开头插入这样一个点图，并用HSPACE和VSPACE属性来调整点图的左右和上下的空格，以达到段落缩进。<br />2、插入没有边框和内容的表格：<br />这种方式与上述的插入图形方式类似，该表格没有边框和内容而是空表格。用TABLE的WIDTH和HEIGHT属性调整表格大小适合缩进的需要。利用表格来定位一般来说比较可靠，这种方法容易使页面的源文件变大。因此也不见得是格式控制的首选。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后告诉你一个最原始的办法：在一些文字编辑软件中（比如记事本）复制空格，然后在Dreamweaver中进行粘贴。<br /><strong>五、<font color="#000000">CSS</font>方法<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>把<p>标记加上一些属性就可以实现，<P style="TEXT-INDENT: 2em">就可以了！本站推荐使用此方法，以后网页教学网也要改版符合WEB标准的网站的。介绍了这么多种，用哪种好呢？各位可以按自己的喜好而定。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					　我们在用Drwamweaver书写英文文本时，段落一般不缩进（不支持半角空格）；但我们大多的时候都是用中文书写格式，必须在每段开头空两个汉字的位置。但浏览器对于文本中的空格，不管多少只认一个空格。如何在Drwamweaver中实现文本的段落缩进，也就成了中的一大难题。针对这一问题，本文为大家提供以下几种解决办法。 <br /><strong>一、用自Dreaweave身所带的功能<br /></strong>1、在<font color="#000000">Dreamweaver</font>中执行下面操作4次就可以插入两个汉字大小的空格。 <p align="center"><img alt="Dreamweaver8轻松实现文本的段落缩进" src="http://file.chinahtml.com/webdesign/1/2007-04-29/5296d3b500c9b2b20e9cb5c5ed37833f.jpg" /><span class="web"></span></p><p>2、用同背景色相同颜色的字符来完成插入空格，这种方法操作比较繁琐、不易修改，而且在浏览内容被选取时，隐藏的字符就曝光了。<br /><strong>二、用HTML语言<br /></strong>用HTML语言方实现中文段落缩进。对于不懂HTML的初学者来说就有些困难了。<br />1、预格式(PRE)<br />用预格式编写的源文件，在显示时照源文件中的排版字样显示，空行和空格都能很清楚地区别开来。如源文件为： 　　<br />〈pre〉<br />　　－－预格式显示……<br />　　〈/pre〉<br />网页就会按照你预先设置好的显示方式显示，即在“预格式显示”的前面就会空两个汉字的位置。<br />2、插入特殊的空格字符“ ”<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “ ”代表非显示空格字符。插入若干个“ ”字符，中间用分号(；)或者空格隔开，也可以实现中文段落缩进。不过在Netscape 3.01中只能写小写字母，而在IE中大小写都可以。（此方法易产生乱码，不建议采用）<br /><strong>三、用输入法的全角<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>如果你用的是智能ABC的拼音输入的话，那请按SHIFT+空格，这时输入法的属性栏上的半月形就变成了圆形了，然后再敲空格键，空格就出来了。另外智能陈桥五笔的全角方式也可以直接输入空格。这种方法相对比较简单，缺点是英文字符集下，全角空格会变成乱码。<br /><strong>四、另类方法<br /></strong>1、插入点图或图形：<br />点图是指图片中只有一个或几个像素点，用肉眼看不出来。当我们在段落开头插入这样一个点图，并用HSPACE和VSPACE属性来调整点图的左右和上下的空格，以达到段落缩进。<br />2、插入没有边框和内容的表格：<br />这种方式与上述的插入图形方式类似，该表格没有边框和内容而是空表格。用TABLE的WIDTH和HEIGHT属性调整表格大小适合缩进的需要。利用表格来定位一般来说比较可靠，这种方法容易使页面的源文件变大。因此也不见得是格式控制的首选。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后告诉你一个最原始的办法：在一些文字编辑软件中（比如记事本）复制空格，然后在Dreamweaver中进行粘贴。<br /><strong>五、<font color="#000000">CSS</font>方法<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>把<p>标记加上一些属性就可以实现，<P style="TEXT-INDENT: 2em">就可以了！本站推荐使用此方法，以后网页教学网也要改版符合WEB标准的网站的。介绍了这么多种，用哪种好呢？各位可以按自己的喜好而定。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/57.html'>插入的Flash添加透明或其他参数</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/59.html'>Dreamweaver基础教程：层及其应用</a> </li>
+     <li>上一篇：<a href='/a/webbase/dreamweaver/2010/0407/57.html'>插入的Flash添加透明或其他参数</a> </li>
+     <li>下一篇：<a href='/a/webbase/dreamweaver/2010/0407/59.html'>Dreamweaver基础教程：层及其应用</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

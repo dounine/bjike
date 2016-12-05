@@ -8,39 +8,33 @@
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="{dede:global.cfg_basehost/}/favicon1.ico" />
 </head>
 <body>
     {dede:include filename="header.htm"/}
     <div class="content">
-        <div class="banner">
+		<div class="banner">
+		
+
+
             <div class="banner_con">
-                <div class="item" style="display:block">
-                    <a href="tpls/aboutUs_team.html "> <img src="{dede:global.cfg_templets_skin/}/img/index/wlyh.png" ></a>
+			{dede:arclist   typeid='35' row='' col='' titlelen='' infolen='' imgwidth='1278' imgheight='400' listtype='' orderby='sortrank'  keyword='' limit='0,3'}
+                <div class="item"  [field:global name=autoindex runphp="yes"](@me==1)? @me="style='display:block'":@me="";[/field:global]>
+                    <a href="[field:arcurl/] "> [field:image/]</a>
                 </div>
-                <div class="item" >
-                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/wlwyy.png" ></a>
-                </div>
-                <div class="item">
-                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/rjyth.png" ></a>
-                </div>
-                <div class="item" >
-                    <a href="tpls/aboutUs_team.html"><img src="{dede:global.cfg_templets_skin/}/img/index/ggyxch.png" ></a>
-                </div>
+			{/dede:arclist}
             </div>
+		
+		
             <ul class="list">
-                <li class="active">
-                    <a href="javascript:void(0)">网络优化与系统集成一体化解决方案</a>
+			{dede:arclist   typeid='35' row='' col='' titlelen='' infolen='' imgwidth='1278' imgheight='400' listtype='' 'sortrank'  keyword='' limit='0,3'}
+                <li [field:global name=autoindex  runphp="yes"](@me==1)? @me="class=active":@me="";[/field:global]>
+                    <a href="[field:arcurl/]">[field:title/]</a>
                 </li>
-                <li>
-                    <a href="javascript:void(0)">物联网应用解决方案</a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">软件一体化解决方案</a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">广告营销策划一体化解决方案</a>
-                </li>
+			{/dede:arclist}
             </ul>
+
+
         </div>
         <div class="company">
             <div class="brief">
@@ -63,7 +57,7 @@
             </div>
             <div class="dynamic">	
 
-			{dede:autochannel partsort='3' typeid=17}
+			{dede:autochannel partsort='1' typeid=17}
 
 
                 <div class="dynamic_title">
@@ -74,7 +68,7 @@
 				
 			{/dede:autochannel}
 	
-			{dede:arclist  flag='h' typeid='20' row='1' col='' titlelen='' infolen='' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
+			{dede:arclist  typeid='20' row='1' col='' titlelen='' infolen='100' imgwidth='150' imgheight='100' listtype='' orderby='sortrank' keyword='' limit='0,1'}
 
 
                 <div class="dynamic_con">
@@ -172,23 +166,4 @@
 
         </div>
     </div>
-<footer>
-    <div class="mainfoot">
-
-        <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
-
-        <ul>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/yinhe.png"></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/inrogo.png" alt=""></li>
-            <li><img src="{dede:global.cfg_templets_skin/}/img/public/tencent.png" alt=""></li>
-        </ul>
-        <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="{dede:global.cfg_templets_skin/}/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
-            <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>
+{dede:include filename="footer.htm"/}

@@ -1,13 +1,13 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://127.0.0.1/dedecms';
-$cfg_cmspath = '/dedecms';
+$cfg_basehost = 'http://127.0.0.2';
+$cfg_cmspath = '';
 $cfg_cookie_encode = '5g3wPoEVG2cOW1igAUnlYWeRi61sMApq';
-$cfg_indexurl = 'dedecms';
+$cfg_indexurl = '';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
-$cfg_webname = '广州裕大通信科技有限公司';
+$cfg_webname = '北京艾佳天诚信息技术有限公司';
 $cfg_adminemail = 'liuxiaoxiong_aj@163.com';
 $cfg_html_editor = 'ckeditor';
 $cfg_arcdir = '/ike_web';
@@ -136,7 +136,7 @@ $cfg_rewrite = 'N';
 $cfg_delete = 'Y';
 $cfg_keywords = '';
 $cfg_description = '';
-$cfg_beian = '';
+$cfg_beian = '粤ICP备123456号-2';
 $cfg_need_typeid2 = 'Y';
 $cfg_cache_type = 'id';
 $cfg_max_face = 50;

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=3";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=3";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>HTML</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=3&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=3&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>你认为已经知道怎么制做表格了吧。当然，你已经了解 table、tr、td和th标签了，甚至还在你的口袋里装入了rowspan和colspan。你确实可以制做一个精美小巧的咖啡色三合板桌子（表格），但难道你不想做一个优雅稳固，上面有玻璃的，足以承受一头大笨象的宴会桌（表格）？</p><p><strong>列反罢工</strong></p><p>表格行简直使表格列看起来很愚蠢。同样的工作，表格由行与行构建，让列感到十分沮丧。</p><p>但是很幸运，colgroup和col标签来拯救热心的列了。</p><p>这两个标签允许你定义表格列和尽你所需地样式化它们，对于你需要把列排成行或不同着色特别有用，如果没有它们，你需要样式化每一个单独的单元格。</p><p>这是一个使用这些标签的例子：</p><p class="code"><table><br /><colgroup> <col /> <col class="alternate" /> <col /> </colgroup><br /><tr><br /><td>This</td><br /><td>That</td><br /><td>The other</td><br /></tr><br /><tr><br /><td>Ladybird</td><br /><td>Locust</td><br /><td>Lunch</td><br /></tr><br /></table> </p><p>alternate类的样式将被应用到第二列，或者说每一行的第二个单元格。</p><p>你当然可以在colgroup或者col上使用span属性，跟rowspan和colspan有相似的用途</p><p>colgroup一起使用可以定义属于列组的行数，比如<colgroup span="2"></colgroup>会组合头两列。当在colgroup使用span时，不应该再使用col标签。</p><p>在col里使用span是更明智的，可以，比如，应用在上述例子像这样：</p><p class="code"><table><br /><colgroup> <col /> <col span="2" class="alternate" /> </colgroup><br />&nbsp;... </p><p>这将把alternate类应用到最后两列。</p><p><strong>注意</strong></p><p>哦，但是可能有一个陷井，不是吗？那就是：你仅能样式化列的是边框、背景、宽度和可见性。</p><p>Internet Explorer在这方面看起来比其他浏览器表现更好因为它装载有漂亮的CSS属性比如 color，但是，正如结果一样，这是因为它疯狂古怪的行为而已。这种奇特的异常可以让Ian Hixie来解释。</p><p><strong>摘要和说明插曲</strong></p><p>一个简要和容易的提高易用性的思考是，总是为表格应用摘要和说明。</p><p>摘要可以在表格起始标签table中用summary属性应用到表格中。这不会显示，但可以辅助非可视化的表格表现。</p><p>caption标签在起始标签table后直接定义说明。它默认直接在表格顶端出现，但可以在CSS属性caption-side中设置top、right、bottom或者left值，尽管IE不会在意。</p><p class="code"><table summary="The mating habits of locust, showing how many use protection and how many have a cigarette afterwards"><br /><caption>Locust mating habits</caption><br />... </p><p><strong>表头、表注和滚动表格的探讨</strong></p><p>thead、tfoot和tbody允许你把表格分为表头、表注和表格主体。对于大表格尤其有用，在打印的时候，表头和表注应该会在每一页都出现。</p><p>这些元素必须按thead-tfoot-tbody的顺序定义，像这样：</p><p class="code"><table><br /><thead><br /><tr><br /><td>Header 1</td><br /><td>Header 2</td><br /><td>Header 3</td><br /></tr><br /></thead><br /><tfoot><br /><tr><br /><td>Footer 1</td><br /><td>Footer 2</td><br /><td>Footer 3</td><br /></tr><br /></tfoot><br /><tbody><br /><tr><br /><td>Cell 1</td><br /><td>Cell 2</td><br /><td>Cell 3</td><br /></tr><br />&nbsp;... <br /></tbody><br /></table> </p><p>你可以让表格主体tbody在基于Gecko的浏览器（Mozilla、Firefox和Netscape 6+等）滚动，通过应用overflow: auto; max-height: [whatever] 的样式。然后你可以看见表头和表注固定，而表的主体右边有滚动条。你应该谨慎使用max-height属性因为IE不认识，比较安全的做法是使用 height属性，IE将为它应用到每一行。</p><p>注意：说回浏览器的差异，目前IE遇到表头和表注时还是没有什么线索，尽管还是当作表格来处理，但打印的时候不会在哦每一页都出现表头和表注，只孤零零地传递滚动的表格。</p><p><strong>注意</strong></p><p>谨慎对待滚动表格。尽管它们提供十分有用的目的，大部分用户不习惯它们并且认为线性数据是唯一的。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>你认为已经知道怎么制做表格了吧。当然，你已经了解 table、tr、td和th标签了，甚至还在你的口袋里装入了rowspan和colspan。你确实可以制做一个精美小巧的咖啡色三合板桌子（表格），但难道你不想做一个优雅稳固，上面有玻璃的，足以承受一头大笨象的宴会桌（表格）？</p><p><strong>列反罢工</strong></p><p>表格行简直使表格列看起来很愚蠢。同样的工作，表格由行与行构建，让列感到十分沮丧。</p><p>但是很幸运，colgroup和col标签来拯救热心的列了。</p><p>这两个标签允许你定义表格列和尽你所需地样式化它们，对于你需要把列排成行或不同着色特别有用，如果没有它们，你需要样式化每一个单独的单元格。</p><p>这是一个使用这些标签的例子：</p><p class="code"><table><br /><colgroup> <col /> <col class="alternate" /> <col /> </colgroup><br /><tr><br /><td>This</td><br /><td>That</td><br /><td>The other</td><br /></tr><br /><tr><br /><td>Ladybird</td><br /><td>Locust</td><br /><td>Lunch</td><br /></tr><br /></table> </p><p>alternate类的样式将被应用到第二列，或者说每一行的第二个单元格。</p><p>你当然可以在colgroup或者col上使用span属性，跟rowspan和colspan有相似的用途</p><p>colgroup一起使用可以定义属于列组的行数，比如<colgroup span="2"></colgroup>会组合头两列。当在colgroup使用span时，不应该再使用col标签。</p><p>在col里使用span是更明智的，可以，比如，应用在上述例子像这样：</p><p class="code"><table><br /><colgroup> <col /> <col span="2" class="alternate" /> </colgroup><br />&nbsp;... </p><p>这将把alternate类应用到最后两列。</p><p><strong>注意</strong></p><p>哦，但是可能有一个陷井，不是吗？那就是：你仅能样式化列的是边框、背景、宽度和可见性。</p><p>Internet Explorer在这方面看起来比其他浏览器表现更好因为它装载有漂亮的CSS属性比如 color，但是，正如结果一样，这是因为它疯狂古怪的行为而已。这种奇特的异常可以让Ian Hixie来解释。</p><p><strong>摘要和说明插曲</strong></p><p>一个简要和容易的提高易用性的思考是，总是为表格应用摘要和说明。</p><p>摘要可以在表格起始标签table中用summary属性应用到表格中。这不会显示，但可以辅助非可视化的表格表现。</p><p>caption标签在起始标签table后直接定义说明。它默认直接在表格顶端出现，但可以在CSS属性caption-side中设置top、right、bottom或者left值，尽管IE不会在意。</p><p class="code"><table summary="The mating habits of locust, showing how many use protection and how many have a cigarette afterwards"><br /><caption>Locust mating habits</caption><br />... </p><p><strong>表头、表注和滚动表格的探讨</strong></p><p>thead、tfoot和tbody允许你把表格分为表头、表注和表格主体。对于大表格尤其有用，在打印的时候，表头和表注应该会在每一页都出现。</p><p>这些元素必须按thead-tfoot-tbody的顺序定义，像这样：</p><p class="code"><table><br /><thead><br /><tr><br /><td>Header 1</td><br /><td>Header 2</td><br /><td>Header 3</td><br /></tr><br /></thead><br /><tfoot><br /><tr><br /><td>Footer 1</td><br /><td>Footer 2</td><br /><td>Footer 3</td><br /></tr><br /></tfoot><br /><tbody><br /><tr><br /><td>Cell 1</td><br /><td>Cell 2</td><br /><td>Cell 3</td><br /></tr><br />&nbsp;... <br /></tbody><br /></table> </p><p>你可以让表格主体tbody在基于Gecko的浏览器（Mozilla、Firefox和Netscape 6+等）滚动，通过应用overflow: auto; max-height: [whatever] 的样式。然后你可以看见表头和表注固定，而表的主体右边有滚动条。你应该谨慎使用max-height属性因为IE不认识，比较安全的做法是使用 height属性，IE将为它应用到每一行。</p><p>注意：说回浏览器的差异，目前IE遇到表头和表注时还是没有什么线索，尽管还是当作表格来处理，但打印的时候不会在哦每一页都出现表头和表注，只孤零零地传递滚动的表格。</p><p><strong>注意</strong></p><p>谨慎对待滚动表格。尽管它们提供十分有用的目的，大部分用户不习惯它们并且认为线性数据是唯一的。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/html/2010/0407/2.html'>初学者：XHTML常用标签的基本应用指南</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/html/2010/0407/4.html'>初学者很好的参考：HTML标签详尽讲解</a> </li>
+     <li>上一篇：<a href='/a/webbase/html/2010/0407/2.html'>初学者：XHTML常用标签的基本应用指南</a> </li>
+     <li>下一篇：<a href='/a/webbase/html/2010/0407/4.html'>初学者很好的参考：HTML标签详尽讲解</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

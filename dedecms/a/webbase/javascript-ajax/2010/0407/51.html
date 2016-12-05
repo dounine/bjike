@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=51";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=51";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Javascript/Ajax</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=51&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=51&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>XML是作为一种数据交换工具开发并推出的，但并不是所有开发者都支持这一工具。实际上一些开发者选择开发其它工具。（JavaScript对象符号）就是其中之一。在本文中，我们来详细了解一下JSON的设计与应用。 </p><p><strong>JSON</strong><strong>简介</strong></p><p>JSON是一种用JavaScript对象符号格式化文本的简单方法。与其它更为流行的面向对象设计技术不同的是，人们经常称它为面向数据工具。由于它使用编程结构，因此易于为人与机器进行阅读。</p><p>JSON旨在传送基于文本的数据，所以它不支持任何类型的二进制对象。基本上，它支持两种类型的数据结构：名称/值对集合（如对象）和有序数值列表（如数组）。下面的列表详细说明了JSON支持的数据元素：</p><ul><li><strong>Objects</strong>（对象）：以大括号（ {}）开始并结束的对象。 </li><li><strong>Object members</strong>（对象成员）：由以冒号（：）分隔的字符串和值组成的元素。成员之间用逗号（，）隔开。 </li><li><strong>Arrays</strong>（数组）：数据用大括号定义。也就是说，它们以大括号（{}）开始并结束。数组由值构成，这些值位于大括号之中，不同值之间以逗号隔开。 </li><li><strong>Values</strong>（值）：单独的值可能为字符串、数字、对象、或一个文字值，如真、假和零。字符串值位于双引号中，可能包含Unicode字符和反斜扛或转义字符。字符是一个单独的字符串。 </li></ul><p>简单是JSON的一个主要优势——它比与之对应的XML要简单得多。用一个显示JSON数据语法和格式化的例子就能清楚证明这一点。下面的代码片断使用JSON来建立一个网址数组：</p><p>{</p><p>"websites":[</p><p>"http://www.techrepublic.com/",</p><p>"http://www.cnet.com/",</p><p>http://www.news.com/</p><p>] }</p><p>要用XML方便地定义同样的数据，可能相当困难。</p><p><strong>为何不使用XML</strong><strong>？</strong></p><p>XML是一个优秀的数据工具。它允许你建立标签等符号来描述任何类型任何数量的数据。另外，它还是IT业的知名标准。</p><p>另一方面，对许多任务来说，XML的功能可能过于强大，并会增加许多额外的开销。而且，不管它建立起来多么方便，（人类）却无法阅读这些代码。</p><p>让我们用XML格式化前面的例子：</p><p><?xml version="1.0"?></p><p><websites></p><p><website>http://www.techrepublic.com/</website></p><p><website>http://www.cnet.com/</website></p><p><website>http://www.news.com/</website></p><p></websites></p><p>你可能认为这两个例子之间没有太大的差别。但是，在XML中要传送的字符数量几乎增加了一倍。对一个简单的例子而言，这可能不是一个大问题。但让我们看看下面的一个更加复杂的JSON实例：</p><p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>XML是作为一种数据交换工具开发并推出的，但并不是所有开发者都支持这一工具。实际上一些开发者选择开发其它工具。（JavaScript对象符号）就是其中之一。在本文中，我们来详细了解一下JSON的设计与应用。 </p><p><strong>JSON</strong><strong>简介</strong></p><p>JSON是一种用JavaScript对象符号格式化文本的简单方法。与其它更为流行的面向对象设计技术不同的是，人们经常称它为面向数据工具。由于它使用编程结构，因此易于为人与机器进行阅读。</p><p>JSON旨在传送基于文本的数据，所以它不支持任何类型的二进制对象。基本上，它支持两种类型的数据结构：名称/值对集合（如对象）和有序数值列表（如数组）。下面的列表详细说明了JSON支持的数据元素：</p><ul><li><strong>Objects</strong>（对象）：以大括号（ {}）开始并结束的对象。 </li><li><strong>Object members</strong>（对象成员）：由以冒号（：）分隔的字符串和值组成的元素。成员之间用逗号（，）隔开。 </li><li><strong>Arrays</strong>（数组）：数据用大括号定义。也就是说，它们以大括号（{}）开始并结束。数组由值构成，这些值位于大括号之中，不同值之间以逗号隔开。 </li><li><strong>Values</strong>（值）：单独的值可能为字符串、数字、对象、或一个文字值，如真、假和零。字符串值位于双引号中，可能包含Unicode字符和反斜扛或转义字符。字符是一个单独的字符串。 </li></ul><p>简单是JSON的一个主要优势——它比与之对应的XML要简单得多。用一个显示JSON数据语法和格式化的例子就能清楚证明这一点。下面的代码片断使用JSON来建立一个网址数组：</p><p>{</p><p>"websites":[</p><p>"http://www.techrepublic.com/",</p><p>"http://www.cnet.com/",</p><p>http://www.news.com/</p><p>] }</p><p>要用XML方便地定义同样的数据，可能相当困难。</p><p><strong>为何不使用XML</strong><strong>？</strong></p><p>XML是一个优秀的数据工具。它允许你建立标签等符号来描述任何类型任何数量的数据。另外，它还是IT业的知名标准。</p><p>另一方面，对许多任务来说，XML的功能可能过于强大，并会增加许多额外的开销。而且，不管它建立起来多么方便，（人类）却无法阅读这些代码。</p><p>让我们用XML格式化前面的例子：</p><p><?xml version="1.0"?></p><p><websites></p><p><website>http://www.techrepublic.com/</website></p><p><website>http://www.cnet.com/</website></p><p><website>http://www.news.com/</website></p><p></websites></p><p>你可能认为这两个例子之间没有太大的差别。但是，在XML中要传送的字符数量几乎增加了一倍。对一个简单的例子而言，这可能不是一个大问题。但让我们看看下面的一个更加复杂的JSON实例：</p><p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/50.html'>如何用JavaScript实现旋转木马</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/52.html'>完全了解AJAX</a> </li>
+     <li>上一篇：<a href='/a/webbase/javascript-ajax/2010/0407/50.html'>如何用JavaScript实现旋转木马</a> </li>
+     <li>下一篇：<a href='/a/webbase/javascript-ajax/2010/0407/52.html'>完全了解AJAX</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=66";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=66";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Dreamweaver</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=66&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=66&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p align="left">层（Layer）是一种 HTML 页面元素，您可以将它定位在页面上的任意位置。层可以包含文本、图像或其它 HTML 文档。层的出现使网页从二维平面拓展到三维。可以使页面上元素进行重叠和复杂的布局。首先，请看下图： </p><p align="left"><img height="513" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/f628b35de38ff3f3c7f4d7b68ced5d4c.gif" width="496" /></p><p align="left">　　我们首先来做一个层</p><p align="left">　　1、&nbsp;在「窗口」菜单＞选“层”<strong>，</strong>或点「插入」菜单＞布局对象<strong>＞</strong>选“层”。</p><p align="left">　　2、&nbsp;在页面中显示一个层。</p><p align="left">　　3、&nbsp;通过周围的黑色调整柄拖动控制层的大小</p><p align="left">　　4、&nbsp;拖动层左上角的选择柄可以移动层的位置。</p><p align="left">　　5、&nbsp;单击层标记可以选中一个层。</p><p align="left">　　6、&nbsp;在层中可以插入其他任何元素包括图片文字链接表格等。</p><p align="left">　　一个页面中可以画出很多的层，这些层都会列在层面板中。层之间也可以相互重叠。层面板可以通过菜单「窗口」菜单＞选“层”打开。</p><p align="left"><img height="206" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/ba15dea1f1bcb77db641c07ecaa1912c.gif" width="216" /></p><p align="left">　　这里我们需要对几个概念进行解释。层有隐藏和显示的属性。这是层的一个重要属性和以后说到的行为相结合就变成了重要的参数。单击层面板列表的左边，可以打开关闭眼睛。眼睛挣开和关闭表示层的显示和隐藏。</p><p align="left">　　层还有一个概念就是层数，层数决定了重叠时哪个层在上面哪个层在下面。　比如层数为２的层在层数为１的层的上面。改变层数就可以改变层的重叠顺序。</p><p align="left">　　层面板上面还有一个参数就是防止层重叠。一旦选中，页面中层就无法重叠了。　</p><p align="left">　　层还有一种父子关系也就是隶属关系。在层面板中是这样表示的。</p><p align="left"><img height="206" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/333c43ceb3c9f60af8153e1658cc9a86.gif" width="216" /></p><p align="left">　　图中Layer2挂在Layer1的下面。Layer1为父层，Layer2为子层。在页面中拖动Layer1，Layer2也跟着动起来。因为他们已经链在一起了，并且Layer2隶属于Layer1。父层移动会影响到子层。移动layer2层，Layer1层不动。也就是子层不会影响到父层。</p><p align="left">　　要建立这样的一种隶属关系方法很简单。在层面板中按Ctrl键将子层拖拽到父层即可。</p><p align="left">　　［层和表格之间转换］<br /><br /></p><p align="left">　　由于层在网页布局上非常方便，所以，一些人可能不喜欢使用表格或“布局”模式来创建自己的页面，而是喜欢通过层来进行设计。Dreamweaver MX 2004可以使用层来创建自己的布局，然后将它们转换为表格。</p><p align="left">　　 在转换为表格之前，请确保层没有重叠。<span>请执行以下操作：</span><span>选择“修改”<strong>＞</strong>“转换”<strong>＞</strong>“层到表格”。</span>即可显示“转换层为表格”对话框。</p><p align="left"><img height="233" src="http://file.chinahtml.com/webdesign/1/2007-06-18/fde4d94c24fd0a8c56d045e0d52edc2f.gif" width="378" /></p><p align="left"><span>选择所需的选项。</span><span>单击“确定”。 </span><p　　若要将表转换为层，请选择“修改”＞“转换”＞“表格到层”。即可显示“转换表格为层。对< />话框。 </p><p align="left" /><p align="left"><img height="125" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/3348177e00769d8dff1a1d2bdf34d2bc.gif" width="341" /></p><p align="left">　　选择所需的选项。单击“确定”。</p><p align="left">　　层及应用我们就简单介绍到这里。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p align="left">层（Layer）是一种 HTML 页面元素，您可以将它定位在页面上的任意位置。层可以包含文本、图像或其它 HTML 文档。层的出现使网页从二维平面拓展到三维。可以使页面上元素进行重叠和复杂的布局。首先，请看下图： </p><p align="left"><img height="513" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/f628b35de38ff3f3c7f4d7b68ced5d4c.gif" width="496" /></p><p align="left">　　我们首先来做一个层</p><p align="left">　　1、&nbsp;在「窗口」菜单＞选“层”<strong>，</strong>或点「插入」菜单＞布局对象<strong>＞</strong>选“层”。</p><p align="left">　　2、&nbsp;在页面中显示一个层。</p><p align="left">　　3、&nbsp;通过周围的黑色调整柄拖动控制层的大小</p><p align="left">　　4、&nbsp;拖动层左上角的选择柄可以移动层的位置。</p><p align="left">　　5、&nbsp;单击层标记可以选中一个层。</p><p align="left">　　6、&nbsp;在层中可以插入其他任何元素包括图片文字链接表格等。</p><p align="left">　　一个页面中可以画出很多的层，这些层都会列在层面板中。层之间也可以相互重叠。层面板可以通过菜单「窗口」菜单＞选“层”打开。</p><p align="left"><img height="206" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/ba15dea1f1bcb77db641c07ecaa1912c.gif" width="216" /></p><p align="left">　　这里我们需要对几个概念进行解释。层有隐藏和显示的属性。这是层的一个重要属性和以后说到的行为相结合就变成了重要的参数。单击层面板列表的左边，可以打开关闭眼睛。眼睛挣开和关闭表示层的显示和隐藏。</p><p align="left">　　层还有一个概念就是层数，层数决定了重叠时哪个层在上面哪个层在下面。　比如层数为２的层在层数为１的层的上面。改变层数就可以改变层的重叠顺序。</p><p align="left">　　层面板上面还有一个参数就是防止层重叠。一旦选中，页面中层就无法重叠了。　</p><p align="left">　　层还有一种父子关系也就是隶属关系。在层面板中是这样表示的。</p><p align="left"><img height="206" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/333c43ceb3c9f60af8153e1658cc9a86.gif" width="216" /></p><p align="left">　　图中Layer2挂在Layer1的下面。Layer1为父层，Layer2为子层。在页面中拖动Layer1，Layer2也跟着动起来。因为他们已经链在一起了，并且Layer2隶属于Layer1。父层移动会影响到子层。移动layer2层，Layer1层不动。也就是子层不会影响到父层。</p><p align="left">　　要建立这样的一种隶属关系方法很简单。在层面板中按Ctrl键将子层拖拽到父层即可。</p><p align="left">　　［层和表格之间转换］<br /><br /></p><p align="left">　　由于层在网页布局上非常方便，所以，一些人可能不喜欢使用表格或“布局”模式来创建自己的页面，而是喜欢通过层来进行设计。Dreamweaver MX 2004可以使用层来创建自己的布局，然后将它们转换为表格。</p><p align="left">　　 在转换为表格之前，请确保层没有重叠。<span>请执行以下操作：</span><span>选择“修改”<strong>＞</strong>“转换”<strong>＞</strong>“层到表格”。</span>即可显示“转换层为表格”对话框。</p><p align="left"><img height="233" src="http://file.chinahtml.com/webdesign/1/2007-06-18/fde4d94c24fd0a8c56d045e0d52edc2f.gif" width="378" /></p><p align="left"><span>选择所需的选项。</span><span>单击“确定”。 </span><p　　若要将表转换为层，请选择“修改”＞“转换”＞“表格到层”。即可显示“转换表格为层。对< />话框。 </p><p align="left" /><p align="left"><img height="125" alt="Dreamweaver教程：层及其应用" src="http://file.chinahtml.com/webdesign/1/2007-06-18/3348177e00769d8dff1a1d2bdf34d2bc.gif" width="341" /></p><p align="left">　　选择所需的选项。单击“确定”。</p><p align="left">　　层及应用我们就简单介绍到这里。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/65.html'>新手入门：利用DW8掌握网页代码基本格式</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/67.html'>网页禁止右键菜单及禁止全选代码</a> </li>
+     <li>上一篇：<a href='/a/webbase/dreamweaver/2010/0407/65.html'>新手入门：利用DW8掌握网页代码基本格式</a> </li>
+     <li>下一篇：<a href='/a/webbase/dreamweaver/2010/0407/67.html'>网页禁止右键菜单及禁止全选代码</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

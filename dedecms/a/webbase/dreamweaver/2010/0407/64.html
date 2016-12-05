@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=64";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=64";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Dreamweaver</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=64&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=64&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>　Dreamweaver CS3集成了AJAX框架Spry，使得我最近对Spry感上了兴趣。<br />　<br />　　再次说明下Spry是Adobe公司推出的AJAX框架，所谓AJAX框架，就先谈目前流行的Web2.0. 1，这些Web2.0站点从页面形式上来看，页面与浏览者的交互很时尚、也很人性化。比如注册信息时输入邮箱不规则，页面立即提示……当然这在Web2.0之前已有应用，但是从来没有哪个时候像现在如此推崇此类即时检测等很符合用户体验的技术，这些脱离不了Javascript脚本的编写，其已属于AJAX的定义范畴。<br />　<br />　　2，当然AJAX不仅仅是这些，比如要做个“TabPane 选项卡”很炫酷的页面展示功能，我们手写Javascript脚本就比较的费事，当然还有很多的在Web2.0站点看到的比如“显示和隐藏”、“淡入淡出”等特效，这些都离不开Javascript，而现在我们也称为AJAX技术。<br />　<br />　　3，AJAX最核心的技术就是数据处理的能力，并能进行远程异步处理的能力，主要集中在对XML数据的数据交互上。<br />　<br />　　所有这些，Javascript占最大比重，XHTML、CSS作为表现形式而存在、因XML涉及的XSLT、XPATH等技术融入其中，还有相关的DOM操作，这些所有有需要功能文件的组合体就构成了AJAX框架（如果可以，你也可以自己写一个AJAX框架给大家使用）。<br />　<br />　　Adobe Spry 介绍页有这样一句话：With Spry， you can use HTML code， CSS code， and a minimal amount of JavaScript to incorporate XML data into your HTML documents， create widgets such as accordions and menu bars， and add different kinds of effects to various page elements.使用Spry框架，用HTML、CSS、JavaScript就可以在HTML文章中展现XML数据、建立诸如炫酷菜单的一些界面，还有其他的一些页面特效（大体上分了三类内容，这也是Spry AJAX框架所具备的）。<br />　<br />　　由此，学习Spry就可以从如下三点开始：Working with Spry widgets Working with Spry Effects Working with Spry XML Data Sets今天介绍的表单检测还属其中内容。<br />　<br />　　在页面中插入“Spry”-“Spry validation text field”文本框之后，在选中该表单元素之后除了显示其元素属性以外，在选择该表单元素之上的蓝色文本“Spry TextField”，属性面板中显示了表单验证相关的选项内容。<br />　<br />　　比如下图就是选择“Type”是“Email Address”的邮件输入检测，触发的动作默认是“Submit”，当然自己也可以选择“Blur”或“Change”，对于这些操作，则要求使用者具备简单的Javascript知识。还可以设置默认文本提示，是否必须填写等。</p><p></p><p>&nbsp; 这些操作，对于有Dreamweaver经验的用户来说，曾经是在DW的脚本行为中的操作，不过那些显示的是弹出警告框，而现在是紧随表单元素之后的即时显示的文字信息，相比较一下哪个更让用户觉得亲切呢？——这就是Web2.0在表现形式上质的飞跃。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 利用Spry框架提供这些操作不仅生成基于标准的XHTML+CSS代码，还能完成完善用户体验的页面功能，这是在Dreamweaver cs3初试Spry的体会。</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>　Dreamweaver CS3集成了AJAX框架Spry，使得我最近对Spry感上了兴趣。<br />　<br />　　再次说明下Spry是Adobe公司推出的AJAX框架，所谓AJAX框架，就先谈目前流行的Web2.0. 1，这些Web2.0站点从页面形式上来看，页面与浏览者的交互很时尚、也很人性化。比如注册信息时输入邮箱不规则，页面立即提示……当然这在Web2.0之前已有应用，但是从来没有哪个时候像现在如此推崇此类即时检测等很符合用户体验的技术，这些脱离不了Javascript脚本的编写，其已属于AJAX的定义范畴。<br />　<br />　　2，当然AJAX不仅仅是这些，比如要做个“TabPane 选项卡”很炫酷的页面展示功能，我们手写Javascript脚本就比较的费事，当然还有很多的在Web2.0站点看到的比如“显示和隐藏”、“淡入淡出”等特效，这些都离不开Javascript，而现在我们也称为AJAX技术。<br />　<br />　　3，AJAX最核心的技术就是数据处理的能力，并能进行远程异步处理的能力，主要集中在对XML数据的数据交互上。<br />　<br />　　所有这些，Javascript占最大比重，XHTML、CSS作为表现形式而存在、因XML涉及的XSLT、XPATH等技术融入其中，还有相关的DOM操作，这些所有有需要功能文件的组合体就构成了AJAX框架（如果可以，你也可以自己写一个AJAX框架给大家使用）。<br />　<br />　　Adobe Spry 介绍页有这样一句话：With Spry， you can use HTML code， CSS code， and a minimal amount of JavaScript to incorporate XML data into your HTML documents， create widgets such as accordions and menu bars， and add different kinds of effects to various page elements.使用Spry框架，用HTML、CSS、JavaScript就可以在HTML文章中展现XML数据、建立诸如炫酷菜单的一些界面，还有其他的一些页面特效（大体上分了三类内容，这也是Spry AJAX框架所具备的）。<br />　<br />　　由此，学习Spry就可以从如下三点开始：Working with Spry widgets Working with Spry Effects Working with Spry XML Data Sets今天介绍的表单检测还属其中内容。<br />　<br />　　在页面中插入“Spry”-“Spry validation text field”文本框之后，在选中该表单元素之后除了显示其元素属性以外，在选择该表单元素之上的蓝色文本“Spry TextField”，属性面板中显示了表单验证相关的选项内容。<br />　<br />　　比如下图就是选择“Type”是“Email Address”的邮件输入检测，触发的动作默认是“Submit”，当然自己也可以选择“Blur”或“Change”，对于这些操作，则要求使用者具备简单的Javascript知识。还可以设置默认文本提示，是否必须填写等。</p><p></p><p>&nbsp; 这些操作，对于有Dreamweaver经验的用户来说，曾经是在DW的脚本行为中的操作，不过那些显示的是弹出警告框，而现在是紧随表单元素之后的即时显示的文字信息，相比较一下哪个更让用户觉得亲切呢？——这就是Web2.0在表现形式上质的飞跃。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 利用Spry框架提供这些操作不仅生成基于标准的XHTML+CSS代码，还能完成完善用户体验的页面功能，这是在Dreamweaver cs3初试Spry的体会。</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/63.html'>通过Dreamweaver设计网页时组织CSS的建议</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/65.html'>新手入门：利用DW8掌握网页代码基本格式</a> </li>
+     <li>上一篇：<a href='/a/webbase/dreamweaver/2010/0407/63.html'>通过Dreamweaver设计网页时组织CSS的建议</a> </li>
+     <li>下一篇：<a href='/a/webbase/dreamweaver/2010/0407/65.html'>新手入门：利用DW8掌握网页代码基本格式</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

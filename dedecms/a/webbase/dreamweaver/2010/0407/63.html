@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=63";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=63";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Dreamweaver</h1>
     </nav>
@@ -180,12 +186,18 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=63&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=63&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>一般地讲，样式表（style sheet）就是控制网页内容外观的格式化的规则的集合。可以以三种不同的方式在你的页面中使用CSS：</p><p>代码式（Inline）：写入到代码中的一次性的样式。<br />内嵌式（Embedded）：可控制一个页面中所有元素的样式表<br />外联式（External）：可控制许多页面中的元素的样式表<span class="web"></span></p><p>事实上，许多站点都根据需要把这三种方式结合起来使用。</p><p>在使用CSS时一个需要重点考虑的事实是不同的浏览器以及同一浏览器的不同版本以不同的方式来解析CSS。除了网络浏览器的差异之外，你还要意识到还有很多其他的浏览器，比如听力浏览器，基于电视的浏览器以及Palm pilot和TTY（teletypewriter，远程打字机）一类的手持设备。</p><p>最佳习惯是指什么？<span class="web"></span></p><p>大多数技术都有自己约定俗成的标准。CSS也不例外。虽然并非网络上存在的所有CSS都很规范，但按照现有标准来使用CSS却还是不无裨益的。一般来说，开发人员应尽可能将内容与报告分离开来。这样做的好处在于：</p><p>1：增加站点的寿命</p><p>不规范的样式表可能在当时觉得很方便，但新版本的浏览器出来以后，很可能就会出现兼容性问题。到时逐页修改站点就是一项非常费时的工作同时也使使用CSS失去了意义。</p><p>2：让你的站点对所有的用户以及浏览器都适用。</p><p>有些地方的政府已经立法要求网站必须让残障人士也同样可以浏览。为残障认识设计的浏览设备，比如听力浏览器，对CSS规范性要求极其严格。</p><p>3：让站点更新和维护更加轻松。<span class="web"></span></p><p>使用方式得当的话，CSS可让你在一个页面中的调整快速应用到所有页面中去。</p><p>你首先要做的选择是使用哪一种样式表。当涉及到最佳习惯时，对不同样式表的分析如下：<span class="web"></span></p><p>Inline CSS；简单地说，你应该尽量避免使用。除了一些其他的缺点之外，使用Inline CSS意味着你并没有利用到CSS的真正优点，即你并没有将内容与格式分离开。DW使用Inline CSS主要是为了定位页面元素（这些元素在DW的用户界面中称为“层（layer）”），或者为了使用某个DHTML特效，它需要使用Inline 样式的Javascript来改变一个对象的属性。<span class="web"></span></p><p>Embedded CSS：它也不是最理想的，因为它只能对当前页面施加影响。在更新的过程中，如果某一个页面丢失，将会使站点的风格不一致；另外，当用户浏览你的站点时，每一页都要下载一次样式表信息。</p><p>External CSS：这是你的第一选择。External CSS可以让所有连接到它的页面保持一致的外观风格；提纲挈领，更改一次，轻松更新所有相关页面；让你的页面体积更小，浏览速度更快。其他的一些最佳习惯将在下文分析具体的CSS特性时提及。</p><p>在DW中创建CSS样式表</p><p>在DW中创建CSS样式表时（Text 》CSS Style 》New style sheet），在弹出的对话框中，你有两个选择：新样式表文档（New Style Sheet File） 和只用于当前页（This Document Only）。选中“New Style Sheet File ”你就开始了创建External CSS的过程。这个选项要求你在真正的创建过程之前先命名样式表并为它选定一个保存位置；另外一个选项，This Document Only，则会直接把相关代码写入到页面的部分。</p><p>你也可以在“新样式（New style）”对话框中选择一个现存的样式表来编辑或添加新的定义。</p><p>应该连接到External CSS还是导入？</p><p>创建外部样式表以后，你需要把它附加在每个页面上（或是模板）。要这样做，可以在CSS面板上淡季“附加样式表（Attach Style Sheet）”按纽，此时会弹出连接外部样式表 （Link External Style Sheet）对话框，在上面可以浏览到你的目标样式表的名字，找到以后，你可以选择连接（link） 或者导入（import ）此外部样式表。</p><p>连接是最常用的方式，选择“link”即可把样式表连接到页面。它会在你的页面中加入下面的标记：</p><p>所有支持CSS的浏览器都支持连接选项。如果你想一些比较旧的浏览器（比如Netscape 4.x）也能“看到”这个样式表的话，就要采用下面的方法。</p><p>如果你选择“导入”选项，所用的标记为：</p><p>NetSscape4会完全忽略导入的CSS，而按照连接的CSS来解释页面。这样我们就可以放心使用CSS中的新功能，不必担心浏览器的兼容性问题了。</p><p>CSS属性检查器</p><p>在DW的属性检查器中可以轻易切换到CSS模式。缺省情况下，属性检查器会显示原始的HTML模式下字体标签。点击字体下拉菜单旁边的小“A”，你就可以看到目前可用的CSS样式表，而不是字体标签列表。同时，你也可以轻松切回到HTML模式。</p><p>现成的CSS样式表</p><p>DW中一个令人激动的CSS特性就是它包含了已制作好的CSS样式表。CSS的新用户可以先体验一下。选择File > New，在弹出的新文档对话框中选择选中CSS style sheets，在右边的方框中会出现所有可用的CSS列表。为了实践我们所说的最佳习惯，选择一个标记为“Accessible”的。</p><p>将文档保存在站点文件夹内，然后就可以用上述的方法来把CSS附加在你的文档中了。<span class="web"></span></p><p>设计时间样式表（Design Time style sheets）</p><p>DW的这一特性可以让你在设计视图下工作时将样式表应用到页面，让你对站点的外观有一个更直观的认识。设计时间样式表将不会出现在站点内。从我们的最佳习惯的观点来讲，这一特性是非常有用的。如果你使用同时导入和连接两种方式（如上所述），附加设计时间样式表可以让你使用其中的任何一个来开发站点。当你想看在另一个样式表下页面外观如何时，你可以轻松更改为另一个样式表。<span class="web"></span></p><p>对于要将CSS应用于服务器端（比如ASP, PHP, or ColdFusion）或是要在客户端通过Javascript来存取的开发者来说，设计时间样式表同样有用。服务器端样式表也是处理客户端浏览器对CSS支持不好的又一种方式。但在以前版本的DW中，这种方式却不能让你在设计阶段查看CSS的实际效果。设计时间样式表让你实时查看样式表效果，所以你可在DW中以可视界面工作。另外一个好处就是当你上传站点文件时，你不必再检查整个站点寻找冗余的样式表了。</p><p>验证</p><p>无论你是自己创建样式表还是编辑现有的样式表，验证可以确保你不会误用不标准的标签或错误的代码。DW本身不包含CSS验证程序，你可以使用W3C站点提供的验证服务。<span class="web"></span></p><p>在DW内你可以验证HTML 或DHTML标签（ File > Check Page > Validate Markup (for HTML) 或 File > Check Page > Validate as XML for XHTML.）。在开发基于CSS的站点时，DW提供了很多辅助工具。有了MW MX的帮助，再加上对CSS良好的理解，你就可以开发出能经受时间考验的站点了。( 负责编辑：kaso )</p>
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>一般地讲，样式表（style sheet）就是控制网页内容外观的格式化的规则的集合。可以以三种不同的方式在你的页面中使用CSS：</p><p>代码式（Inline）：写入到代码中的一次性的样式。<br />内嵌式（Embedded）：可控制一个页面中所有元素的样式表<br />外联式（External）：可控制许多页面中的元素的样式表<span class="web"></span></p><p>事实上，许多站点都根据需要把这三种方式结合起来使用。</p><p>在使用CSS时一个需要重点考虑的事实是不同的浏览器以及同一浏览器的不同版本以不同的方式来解析CSS。除了网络浏览器的差异之外，你还要意识到还有很多其他的浏览器，比如听力浏览器，基于电视的浏览器以及Palm pilot和TTY（teletypewriter，远程打字机）一类的手持设备。</p><p>最佳习惯是指什么？<span class="web"></span></p><p>大多数技术都有自己约定俗成的标准。CSS也不例外。虽然并非网络上存在的所有CSS都很规范，但按照现有标准来使用CSS却还是不无裨益的。一般来说，开发人员应尽可能将内容与报告分离开来。这样做的好处在于：</p><p>1：增加站点的寿命</p><p>不规范的样式表可能在当时觉得很方便，但新版本的浏览器出来以后，很可能就会出现兼容性问题。到时逐页修改站点就是一项非常费时的工作同时也使使用CSS失去了意义。</p><p>2：让你的站点对所有的用户以及浏览器都适用。</p><p>有些地方的政府已经立法要求网站必须让残障人士也同样可以浏览。为残障认识设计的浏览设备，比如听力浏览器，对CSS规范性要求极其严格。</p><p>3：让站点更新和维护更加轻松。<span class="web"></span></p><p>使用方式得当的话，CSS可让你在一个页面中的调整快速应用到所有页面中去。</p><p>你首先要做的选择是使用哪一种样式表。当涉及到最佳习惯时，对不同样式表的分析如下：<span class="web"></span></p><p>Inline CSS；简单地说，你应该尽量避免使用。除了一些其他的缺点之外，使用Inline CSS意味着你并没有利用到CSS的真正优点，即你并没有将内容与格式分离开。DW使用Inline CSS主要是为了定位页面元素（这些元素在DW的用户界面中称为“层（layer）”），或者为了使用某个DHTML特效，它需要使用Inline 样式的Javascript来改变一个对象的属性。<span class="web"></span></p><p>Embedded CSS：它也不是最理想的，因为它只能对当前页面施加影响。在更新的过程中，如果某一个页面丢失，将会使站点的风格不一致；另外，当用户浏览你的站点时，每一页都要下载一次样式表信息。</p><p>External CSS：这是你的第一选择。External CSS可以让所有连接到它的页面保持一致的外观风格；提纲挈领，更改一次，轻松更新所有相关页面；让你的页面体积更小，浏览速度更快。其他的一些最佳习惯将在下文分析具体的CSS特性时提及。</p><p>在DW中创建CSS样式表</p><p>在DW中创建CSS样式表时（Text 》CSS Style 》New style sheet），在弹出的对话框中，你有两个选择：新样式表文档（New Style Sheet File） 和只用于当前页（This Document Only）。选中“New Style Sheet File ”你就开始了创建External CSS的过程。这个选项要求你在真正的创建过程之前先命名样式表并为它选定一个保存位置；另外一个选项，This Document Only，则会直接把相关代码写入到页面的部分。</p><p>你也可以在“新样式（New style）”对话框中选择一个现存的样式表来编辑或添加新的定义。</p><p>应该连接到External CSS还是导入？</p><p>创建外部样式表以后，你需要把它附加在每个页面上（或是模板）。要这样做，可以在CSS面板上淡季“附加样式表（Attach Style Sheet）”按纽，此时会弹出连接外部样式表 （Link External Style Sheet）对话框，在上面可以浏览到你的目标样式表的名字，找到以后，你可以选择连接（link） 或者导入（import ）此外部样式表。</p><p>连接是最常用的方式，选择“link”即可把样式表连接到页面。它会在你的页面中加入下面的标记：</p><p>所有支持CSS的浏览器都支持连接选项。如果你想一些比较旧的浏览器（比如Netscape 4.x）也能“看到”这个样式表的话，就要采用下面的方法。</p><p>如果你选择“导入”选项，所用的标记为：</p><p>NetSscape4会完全忽略导入的CSS，而按照连接的CSS来解释页面。这样我们就可以放心使用CSS中的新功能，不必担心浏览器的兼容性问题了。</p><p>CSS属性检查器</p><p>在DW的属性检查器中可以轻易切换到CSS模式。缺省情况下，属性检查器会显示原始的HTML模式下字体标签。点击字体下拉菜单旁边的小“A”，你就可以看到目前可用的CSS样式表，而不是字体标签列表。同时，你也可以轻松切回到HTML模式。</p><p>现成的CSS样式表</p><p>DW中一个令人激动的CSS特性就是它包含了已制作好的CSS样式表。CSS的新用户可以先体验一下。选择File > New，在弹出的新文档对话框中选择选中CSS style sheets，在右边的方框中会出现所有可用的CSS列表。为了实践我们所说的最佳习惯，选择一个标记为“Accessible”的。</p><p>将文档保存在站点文件夹内，然后就可以用上述的方法来把CSS附加在你的文档中了。<span class="web"></span></p><p>设计时间样式表（Design Time style sheets）</p><p>DW的这一特性可以让你在设计视图下工作时将样式表应用到页面，让你对站点的外观有一个更直观的认识。设计时间样式表将不会出现在站点内。从我们的最佳习惯的观点来讲，这一特性是非常有用的。如果你使用同时导入和连接两种方式（如上所述），附加设计时间样式表可以让你使用其中的任何一个来开发站点。当你想看在另一个样式表下页面外观如何时，你可以轻松更改为另一个样式表。<span class="web"></span></p><p>对于要将CSS应用于服务器端（比如ASP, PHP, or ColdFusion）或是要在客户端通过Javascript来存取的开发者来说，设计时间样式表同样有用。服务器端样式表也是处理客户端浏览器对CSS支持不好的又一种方式。但在以前版本的DW中，这种方式却不能让你在设计阶段查看CSS的实际效果。设计时间样式表让你实时查看样式表效果，所以你可在DW中以可视界面工作。另外一个好处就是当你上传站点文件时，你不必再检查整个站点寻找冗余的样式表了。</p><p>验证</p><p>无论你是自己创建样式表还是编辑现有的样式表，验证可以确保你不会误用不标准的标签或错误的代码。DW本身不包含CSS验证程序，你可以使用W3C站点提供的验证服务。<span class="web"></span></p><p>在DW内你可以验证HTML 或DHTML标签（ File > Check Page > Validate Markup (for HTML) 或 File > Check Page > Validate as XML for XHTML.）。在开发基于CSS的站点时，DW提供了很多辅助工具。有了MW MX的帮助，再加上对CSS良好的理解，你就可以开发出能经受时间考验的站点了。( 负责编辑：kaso )</p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -213,28 +225,27 @@ function getDigg(aid)
   <div class="handle">
    <div class="context">
     <ul>
-     <li>上一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/62.html'>在Dreamweaver8.0.2中为插入的Flash添加透明或其他参数</a> </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/dreamweaver/2010/0407/64.html'>Dreamweaver cs3新功能Spry效果试用</a> </li>
+     <li>上一篇：<a href='/a/webbase/dreamweaver/2010/0407/62.html'>在Dreamweaver8.0.2中为插入的Flash添加透明或其他参数</a> </li>
+     <li>下一篇：<a href='/a/webbase/dreamweaver/2010/0407/64.html'>Dreamweaver cs3新功能Spry效果试用</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>

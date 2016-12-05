@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>北京艾佳天诚信息技术有限公司</title>
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/header.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/companyDy.css">
-    <link rel="stylesheet" href="/dedecms/templets/ike/css/footer.css">
-    <script src="/dedecms/templets/ike/js/jquery.min.js"></script>
-    <script src="/dedecms/templets/ike/js/index.js"></script>
-	<link href="/dedecms/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/dedecms/m/view.php?aid=34";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-<script language="javascript" type="text/javascript" src="/dedecms/include/dedeajax2.js"></script>
+    <link rel="stylesheet" href="/templets/ike/css/header.css">
+    <link rel="stylesheet" href="/templets/ike/css/companyDy.css">
+    <link rel="stylesheet" href="/templets/ike/css/footer.css">
+    <script src="/templets/ike/js/jquery.min.js"></script>
+    <script src="/templets/ike/js/index.js"></script>
+	<link href="/templets/ike/css/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=34";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
 </head>
 <style>
 	.comDyMain h2{
@@ -31,7 +31,7 @@
 function CheckLogin(){
 	  var taget_obj = document.getElementById('_ajax_feedback');
 	  myajax = new DedeAjax(taget_obj,false,false,'','','');
-	  myajax.SendGet2("/dedecms/member/ajax_feedback.php");
+	  myajax.SendGet2("/member/ajax_feedback.php");
 	  DedeXHTTP = null;
 }
 function postBadGood(ftype,fid)
@@ -64,7 +64,7 @@ function postBadGood(ftype,fid)
 		SetCookie('badgoodid',fid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
 }
 function postDigg(ftype,aid)
 {
@@ -96,14 +96,14 @@ function postDigg(ftype,aid)
 		SetCookie('diggid',aid,1);
 	}
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	var url = "/dedecms/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
 	myajax.SendGet2(url);
 }
 function getDigg(aid)
 {
 	var taget_obj = document.getElementById('newdigg');
 	myajax = new DedeAjax(taget_obj,false,false,'','','');
-	myajax.SendGet2("/dedecms/plus/digg_ajax.php?id="+aid);
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
 	DedeXHTTP = null;
 }
 -->
@@ -112,58 +112,64 @@ function getDigg(aid)
 <header>
     <div class="headtop">
         <div class="headtop_con">
-            <img src="/dedecms/templets/ike/img/public/cope.png" alt="" class="cope">
+            <img src="/templets/ike/img/public/cope.png" alt="" class="cope">
             <div class="head_r">
+				<div class="wx">
+					<a href="http://issp.bjike.com" class="">ISSP智能服务共享平台 </a>
+				</div>
                 <div class="wx">
-                    <a href="javascript:void(0) "><img src="/dedecms/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
-                    <div class="twowm"><img src="/dedecms/templets/ike/img/public/2wm.png" ></div>
+                    <a href="javascript:void(0) "><img src="/templets/ike/img/public/wx.png" alt="图片失联">微信</a>
+                    <div class="twowm"><img src="/templets/ike/img/public/2wm.png" ></div>
                 </div>
                 <a href="tpls/recruit.html" class="tel">联系电话：010-62272306</a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="logo"><a href="/dedecms"><img src="/dedecms/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
+        <div class="logo"><a href=""><img src="/templets/ike/img/public/logo.png" alt="图片失联"></a></div>
         <ul class="mainnav">
             <li>
-                <a href="/dedecms/">首页</a>
+                <a href="/">首页</a>
             </li>
             <li>
-			<a href='/dedecms/ike_web/about/'>关于我们</a>
+			<a href='/ike_web/about/'>关于我们</a>
 
             </li>
             <li class="serBtn">
-			<a href="/dedecms/ike_web/service/" class="serviceBtn">服务 <i></i></a>
+			<a href="/ike_web/service/" class="serviceBtn">服务 <i></i></a>
                 <ul class="subnav">
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/b/#stft" goId="">通讯类</a>
+                        <a href="/ike_web/Software/b/#stft" goId="">通讯类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/c/#stft" goId="">系统集成类</a>
+                        <a href="/ike_web/Software/c/#stft" goId="">系统集成类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/d/#stft" goId="">营销策划类</a>
+                        <a href="/ike_web/Software/d/#stft" goId="">营销策划类</a>
                     </li>
 				
                     <li>
-                        <a href="/dedecms/ike_web/Software/a/#stft" goId="">软件类</a>
+                        <a href="/ike_web/Software/a/#stft" goId="">软件类</a>
                     </li>
 				
 
                 </ul>
             </li>
-            <li>
-                <a href="###">加入我们</a>
+			<li>
+			<a href='/ike_web/news/'>公司动态</a>
             </li>
             <li>
-                <a href="../tpls/contactUs.html">联系我们</a>
+                <a href='/ike_web/join/'>加入我们</a>
+            </li>
+            <li>
+			<a href="/ike_web/contactus/">联系我们</a>
             </li>
         </ul>
 		<h1>
-		
+		      
 		</h1>
 		<h1>Javascript/Ajax</h1>
     </nav>
@@ -180,13 +186,19 @@ function getDigg(aid)
 				<small>作者:</small>
 				 
 				<small>点击:</small>
-				<script src="/dedecms/plus/count.php?view=yes&aid=34&mid=1" type='text/javascript' language="javascript"></script>
+				<script src="/plus/count.php?view=yes&aid=34&mid=1" type='text/javascript' language="javascript"></script>
 					次
 			</div>
-			<p>关于英文的写作有一本十分著名的书，（风格要素），编写程序也有一本（编程风格要素）。证明了在某种程度上，编写程序其实就是语文写作，清晰的风格对程序的质量有着重要的影响。草率含混的风格会隐蔽程序真性。</p><p>作为JavaScript Guru, 提出了自己对JavaScript风格的创见（，）。</p><p>第一部分主要讨论JavaScript语言本身，包括：</p><ul><li><strong>淘汰过时的构建。</strong> <p>讨论了在HTML页面引入JavaScript的方式。经典的写法是：</p><pre><code><script language=javascript><!--
+			<div class="t_left" style="margin-top:10px">
+				<div>
+					<p>关于英文的写作有一本十分著名的书，（风格要素），编写程序也有一本（编程风格要素）。证明了在某种程度上，编写程序其实就是语文写作，清晰的风格对程序的质量有着重要的影响。草率含混的风格会隐蔽程序真性。</p><p>作为JavaScript Guru, 提出了自己对JavaScript风格的创见（，）。</p><p>第一部分主要讨论JavaScript语言本身，包括：</p><ul><li><strong>淘汰过时的构建。</strong> <p>讨论了在HTML页面引入JavaScript的方式。经典的写法是：</p><pre><code><script language=javascript><!--
 --></script></code></pre><p><code><font face="NSimsun">language</font></code>并不是W3C所认同的标准，建议使用的是<code><font face="NSimsun">type</font></code>, 但作为<code><font face="NSimsun">type</font></code>值的MIME type并没有标准化（有时是<code><font face="NSimsun">text/javascript</font></code>, 有时是application/ecmascript），但目前所有的浏览器都是使用JavaScript作为默认的脚本语言，因此仅仅些<font face="NSimsun"><code><script>就是安全的。随着NetScape 3的淘汰，</code><code><-- --></code></font>也不是必要的了。</p><p>（注：这个东西Web标准社区也有自己的看法，并认为应该写<code><font face="NSimsun">type="text/javascript"</font></code>，我也赞成。） </p></li><li><strong>在结构中始终使用区块。</strong> <p>莫偷懒，省略区块（即<code><font face="NSimsun">{ }</font></code>）会引发不经意的错误和麻烦。即使只有一句，也老老实实写上：</p><pre><code>if (expression) { ... }</code></pre></li><li><strong>避免在表达式中进行赋值。</strong>虽然可以使代码紧凑，但会让控制流程难于理解。 </li><li><strong>使用对象扩充。</strong>在不需要构造函数的对象中，不如先创建一个空对象，然后扩充它。 </li><li><strong>使用通用库。</strong>注意提高代码的重用。 </li></ul><p>第二部分主要讲的是一些使程序更清晰和简洁的习惯用法：</p><ul><li><strong>使用<code><font face="NSimsun">==</font></code>得当心强类型。</strong><code><font face="NSimsun">1 == true</font></code>是真，但<code><font face="NSimsun">1 === true</font></code>却为假。 </li><li><strong>使用<code><font face="NSimsun">?:</font></code>运算符选择两值之一。</strong>在这种操作中，三元运算符为此而生。 </li><li><strong>永远不要使用隐含的全局变量。</strong>请记得声明变量时加上<code><font face="NSimsun">var</font></code>. </li><li><strong>不要使用<code><font face="NSimsun">?:</font></code>来选择两种行为的其一。</strong>写作<code><font face="NSimsun">p.style.backgroundColor = z ? '#fff' : '#989898';</font></code>而不是<code><font face="NSimsun">(z == 0) ? p.style.backgroundColor = '#fff' : p.style.backgroundColor = '#989898';</font></code>。 </li><li><strong>使用<code><font face="NSimsun">||</font></code>来指定一个默认值。</strong>最典型的莫过于处理事件参数了：<code><font face="NSimsun">var e = e || event;</font></code>。 </li><li><strong>全局变量是邪恶的。</strong> </li><li><strong>使用内部函数来避免全局变量。</strong> </li></ul><p>这些风格是Crock在2005年提出的，现在有些已经深入人心（如不要使用全局变量），因而也没有必要多做解释了。如果你有所疑惑，不如详细看看这两篇风格文章，里面有大量的代码来举证这些风格的重要性。</p><p><strong>更新：</strong>也不错。 </p>
             <p align="center"> </p>
-			(责任编辑：admin)
+				</div>
+			</div>			
+			<div style="margin-top:20px">
+				(责任编辑：admin)
+			</div>
 
     </div>
 	  <!-- //顶踩 -->
@@ -215,27 +227,26 @@ function getDigg(aid)
    <div class="context">
     <ul>
      <li>上一篇：没有了 </li>
-     <li>下一篇：<a href='/dedecms/a/webbase/javascript-ajax/2010/0407/35.html'>用JavaScript的日期对象操控时间和日期值</a> </li>
+     <li>下一篇：<a href='/a/webbase/javascript-ajax/2010/0407/35.html'>用JavaScript的日期对象操控时间和日期值</a> </li>
     </ul>
    </div>
    <!-- /context -->
    <!-- /actbox -->
   </div>
 </div>
-
 <footer>
     <div class="mainfoot">
 
         <h2><i class="leftline"></i>合作伙伴<i class="rightline"></i></h2>
 
         <ul>
-            <li><img src="/dedecms/templets/ike/img/public/yinhe.png"></li>
-            <li><img src="/dedecms/templets/ike/img/public/inrogo.png" alt=""></li>
-            <li><img src="/dedecms/templets/ike/img/public/tencent.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/yinhe.png"></li>
+            <li><img src="/templets/ike/img/public/inrogo.png" alt=""></li>
+            <li><img src="/templets/ike/img/public/tencent.png" alt=""></li>
         </ul>
         <div class="copyright">
-            <p>粤ICP备123456号-2 <img src="/dedecms/templets/ike/img/public/Baidu.png" ></p>
-            <p>北京艾佳天诚信息技术有限公司 &copy;2016 版权所有</p>
+            <p>粤ICP备123456号-2<img src="/templets/ike/img/public/Baidu.png" ></p>
+            <p>Copyright @ 2016 北京艾佳天诚信息技术有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
             <p>BEIJING AIJIATIANCHENG INFORMATION TECHNOLOGY CO.LTD.</p>
         </div>
     </div>
