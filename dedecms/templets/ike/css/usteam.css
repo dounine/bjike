@@ -1,0 +1,153 @@
+.usteamCon {
+  background: #f3f3f3;
+  padding-bottom: 50px; }
+  .usteamCon .teambanner {
+    width: 100%;
+    max-height: 600px;
+    background: url("../img/about/big_Team.png");
+    background-size: 100% 100%; }
+    .usteamCon .teambanner .banCon {
+      max-width: 1100px;
+      margin: 0 auto; }
+      .usteamCon .teambanner .banCon img {
+        margin-top: 180px; }
+      .usteamCon .teambanner .banCon h2 {
+        font-size: 48px;
+        color: #fff;
+        width: 500px;
+        margin-top: 50px; }
+    .usteamCon .teambanner .teamDate {
+      float: right;
+      width: 200px;
+      height: 84px;
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: -100px; }
+      .usteamCon .teambanner .teamDate h3 {
+        width: 84px;
+        height: 84px;
+        text-align: center;
+        line-height: 84px;
+        font-size: 38px;
+        color: #fff;
+        float: left; }
+      .usteamCon .teambanner .teamDate .years {
+        width: 50px;
+        height: 84px;
+        text-align: center;
+        float: left; }
+        .usteamCon .teambanner .teamDate .years .tmonth {
+          color: #ccc;
+          margin-top: 30px; }
+        .usteamCon .teambanner .teamDate .years .tyear {
+          color: #a3a3a3; }
+      .usteamCon .teambanner .teamDate .upload {
+        color: #ccc;
+        float: left;
+        margin: 20px; }
+    .usteamCon .teambanner .blank {
+      height: 50px;
+      background: #f3f3f3;
+      width: 1180px;
+      margin-top: 177px; }
+  .usteamCon .t_left {
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .usteamCon .t_left .text {
+      float: left;
+      width: 750px; }
+      .usteamCon .t_left .text p {
+        font-size: 14px;
+        color: #777;
+        line-height: 22px;
+        margin-bottom: 20px; }
+      .usteamCon .t_left .text h4 {
+        font-size: 70px;
+        color: #333;
+        float: left;
+        width: 150px;
+        margin-right: 20px; }
+	.usteamCon .t_left .text img{
+		max-width:750px !important;
+	}
+      .usteamCon .t_left .text .other {
+        margin-top: 50px; }
+        .usteamCon .t_left .text .other h5 {
+          font-size: 18px;
+          color: #333;
+          margin: 20px 0; }
+        .usteamCon .t_left .text .other .otherCon {
+          position: relative;
+          width: 400px;
+          height: 330px;
+          background: url("../img/about/other.png") no-repeat;
+          background-size: 100% 100%; }
+          .usteamCon .t_left .text .other .otherCon img {
+            position: absolute;
+            top: 200px;
+            left: 50px; }
+          .usteamCon .t_left .text .other .otherCon p {
+            font-size: 26px;
+            color: #fff;
+            font-weight: 700;
+            position: absolute;
+            top: 250px;
+            left: 50px; }
+  .usteamCon .t_right {
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 300px; }
+    .usteamCon .t_right h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333; }
+    .usteamCon .t_right .label {
+      padding-left: 20px; }
+      .usteamCon .t_right .label a {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        padding: 0 20px;
+        color: #fff;
+        background: #4898ea;
+        transform: skew(-20deg);
+        margin: 3px 0; }
+        .usteamCon .t_right .label a span {
+          display: inline-block;
+          transform: skew(20deg); }
+    .usteamCon .t_right .recommend {
+      padding-left: 20px; }
+      .usteamCon .t_right .recommend h4 {
+        margin-top: 20px;
+        border-bottom: 1px solid #ddd;
+        padding: 14px 0;
+        position: relative; }
+        .usteamCon .t_right .recommend h4 i {
+          display: inline-block;
+          width: 35px;
+          border-bottom: 2px solid #ea4848;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+      .usteamCon .t_right .recommend ul li {
+        height: 60px;
+        width: 100%;
+        text-indent: 10px; }
+        .usteamCon .t_right .recommend ul li:nth-child(2n) {
+          background: #e6e6e6; }
+        .usteamCon .t_right .recommend ul li.active {
+          border-left: 2px solid #ea4848; }
+        .usteamCon .t_right .recommend ul li a {
+          display: inline-block;
+          width: 100%;
+          height: 26px;
+          color: #777;
+          padding: 17px 0;
+          text-indent: 0; }
+          .usteamCon .t_right .recommend ul li a p {
+            color: #444;
+            font-weight: 700; }
+
+/*# sourceMappingURL=usteam.css.map */
