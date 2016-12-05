@@ -1,0 +1,99 @@
+/*-----------------------------公共样式-------------------------*/
+*{
+	margin:0;padding:0;color:black;font-size:12px;font-family:"宋体","黑体";list-style:none;text-decoration:none;font-weight:normal;font-style:normal;
+}
+body{
+	background:white;
+}
+a img{
+	border:none;/*IE7*/
+}
+.nobd{
+	border:none !important;
+}
+.clear{
+	clear:both;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+/*-----------------------------公共结束-------------------------*/
+
+.header{
+	width:100%;min-width:1200px;max-width:1920px;height:802px;margin:0 auto;overflow:hidden;
+}
+.header_t{
+	width:100%;height:30px;background:#2087cc;
+}
+.header_t_content{
+	width:1157px;margin:0 auto;line-height:30px;padding-left:43px;
+}
+.header_t_content span{
+	color:white;
+}
+.header_t_content font{
+	float:right;
+}
+.header_t_content font a{
+	border-right:1px white solid;color:white;padding-right:9px;margin:0 9px;
+}
+
+.header_logo{
+	width:1087px;height:136px;margin:0 auto;padding-top:36px;
+}
+.header_logo .logo_L{
+	float:left;
+}
+.header_logo .logo_R{
+	float:right;
+}
+.header_banner{
+	width:1920px;position:relative;left:50%;margin-left:-960px;
+	height:600px;overflow:hidden;
+}
+.header_nav{
+	width:1200px;height:87px;margin:0 auto;position:relative;
+	background:rgba(29,73,119, 0.7)!important;/*实现背景透明*/
+	
+	/*---ie背景透明---*/
+	background:#153c6e;
+	filter:Alpha(opacity=40);    /* 只支持IE6、7、8、9 */
+	position:static;			/* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+	overflow:hidden;				/* 激活IE6、7的haslayout属性，让它读懂Alpha */
+}
+.header_banner img{ 
+	position:relative;top:-90px;z-index:-1;
+}
+.header_nav ul li{
+	float:left;line-height:87px;margin-left:140px;
+}
+.header_nav ul li a{
+	font-size:18px;color:white;font-weight:bold;position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值，保证字体颜色不透明 */
+}
+.header_nav ul li a:hover{
+	color:#a7d000;
+}
+/*---------------header结束--------------------*/
+.footer{
+	width:100%;min-width:1200px;max-width:1920px;margin:0 auto;height:auto;background:#2087cc;text-align:center;border-top:1px solid gray;padding-bottom:21px;
+}
+.footer p  a{
+	color:white;font-size:14px;
+}
+.footer p  .footer_bg{
+	background:url(../Images/base/foonter_a_bg.gif) no-repeat right center; padding:0 8px;
+}
+.footer p .footer_a_br{
+	border-right:1px #93bce1 solid;padding:0 8px;margin-right:8px;
+}
+.footer p span{
+	margin-right:38px;color:white;
+}
+.footer p{
+	color:white;margin-top:22px;
+}
+/*---------------footer结束----------------------*/
+
